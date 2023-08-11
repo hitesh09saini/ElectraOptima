@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐄𝐥𝐞𝐜𝐭𝐫𝐚𝐎𝐩𝐭𝐢𝐦𝐚 | Unit Convertor </title>
+    <link rel="shortcut icon" href="solar-energy.ico" type="image/x-icon">
+    <link rel="stylesheet" href="unitConvertor.css">
+
+    <script src="https://kit.fontawesome.com/b94ee17cb1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+   
+</head>
+<body>
+    <main>
+    <div class="div">
+    
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img id="img" src="logo.png" alt="logo"><span style="color: rgb(14, 2, 55);">𝐄𝐥𝐞𝐜𝐭𝐫𝐚</span><span style="color: rgb(243, 140, 4)">𝐎𝐩𝐭𝐢𝐦𝐚</span></a>
+  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    </div>
+  </nav>
+
+  <!-- upper container -->
+<div class="cont ">
+<!-- calci img-->
+  <div class="calci" > 
+        <img id="imgC" style="width: 40px; user-select: none;" src="calculator .png" alt="calculator">
+  </div>
+
+  <!-- inner container -->
+  <div class="bound " >   
+    <!-- calculator -->
+  <div class="containe" id="boundi">
+    <div class="img1"><img  style="width: 50px; height: 50px;" src="logo.png" alt="logo"><img class="close" id="close" style="width: 30px; height: 30px;" src="close.png" alt="calculator"></div>
+     
+  
+    <input type="text"  value="0" id="result">
+    <div class="inner">
+    
+    
+     <div class="right">
+        <span id="right"></span>
+        <span onclick="addToResult('7') ">7</span>
+        <span onclick="addToResult('8') ">8</span>
+        <span  onclick="addToResult('9') ">9</span>
+        <span onclick="addToResult('+') ">+</span>
+        
+
+        <span onclick="addToResult('4') ">4</span>
+        <span onclick="addToResult('5') ">5</span>
+        <span onclick="addToResult('6') ">6</span>
+        <span onclick="addToResult('-') ">-</span>
+       
+
+        <span onclick="addToResult('1') ">1</span>
+        <span onclick="addToResult('2') ">2</span>
+        <span onclick="addToResult('3') ">3</span>
+        <span onclick="addToResult('*') ">x</span>
+      
+        <span onclick="addToResult('.') ">.</span>
+        <span onclick="addToResult('0') ">0</span>
+        <span onclick="calculateResult()">=</span>
+        <span onclick="addToResult('/') ">/</span>
+
+        <span onclick="MinAtMemory()">M-</span>
+        <span onclick="showmemory()">MR</span>   
+        <span onclick="plusAtMemory()">M+</span>
+        <span onclick="generate()">RND</span>
+
+        <span id="back" onclick="back()">Back</span>
+        <span id="clear" onclick="clearResult()">AC</span>
+        
+        
+    </div>
+    <div class="left">
+        <span id="left"></span>
+        <span onclick="sin()" >sin</span>
+        <span onclick="cos()" >cos</span>
+        <span onclick="tan()" >tan</span>
+
+         <!-- <span style="user-select: none;" ><input type="radio" value="deg"  class="conversion" >Deg</span> -->
+         <!-- <span style="user-select: none;"><input type="radio" value="rad" class="conversion"  >Rad</span> -->
+
+        <span onclick="sini()">sin<sup style="font-size: 0.5em;">-1</sup></span>
+        <span onclick="cosi()">cos<sup style="font-size: 0.5em;">-1</sup></span>
+        <span onclick="tani()" >tan<sup style="font-size: 0.5em;">-1</sup></span>
+
+        <span onclick="pi()">π</span>
+        <span onclick="e()">e</span>
+        <span onclick="poe()">e<sup style="font-size: 0.5em;">x</sup></span>
+
+        <span onclick="addToResult('^')" >x<sup style="font-size: 0.5em;">y</sup></span>
+
+        <span onclick="po3()">x<sup style="font-size: 0.5em;">3</sup></span>
+        <span onclick="po2()">x<sup style="font-size: 0.5em;">2</sup></span>
+        <span onclick="po10()">10<sup style="font-size: 0.5em;">X</sup></span>
+
+        <span onclick="addToResult('√')" ><sup style="font-size: 0.5em;">y</sup>√x</span>
+
+        <span onclick="qroot()"><sup style="font-size: 0.5em;">3</sup>√x</span>
+        <span onclick="root()"><sup style="font-size: 0.5em;">2</sup>√x</span>
+        <span onclick="ln()">ln</span>
+        <span onclick="log()">log</span>
+
+        <span onclick="addToResult('\(')" >(</span>
+        <span onclick="addToResult(')')">)</span>
+        <span onclick="inx()">1/x</span> 
+        <span onclick="addToResult('%')">%</span>
+        <span onclick="facto()">n!</span>
+     </div>
+</div>
+
+</div>
+
+</div>
+
+  <!-- heading -->
+   <div class="heading " id="heading"><h1 id="heading">Length Convertor</h1><div class="icon " id="icon"><i class="fa-solid fa-sun  fa-2xl" style="color: #fa9200;"></i></div></div> 
+<div id="container0" class="boxw ">
+      <div class="input-div">
+        <label>Foot</label> <br>
+        <input type="number" value="1" id="feet" class="inpt">
+
+       </div>
+   
+      <div class="input-div">
+        <label>Inche</label> <br>
+        <input type="number" value="12" id="inch" class="inpt">
+
+      </div>
+
+      <div class="input-div">
+        <label>Cm (Centimeter)</label> <br>
+        <input type="number" value="30.48" id="cm" class="inpt">
+
+        </div>
+       <div class="input-div">
+        <label>m (meter)</label> <br>
+        <input type="number" value="0.3048" id="m" class="inpt">
+
+      </div>
+
+
+     <div class="input-div">
+        <label>km (Kilometer)</label> <br>
+        <input type="number" value="0.0003048" id="km" class="inpt">
+
+       </div>
+
+       <div class="input-div">
+        <label>mm (Millimeter)</label> <br>
+        <input type="number" value="304.8" id="mm" class="inpt">
+ 
+      </div>
+  
+      <div class="input-div">
+        <label>µm (Micrometer)</label> <br>
+        <input type="number" value="304800" id="mim" class="inpt">
+
+      </div>
+       <div class="input-div">
+        <label>nm (Nanometer)</label> <br>
+        <input type="number" value="304800000" id="nm" class="inpt">
+
+       </div>
+
+
+     <div class="input-div">
+        <label>Mile</label> <br>
+        <input type="number" value="0.0001893932" id="mile" class="inpt">
+
+     </div>
+
+     <div class="input-div">
+        <label>Yard</label> <br>
+        <input type="number" value="0.3333333333" id="yard" class="inpt">
+
+     </div>
+
+     <div class="input-div">
+        <label>Light Years</label> <br>
+        <input type="number" value="3.22176254E-17" id="lgy" class="inpt">
+
+     </div>
+</div>
+
+   
+
+
+  <!-- weight conertor -->
+
+    <div class="heading" id="heading1"><h1 id="heading">Weight Convertor</h1><div class="icon " id="icon1"><i class="fa-solid fa-sun  fa-2xl" style="color: #fa9200;"></i></div></div> 
+    <div id="container1" class="boxw" >
+      <div class="input-div">
+        <label>Kg (Kilogram)</label> <br>
+        <input type="number" value="1" id="kg" class="inpt">
+
+       </div>
+   
+    <div class="input-div">
+        <label>g (Gram)</label> <br>
+        <input type="number" value="1000" id="g" class="inpt">
+
+    </div>
+
+    <div class="input-div">
+        <label>mg (Miligram)</label> <br>
+        <input type="number" value="1000000" id="mg" class="inpt">
+
+    </div>
+    <div class="input-div">
+        <label>Metric Ton</label> <br>
+        <input type="number" value="0.001" id="mt" class="inpt">
+
+    </div>
+
+
+    <div class="input-div">
+        <label>Long Ton</label> <br>
+        <input type="number" value="0.0009842073" id="lt" class="inpt">
+
+    </div>
+
+    <div class="input-div">
+        <label>Short Ton</label> <br>
+        <input type="number" value="0.0011023122" id="st" class="inpt">
+
+    </div>
+
+    <div class="input-div">
+        <label>Pound</label> <br>
+        <input type="number" value="2.2046244202" id="p" class="inpt">
+
+    </div>
+    <div class="input-div">
+        <label>Ounce</label> <br>
+        <input type="number" value="35.273990723" id="o" class="inpt">
+
+    </div>
+
+
+    <div class="input-div">
+        <label>Carrat</label> <br>
+        <input type="number" value="5000" id="c" class="inpt">
+
+    </div>
+
+    <div class="input-div">
+        <label>Atomic Mass Unit</label> <br>
+        <input type="number" value="6.022136652E+26" id="am" class="inpt">
+
+    </div>
+   </div>
+  
+
+
+
+   <!-- temprature -->
+   <div class="heading  " id="heading2"><h1 id="heading">Temperature Convertor</h1><div class="icon " id="icon2"><i class="fa-solid fa-sun  fa-2xl" style="color: #fa9200;"></i></div></div> 
+    <div id="container2" class="boxw" >
+      <div class="input-div">
+        <label>Celsius</label> <br>
+        <input type="number" value="1" id="cl" class="inpt">
+
+       </div>
+   
+    <div class="input-div">
+        <label>Kelvin</label> <br>
+        <input type="number" value="1000" id="kl" class="inpt">
+
+    </div>
+
+    <div class="input-div">
+        <label>Fahrenheit</label> <br>
+        <input type="number" value="1000000" id="ft" class="inpt">
+
+    </div>
+
+    </div>
+
+
+
+    <!-- Area -->
+
+    <div class="heading  " id="heading3"><h1 id="heading">Area Convertor</h1><div class="icon " id="icon3"><i class="fa-solid fa-sun  fa-2xl" style="color: #fa9200;"></i></div></div> 
+    <div id="container3" class="boxw" >
+      <div class="input-div">
+        <label>m (Square Meter)</label> <br>
+        <input type="number" value="1" id="sm" class="inpt">
+
+       </div>
+   
+    <div class="input-div">
+        <label>Km  (Square Kilometer)</label> <br>
+        <input type="number" value="0.000001" id="skm" class="inpt">
+    
+    </div>
+
+    <div class="input-div">
+        <label>cm (Square Centimeter)</label> <br>
+        <input type="number" value="10000" id="scm" class="inpt">
+
+    </div>
+    <div class="input-div">
+        <label>mm (Square Millimeter)</label> <br>
+        <input type="number" value="1000000" id="smm" class="inpt">
+
+    </div>
+
+
+    <div class="input-div">
+        <label> µm (Square Micrometer)</label> <br>
+        <input type="number" value="1000000000000" id="smim" class="inpt">
+
+    </div>
+
+    <div class="input-div">
+        <label> Hectare</label> <br>
+        <input type="number" value="0.0001" id="ha" class="inpt">
+
+    </div>
+
+    <div class="input-div">
+        <label> Square Mile</label> <br>
+        <input type="number" value="3.861018768E-7" id="sml" class="inpt">
+
+    </div>
+    <div class="input-div">
+        <label> Square Yard</label> <br>
+        <input type="number" value="1.1959900463" id="sy" class="inpt">
+
+    </div>
+
+
+    <div class="input-div">
+        <label> Square Foot</label> <br>
+        <input type="number" value="10.763910417" id="sf" class="inpt">
+
+    </div>
+
+    <div class="input-div">
+        <label> Square Inch</label> <br>
+        <input type="number" value="1550.0031" id="si" class="inpt">
+
+    </div>
+
+    <div class="input-div">
+        <label> Acre</label> <br>
+        <input type="number" value="0.0002471054" id="aa" class="inpt">
+
+    </div>
+   </div>
+
+
+
+
+   <!-- volume -->
+
+   
+   <div class="heading  " id="heading4"><h1 id="heading">Volume Convertor</h1><div class="icon " id="icon4"><i class="fa-solid fa-sun  fa-2xl" style="color: #fa9200;"></i></div></div> 
+   <div id="container4" class="boxw" >
+     <div class="input-div">
+       <label>Cubic Meter</label> <br>
+       <input type="number" value="1" id="qm" class="inpt">
+
+      </div>
+  
+   <div class="input-div">
+       <label>Cubic Kilo meter</label> <br>
+       <input type="number" value="1.E-9" id="qkm" class="inpt">
+   
+   </div>
+
+   <div class="input-div">
+       <label>Cubic Centi Meter</label> <br>
+       <input type="number" value="1000000" id="qcm" class="inpt">
+
+   </div>
+   <div class="input-div">
+       <label>Cubic Milli Meter</label> <br>
+       <input type="number" value="1000000000" id="qmm" class="inpt">
+
+   </div>
+
+
+   <div class="input-div">
+       <label>Liter</label> <br>
+       <input type="number" value="1000" id="L" class="inpt">
+
+   </div>
+
+   <div class="input-div">
+       <label>Milli Liter</label> <br>
+       <input type="number" value="1000000" id="ml" class="inpt">
+
+   </div>
+
+   <div class="input-div">
+       <label>US Gallon</label> <br>
+       <input type="number" value="264.17217686" id="ug" class="inpt">
+
+   </div>
+   <div class="input-div">
+       <label>Us Quart</label> <br>
+       <input type="number" value="1056.6887074" id="uq" class="inpt">
+
+   </div>
+
+
+   <div class="input-div">
+       <label>Us pint</label> <br>
+       <input type="number" value="2113.3774149" id="up" class="inpt">
+
+   </div>
+
+   <div class="input-div">
+       <label>Us Cup</label> <br>
+       <input type="number" value="4226.7548297" id="uc" class="inpt">
+
+   </div>
+
+   <div class="input-div">
+       <label>Us Fluid Ounce</label> <br>
+       <input type="number" value="33814.038638" id="ufo" class="inpt">
+
+   </div>
+
+   <div class="input-div">
+    <label>Us Table Spoon</label> <br>
+    <input type="number" value="67628.077276" id="utls" class="inpt">
+
+   </div>
+
+<div class="input-div">
+    <label>Us Tea Spoon</label> <br>
+    <input type="number" value="202884.23183" id="uts" class="inpt">
+
+</div>
+
+<div class="input-div">
+    <label>Imperial Gallon</label> <br>
+    <input type="number" value="219.9692483" id="ig" class="inpt">
+
+</div>
+<div class="input-div">
+    <label>Imperial Quart</label> <br>
+    <input type="number" value="879.8769932" id="iq" class="inpt">
+
+</div>
+<div class="input-div">
+    <label>Imperial Pint</label> <br>
+    <input type="number" value="1759.7539864" id="ip" class="inpt">
+
+   </div>
+
+<div class="input-div">
+    <label>Imperial Fluid Ounce</label> <br>
+    <input type="number" value="35195.079728" id="ifo" class="inpt">
+
+</div>
+
+<div class="input-div">
+    <label>Imperial Table Spoon</label> <br>
+    <input type="number" value="56312.127565" id="itls" class="inpt">
+
+</div>
+<div class="input-div">
+    <label>Imperial Tea Spoon</label> <br>
+    <input type="number" value="168936.38269" id="its" class="inpt">
+
+</div>
+
+<div class="input-div">
+    <label>Cubic Mile</label> <br>
+    <input type="number" value="2.399128636E-10" id="qml" class="inpt">
+
+   </div>
+
+<div class="input-div">
+    <label>Cubic Yard</label> <br>
+    <input type="number" value="1.3079506193" id="qy" class="inpt">
+
+</div>
+
+<div class="input-div">
+    <label>Cubic Foot</label> <br>
+    <input type="number" value="35.314666721" id="qf" class="inpt">
+
+</div>
+<div class="input-div">
+    <label>Cubic Inch</label> <br>
+    <input type="number" value="61023.744095" id="qi" class="inpt">
+
+</div>
+
+</div>
+
+   
+  <!-- Time convertor -->
+
+  
+  <div class="heading  " id="heading5"><h1 id="heading">Time Convertor</h1><div class="icon " id="icon5"><i class="fa-solid fa-sun  fa-2xl" style="color: #fa9200;"></i></div></div> 
+  <div id="container5" class="boxw" >
+    <div class="input-div">
+      <label>Second</label> <br>
+      <input type="number" value="1" id="se" class="inpt">
+
+     </div>
+ 
+  <div class="input-div">
+      <label>Milli Second</label> <br>
+      <input type="number" value="1000" id="mse" class="inpt">
+  
+  </div>
+
+  <div class="input-div">
+      <label>Micro Second</label> <br>
+      <input type="number" value="1000000" id="mise" class="inpt">
+
+  </div>
+  <div class="input-div">
+      <label>Nano Second</label> <br>
+      <input type="number" value="1000000000" id="nse" class="inpt">
+
+  </div>
+
+
+  <div class="input-div">
+      <label>Pico Second</label> <br>
+      <input type="number" value="1000000000000" id="pse" class="inpt">
+
+  </div>
+
+  <div class="input-div">
+      <label>Minute</label> <br>
+      <input type="number" value="0.0166666667" id="M" class="inpt">
+
+  </div>
+
+  <div class="input-div">
+      <label>Hour</label> <br>
+      <input type="number" value="0.0002777778" id="H" class="inpt">
+
+  </div>
+  <div class="input-div">
+      <label>Day</label> <br>
+      <input type="number" value="0.0000115741" id="D" class="inpt">
+
+  </div>
+
+
+  <div class="input-div">
+      <label>Week</label> <br>
+      <input type="number" value="0.0000016534" id="W" class="inpt">
+
+  </div>
+
+  <div class="input-div">
+      <label>Month</label> <br>
+      <input type="number" value="3.802570537E-7" id="Mo" class="inpt">
+
+  </div>
+
+  <div class="input-div">
+      <label>year</label> <br>
+      <input type="number" value="3.168808781E-8" id="Y" class="inpt">
+
+  </div>
+ </div>
+ 
+</div>
+ 
+</div>
+</main>
+
+<footer>
+</footer>
+</body>
+<script src="unitConvertor.js"></script>
+</html>

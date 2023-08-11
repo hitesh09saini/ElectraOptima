@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐄𝐥𝐞𝐜𝐭𝐫𝐚𝐎𝐩𝐭𝐢𝐦𝐚 | Calculator</title>
+    <link rel="stylesheet" href="calci.css">
+    <link rel="shortcut icon" href="solar-energy.ico" type="image/x-icon">
+   
+</head>
+<body>
+    
+    <div class="containe" id="boundi">
+        <div class="img1"><img  style="width: 50px; height: 50px;" src="logo.png" alt="logo"></div>
+         
+      
+        <input type="text"  value="0" id="result">
+        <div class="inner">
+        
+        
+         <div class="right">
+            <span id="right"></span>
+            <span onclick="addToResult('7') ">7</span>
+            <span onclick="addToResult('8') ">8</span>
+            <span  onclick="addToResult('9') ">9</span>
+            <span onclick="addToResult('+') ">+</span>
+            
+    
+            <span onclick="addToResult('4') ">4</span>
+            <span onclick="addToResult('5') ">5</span>
+            <span onclick="addToResult('6') ">6</span>
+            <span onclick="addToResult('-') ">-</span>
+           
+    
+            <span onclick="addToResult('1') ">1</span>
+            <span onclick="addToResult('2') ">2</span>
+            <span onclick="addToResult('3') ">3</span>
+            <span onclick="addToResult('*') ">x</span>
+          
+            <span onclick="addToResult('.') ">.</span>
+            <span onclick="addToResult('0') ">0</span>
+            <span onclick="calculateResult()">=</span>
+            <span onclick="addToResult('/') ">/</span>
+    
+            <span onclick="MinAtMemory()">M-</span>
+            <span onclick="showmemory()">MR</span>   
+            <span onclick="plusAtMemory()">M+</span>
+            <span onclick="generate()">RND</span>
+    
+            <span id="back" onclick="back()">Back</span>
+            <span id="clear" onclick="clearResult()">AC</span>
+            
+            
+        </div>
+        <div class="left">
+            <span id="left"></span>
+            <span onclick="sin()" >sin</span>
+            <span onclick="cos()" >cos</span>
+            <span onclick="tan()" >tan</span>
+    
+             <!-- <span style="user-select: none;" ><input type="radio" value="deg"  class="conversion" >Deg</span> -->
+             <!-- <span style="user-select: none;"><input type="radio" value="rad" class="conversion"  >Rad</span> -->
+    
+            <span onclick="sini()">sin<sup style="font-size: 0.5em;">-1</sup></span>
+            <span onclick="cosi()">cos<sup style="font-size: 0.5em;">-1</sup></span>
+            <span onclick="tani()" >tan<sup style="font-size: 0.5em;">-1</sup></span>
+    
+            <span onclick="pi()">π</span>
+            <span onclick="e()">e</span>
+            <span onclick="poe()">e<sup style="font-size: 0.5em;">x</sup></span>
+    
+            <span onclick="addToResult('^')" >x<sup style="font-size: 0.5em;">y</sup></span>
+    
+            <span onclick="po3()">x<sup style="font-size: 0.5em;">3</sup></span>
+            <span onclick="po2()">x<sup style="font-size: 0.5em;">2</sup></span>
+            <span onclick="po10()">10<sup style="font-size: 0.5em;">X</sup></span>
+    
+            <span onclick="addToResult('√')" ><sup style="font-size: 0.5em;">y</sup>√x</span>
+    
+            <span onclick="qroot()"><sup style="font-size: 0.5em;">3</sup>√x</span>
+            <span onclick="root()"><sup style="font-size: 0.5em;">2</sup>√x</span>
+            <span onclick="ln()">ln</span>
+            <span onclick="log()">log</span>
+    
+            <span onclick="addToResult('\(')" >(</span>
+            <span onclick="addToResult(')')">)</span>
+            <span onclick="inx()">1/x</span> 
+            <span onclick="addToResult('%')">%</span>
+            <span onclick="facto()">n!</span>
+         </div>
+    
+    </div>
+</div>
+     <script src="calci.js"></script>
+</body>
+</html>
