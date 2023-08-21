@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>𝐄𝐥𝐞𝐜𝐭𝐫𝐚𝐎𝐩𝐭𝐢𝐦𝐚 | Unit Convertor </title>
-    <link rel="shortcut icon" href="solar-energy.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/solar-energy.ico" type="image/x-icon">
     <link rel="stylesheet" href="unitConvertor.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,7 +24,7 @@
             <nav
                 class="navbar navbar-expand-lg position-relative bg-body-tertiary nav flex justify-content-between align-items-center  px-5">
                 <div>
-                    <a class="navbar-brand" href="index.html"><img id="img" src="logo.png" alt="logo"><span
+                    <a class="navbar-brand" href="index.html"><img id="img" src="/assets/logo.png" alt="logo"><span
                             style="color: rgb(14, 2, 55);">𝐄𝐥𝐞𝐜𝐭𝐫𝐚</span><span
                             style="color: rgb(243, 140, 4) ">𝐎𝐩𝐭𝐢𝐦𝐚</span></a>
                 </div>
@@ -34,25 +34,25 @@
                     <div class="drop-box" >
                         <div class="drop-items" style="display: block;">
                           
-                            <p>Home</p>
-                            <p>About Us</p>
+                            <p onclick="home()">Home</p>
+                            <p onclick="aboutus()">About Us</p>
                             <div class="feat">
                               <p >Features <i class="fa-solid fa-caret-down fa-sm" style="color: #f27907;"></i></p>
                                 <div class="features" >
-                                    <p>Energy Auditor</p>
-                                    <p>Unit Convertor</p>
-                                    <p>Calculator</p>
+                                    <p onclick="Auditor()">Energy Auditor</p>
+                                    <p onclick="unitconvert()">Unit Convertor</p>
+                                    <p onclick="calculator()">Calculator</p>
                                 </div>
                             </div>
                            
-                            <p>How it Works</p>
+                            <p onclick="howitwork()">How it Works</p>
 
                             
                            
                         </div>
                         <div class="items-list" style="display: block;">
-                            <button>Log in</button>
-                            <button>Sign up</button>
+                            <button onclick="login()">Log in</button>
+                            <button onclick="signin()">Sign up</button>
                         </div>
                        
                      </div>
@@ -60,16 +60,23 @@
 
                 <div class="items-list">
 
-                    <p>Home</p>
-                    <p>About Us</p>
-                    <p>Features</p>
-                    <p>How it Works</p>
+                    <p onclick="home()">Home</p>
+                    <p onclick="aboutus()">About Us</p>
+                    <div class="feat1">
+                        <p >Features <i class="fa-solid fa-caret-down fa-sm" style="color: #f27907;"></i></p>
+                          <div class="features1" >
+                              <p onclick="Auditor()">Energy Auditor</p>
+                              <p onclick="unitconvert()">Unit Convertor</p>
+                              <p onclick="calculator()">Calculator</p>
+                          </div>
+                      </div>
+                    <p onclick="howitwork()">How it Works</p>
 
                 </div>
 
                 <div class="items-list">
-                    <button>Log in</button>
-                    <button>Sign up</button>
+                    <button onclick="login()">Log in</button>
+                    <button onclick="signin()">Sign in</button>
                 </div>
 
                
@@ -86,15 +93,15 @@
             <div class="cont ">
                 <!-- calci img-->
                 <div class="calci">
-                    <img id="imgC" style="width: 40px; user-select: none;" src="calculator .png" alt="calculator">
+                    <img id="imgC" style="width: 40px; user-select: none;" src="/assets/calculator .png" alt="calculator">
                 </div>
 
                 <!-- inner container -->
                 <div class="bound ">
                     <!-- calculator -->
                     <div class="containe" id="boundi">
-                        <div class="img1"><img style="width: 50px; height: 50px;" src="logo.png" alt="logo"><img
-                                class="close" id="close" style="width: 30px; height: 30px;" src="close.png"
+                        <div class="img1"><img style="width: 50px; height: 50px;" src="/assets/logo.png" alt="logo"><img
+                                class="close" id="close" style="width: 30px; height: 30px;" src="/assets/close.png"
                                 alt="calculator"></div>
 
 

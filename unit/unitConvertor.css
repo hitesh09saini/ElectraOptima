@@ -456,3 +456,19 @@ p:hover {
     display: block;
     background-color: #0f0f0f;
 }
+
+.features1{
+    padding: 10px;
+    font-size: 40px;
+    display: none;
+    background-color: #000000cb;
+    position: absolute;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid #ffffff5e;
+
+}
+
+.feat1:hover .features1{
+    display: block;
+}

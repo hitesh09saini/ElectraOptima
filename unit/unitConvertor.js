@@ -2653,3 +2653,34 @@ Y.addEventListener('input' , function () {
 
 
 
+function login(){
+  location.href ="login.html";
+}
+
+function signin(){
+    location.href ="signin.html";
+}
+
+function unitconvert(){
+    location.href ="unitConvertor.html";
+}
+
+function Auditor(){
+    location.href ="auditor.html";
+}
+
+function calculator(){
+    location.href ="calci.html";
+}
+
+function home(){
+    location.href ="home.html";
+}
+
+function howitwork(){
+    location.href ="howitwork.html";
+}
+
+function aboutus(){
+    location.href ="about.html";
+}
