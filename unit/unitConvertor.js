@@ -2657,8 +2657,8 @@ function login(){
   location.href ="login.html";
 }
 
-function signin(){
-    location.href ="signin.html";
+function signUp(){
+    location.href ="signup.html";
 }
 
 function unitconvert(){
@@ -2683,4 +2683,9 @@ function howitwork(){
 
 function aboutus(){
     location.href ="about.html";
+}
+
+
+function feature(){
+    document.getElementById('features').classList.toggle('active');
 }

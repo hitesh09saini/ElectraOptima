@@ -79,6 +79,18 @@
         #forgot{
             margin: 0;
         }
+
+        @media screen and (max-width:900px ) {
+            .login{
+                width: 70%;
+            }
+        }
+
+        @media screen and (max-width:280px ) {
+            .login{
+                width: 80%;
+            }
+        }
     </style>
    
 </head>
@@ -89,11 +101,11 @@
         <div class="login">
             <h1>Log in</h1>
            
-           <input type="email" placeholder="Enter your Email">
+           <input id="name" type="text" placeholder="Enter your Email">
            
-           <input type="password" placeholder="Password ">
+           <input id="pass" type="text" placeholder="Password ">
            <a id="forgot" href="forgotPass.html">Forgot your password ?</a>
-           <button>Submit</button>
+           <button onclick="login()">Submit</button>
 
            <span>or</span>
 
@@ -103,7 +115,7 @@
         </div>
 
 
-        <script src="unitConvertor.js"></script>
+        <script src="loginAndsignup.js"></script>
 
  
 </body>
