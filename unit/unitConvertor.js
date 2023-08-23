@@ -2666,7 +2666,7 @@ function unitconvert(){
 }
 
 function Auditor(){
-    location.href ="auditor.html";
+    location.href ="Auditor.html";
 }
 
 function calculator(){
@@ -2674,11 +2674,11 @@ function calculator(){
 }
 
 function home(){
-    location.href ="home.html";
+    location.href ="index.html";
 }
 
 function howitwork(){
-    location.href ="howitwork.html";
+    location.href ="howItWorks.html";
 }
 
 function aboutus(){
@@ -2689,3 +2689,8 @@ function aboutus(){
 function feature(){
     document.getElementById('features').classList.toggle('active');
 }
+
+function getStart(){
+    location.href ="login.html";
+}
+
