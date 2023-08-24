@@ -8,6 +8,11 @@
     <link rel="shortcut icon" href="/assets/solar-energy.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
        body{
 
             height: 90vh;
@@ -84,6 +89,15 @@
             .login{
                 width: 70%;
             }
+            img{
+                display: none;
+            }
+            body{
+                background-repeat: no-repeat; 
+                /* background-clip: border-box; */
+                background-size: contain;
+                background-image: url(/assets/guitar.png);
+            }
         }
 
         @media screen and (max-width:280px ) {
@@ -94,7 +108,7 @@
     </style>
    
 </head>
-<body>
+<body >
     
 
 
@@ -109,11 +123,12 @@
 
            <span>or</span>
 
-           <a href="signin.html" target="_blank" >Generate an Electro account </a>
+           <a href="signup.html" target="_blank" >Generate an Electro account </a>
          
 
         </div>
 
+        <img src="/assets/fun-3d-cartoon-teenage-boy_183364-81179-removebg-preview.png" alt="">
 
         <script src="loginAndsignup.js"></script>
 

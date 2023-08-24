@@ -1,6 +1,6 @@
 
 
-function signUp() {
+function signup() {
    
     let email = document.getElementById('email').value;
     let name= document.getElementById('name').value;

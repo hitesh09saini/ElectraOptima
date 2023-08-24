@@ -192,16 +192,17 @@ function po10(){
 
 const calci = document.getElementById("imgC");
 const disply = document.getElementById("boundi");
-const close = document.getElementById("close");
 
-calci.addEventListener('click',function(){
+
+calci.addEventListener('click',()=>{
 
     disply.style.display="block";
     calci.style.display ="none";
 
 });
+const close = document.getElementById("close");
 
-close.addEventListener('click',function(){
+close.addEventListener('click',()=>{
 
     disply.style.display="none";
     calci.style.display ="block";
@@ -215,7 +216,7 @@ const cont = document.getElementById('container0');
 const ic = document.getElementById('icon');
 
 
-tog.addEventListener('click',function(){
+tog.addEventListener('click',()=>{
     cont.classList.toggle('active');
     tog.classList.toggle('color');
     ic.classList.toggle('fa-spin');
