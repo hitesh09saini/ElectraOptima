@@ -1128,7 +1128,7 @@ i{
  }
   #ihero{
     width: 80%;
-    background-image: url(/assets/bulb.webp);
+    background-image: url(assets/bulb.webp);
     background-repeat: no-repeat;
      background-size: cover;
   }
@@ -1175,7 +1175,7 @@ footer>h1{
     background-size: cover;
     
     background-repeat: no-repeat;
-    background-image: url(/assets/animi.png);
+    background-image: url(assets/animi.png);
   }
   
 }
