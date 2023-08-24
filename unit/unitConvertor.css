@@ -22,14 +22,14 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(14, 2, 55);
+    background-color: #0E0237;
 }
 
 :root {
 
     --primary-text-color: rgb(217, 219, 182);
     --seconary-text-color: rgb(215, 202, 196);
-    --head-accent-color: rgb(14, 2, 55);
+    --head-accent-color: #0E0237;
     --hover-head-accent-color: rgb(21, 21, 81);
     --back-color: rgb(243, 140, 4);
 }
