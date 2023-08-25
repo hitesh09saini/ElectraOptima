@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>𝐄𝐥𝐞𝐜𝐭𝐫𝐚𝐎𝐩𝐭𝐢𝐦𝐚 | Login Page </title>
-     
+
     <link rel="shortcut icon" href="assets/solar-energy.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-         *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-       body{
 
+        body {
+
+            user-select: none;
             height: 90vh;
             display: flex;
-            
+
             justify-content: center;
             align-items: center;
-            
+
+        }
+
+        .Otp-box {
+            color: #fff;
+            height: 100%;
+            width: 100%;
+            display: none;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color: rgba(40, 41, 41, 0.616);
+        }
+
+        .otp {
+            user-select: none;
+            border-radius: 10px;
+            background-color: rgba(18, 2, 46, 0.836);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+
         }
 
 
-        .login
-        {
+        .login {
             user-select: none;
             border-radius: 10px;
             background-color: rgba(21, 21, 81, 0.651);
@@ -34,13 +63,13 @@
             flex-direction: column;
             align-items: center;
             width: 30%;
-            
-    
+
+
         }
 
-        input{
+        input {
             width: 80%;
-            height:30px ;
+            height: 30px;
             font-size: larger;
             margin: 20px;
             border-radius: 5px;
@@ -48,23 +77,24 @@
             padding: 5px;
             padding-left: 30px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-          
+
         }
 
-        h1{
+        h1 {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
-        input:focus{
+        input:focus {
             outline: none;
         }
 
-       
 
-       a{
-        margin: 20px;
-       }
-        button{
+
+        a {
+            margin: 20px;
+        }
+
+        button {
             color: #fff;
             background-color: rgb(250, 95, 5);
             width: 80%;
@@ -76,62 +106,85 @@
             margin-bottom: 20px;
         }
 
-        button:hover{
+        button:hover {
             background-color: rgb(230, 86, 3);
 
         }
 
-        #forgot{
+        #forgot {
+            color: rgb(8, 5, 216);
             margin: 0;
         }
 
-        @media screen and (max-width:900px ) {
-            .login{
+        
+
+        @media screen and (max-width:900px) {
+            .login {
                 width: 70%;
             }
-            img{
+
+            .otp {
+                width: 70%;
+            }
+            img {
                 display: none;
             }
-            body{
-                background-repeat: no-repeat; 
+
+            body {
+                background-repeat: no-repeat;
                 /* background-clip: border-box; */
                 background-size: contain;
                 background-image: url(/assets/guitar.png);
             }
         }
 
-        @media screen and (max-width:280px ) {
-            .login{
+        @media screen and (max-width:280px) {
+            .login {
+                width: 80%;
+            }
+            .otp {
                 width: 80%;
             }
         }
     </style>
-   
+
 </head>
-<body >
-    
+
+<body>
 
 
-        <div class="login">
-            <h1>Log in</h1>
-           
-           <input id="name" type="text" placeholder="Enter your Email">
-           
-           <input id="pass" type="text" placeholder="Password ">
-           <a id="forgot" href="forgotPass.html">Forgot your password ?</a>
-           <button onclick="login()">Submit</button>
 
-           <span>or</span>
+    <div class="login">
+        <h1>Log in</h1>
 
-           <a href="signup.html" target="_blank" >Generate an Electro account </a>
-         
+        <input id="name" type="email" placeholder="Enter your Email" required>
+        <input id="pass" type="password" placeholder="Password " required>
+        <p id="forgot"  onclick="otp()"><u> Forgot your password ?</u></p>
+        <button onclick="login()">Submit</button>
 
+        <span>or</span>
+
+        <a href="signup.html" target="_blank">Generate an Electro account </a>
+
+
+    </div>
+
+    <div class="Otp-box" id="otp-box" >
+        <div class="otp">
+            <div id="close" style="align-self: flex-end; padding: 4px; color: #fff; background-color: rgb(190, 5, 5);" >X</div>
+            <h1 >Forgot Your Password</h1>
+
+            <input  type="email" placeholder="Enter your Email">
+            <button onclick="sendotp()">Send Otp</button>
         </div>
 
-        <img src="assets/fun-3d-cartoon-teenage-boy_183364-81179-removebg-preview.png" alt="">
+    </div>
 
-        <script src="loginAndsignup.js"></script>
+    <img src="assets/fun-3d-cartoon-teenage-boy_183364-81179-removebg-preview.png" alt="">
 
- 
+    <script src="loginAndsignup.js"></script>
+
+
 </body>
+
 </html>

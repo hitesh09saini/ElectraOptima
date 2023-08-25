@@ -32,42 +32,63 @@ function calci() {
 function letStart() {
 
     document.getElementById('Q1').style.display = 'block';
+    scrollToBottom();
   
 }
+  
 
+
+function scrollToBottom() {
+    const container = document.getElementById('demo');
+
+    container.scrollTop = container.scrollHeight;
+}
 
 
 function q2() {
     document.getElementById('Q2').style.display = 'block';
+    scrollToBottom();
 }
 function q3() {
     document.getElementById('Q3').style.display = 'block';
+    scrollToBottom();
 }
 function q4() {
     document.getElementById('Q4').style.display = 'block';
+    scrollToBottom();
 }
 function q5() {
     document.getElementById('Q5').style.display = 'block';
+    scrollToBottom();
 }
 function q6() {
     document.getElementById('Q6').style.display = 'block';
+    scrollToBottom();
 }
 function q7() {
     document.getElementById('Q7').style.display = 'block';
+    scrollToBottom();
 }
 function q8() {
     document.getElementById('Q8').style.display = 'block';
+    scrollToBottom();
 }
 function q9() {
     document.getElementById('Q9').style.display = 'block';
+     scrollToBottom();
 }
 
-function submit() {
-    document.getElementById('cont').style.display = 'none';
 
+function submit(){
+    document.getElementById('upload').style.display ="flex";
+    setTimeout(sub,5000);
+}
+function sub() {
+    document.getElementById('cont').style.display = 'none';
+    document.getElementById('upload').style.display ="none";
     document.getElementById('gen').style.display = 'flex';
     
-    write('report', 'The auditing process is completed.');
+    write('report', 'The Auditing process is completed.');
     setTimeout(openFeedback, 5000);
 }
 
