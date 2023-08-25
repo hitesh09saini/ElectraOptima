@@ -16,180 +16,265 @@
 <body>
     <nav>
         <a href="index.html"><img src="assets/logo.png" alt=""></a>
-        <div class="flex gap-10">
+        <div class="flex gap-10 list">
             <span onclick="calci()" class="font-bold">Calculator</span>
             <span onclick="unitconvert()" class="font-bold">Unit Convertor</span>
         </div>
-       
-     
+
+
 
         <span class="font-bold" onclick="location.href = 'index.html';  ">Exit <i
                 class="fa-solid fa-arrow-right-from-bracket fa-2xl" style="color: #7c06a0;"></i></span>
     </nav>
 
-    
-    <div class="container" id="demo">
-        <p id="wel" class="text-xl "></p>
-        
-        <button id="let" style="margin-bottom: 40px;">Let's Start..</button>
-        <div id="Q1" class="q">
-            <h1>Question 1: Electricity Usage</h1>
-            <div class="text">
-            <div class="def">
-                <ul>
-                    <li>How many kilowatt-hours(kwh) of Electricity
-                        do you use on average per month? you can find this information on your electricity bills</li>
-                </ul>
+
+    <div class="container relative" id="demo">
+        <div id="cont">
+            <p id="wel" class="text-xl ">
+
+            </p>
+
+            <button id="let" style="margin-bottom: 40px;" onclick="letStart()">Let's Start..</button>
+            <div id="Q1" class="q">
+                <h1>Question 1: Electricity Usage</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>How many kilowatt-hours(kwh) of Electricity do you use on average per month? you can
+                                find this information on your electricity bills</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="user">
+                        <p>Average Monthly Usage:</p>
+                        <input type="number" id="iq1" placeholder="Enter here..">
+                        <button onclick="q2()">Next</button>
+                    </div>
+
+                </div>
 
             </div>
+            <div id="Q2" class="q">
+                <h1>Question 2: Heating and Cooling</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>How do you heat your home?(e.g., electric heaters, centeral heating)</li>
+                        </ul>
 
-            <div class="user">
-                <p>Average Monthly Usage:</p>
-                <input type="text"  placeholder="Enter here..">
+
+                    </div>
+
+
+                    <div class="user">
+                        <p>Heating and Cooling:</p>
+
+                        <button onclick="q3()">Next</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="Q3" class="q">
+                <h1>Question 3: Appliances</h1>
+                <div class="text">
+                    <div class="def">
+                        <ol>
+
+                            <li>How Often do you use your electrical Stove, and for how long each time?</li>
+
+                            <li>How old is your refrigerator?</li>
+                            <li>Do you have any other energy-intensive appliances (e.g., dishwasher, washing machine,
+                                dryer)? if
+                                yes, please provide usage details.</li>
+
+
+                        </ol>
+
+                    </div>
+                    <div class="user">
+
+                        <button onclick="q4()">Next</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="Q4" class="q">
+                <h1>Question 4: Lighting</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>How many lamps,overhead lights, or other light sources do you have in house ?</li>
+                            <li>What is the the total wattage of all the light bulbs in these light sources combined?
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user">
+
+                        <button onclick="q5()">Next</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="Q5" class="q">
+                <h1>Question 5: Insulation</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>is your home adequately insulated? If yes, please provide details about the type and
+                                quality of
+                                insulation.</li>
+                        </ul>
+                    </div>
+                    <div class="user">
+
+                        <button onclick="q6()">Next</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="Q6" class="q">
+                <h1>Question 6: Renewable Energy</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>Are you considering installing solar panels or any other renewable energy sources in the
+                                future?
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user">
+
+                        <button onclick="q7()">Next</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="Q7" class="q">
+                <h1>Question 7: Local Climate</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>What is the average temperature range in your area during the summer and winter months?
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user">
+
+                        <button onclick="q8()">Next</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="Q8" class="q">
+                <h1>Question 8: Windows and Doors</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>
+                                How many windows and exterior doors does your home have?
+                            </li>
+                            <li>Are they single-pane or double-pane windows?</li>
+                        </ul>
+                    </div>
+                    <div class="user">
+
+                        <button onclick="q9()">Next</button>
+                    </div>
+                </div>
             </div>
 
-           </div>
+            <div id="Q9" class="q">
+                <h1>Question 9: Occupancy Patterns</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>
+                                Do you have specific rooms or areas that are frequently occupied or unused during the
+                                day?
+                            </li>
+                            <li>Are there any specific times of day when certain areas of your home are used more
+                                frequently?
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user">
 
+                        <button onclick="submit()" id="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="Q2" class="q">
-            <h1>Question 2: Heating and Cooling</h1>
-            <div class="text">
-            <div class="def">
-                <ul>
-                    <li>How do you heat your home?(e.g., electric heaters, centeral heating)</li>
-                </ul>
 
+
+        <!-- generated -->
+
+        <div class="flex-col flex " id="gen">
+            <p id="report" class="pb-8 text-4xl font-bold text-center">
+                
+            </p>
+            <div class="download">
+                <i class="fa-solid fa-file-arrow-down fa-2xl" style="color: #000529;"></i> Download your report
             </div>
 
+             <div class=" md:flex justify-between  items-center">
+                <div id="open-popup" class="m-5"><i class="fa-solid fa-lightbulb fa-beat fa-xl" style="color: #ff7e05;"></i><br> Show <br> Tips</div>
+               <span class="text-gray-300 m-4"><a href="mailto: hello.electaoptima@gmail.com" target="_blank"> <i class="fa-solid fa-envelope fa-2xl" style="color: #0e0131;"></i></a> hello.electraoptima@gmail.com</span>
+
+             </div>
             
-            <div class="user">
-                 <p>Heating and Cooling:</p>
-
-            </div>
-        </div>
-
-        </div>
-        <div id="Q3" class="q">
-            <h1>Question 3: Appliances</h1>
-            <div class="text">
-            <div class="def">
-                <ol>
-
-                    <li>How Often do you use your electrical Stove, and for how long each time?</li>
-
-                    <li>How old is your refrigerator?</li>
-                    <li>Do you have any other energy-intensive appliances (e.g., dishwasher, washing machine, dryer)? if
-                        yes, please provide usage details.</li>
-
-
-                </ol>
-
-            </div>
-            <div class="user">
-
-            </div>
-        </div>
-
-
-        </div>
-        <div id="Q4" class="q">
-            <h1>Question 4: Lighting</h1>
-            <div class="text">
-            <div class="def">
-                <ul>
-                    <li>How many lamps,overhead lights, or other light sources do you have in house ?</li>
-                    <li>What is the the total wattage of all the light bulbs in these light sources combined?</li>
-                </ul>
-            </div>
-            <div class="user">
-
-            </div>
-        </div>
-
-        </div>
-        <div id="Q5" class="q">
-            <h1>Question 5: Insulation</h1>
-            <div class="text">
-            <div class="def">
-                <ul>
-                    <li>is your home adequately insulated? If yes, please provide details about the type and quality of
-                        insulation.</li>
-                </ul>
-            </div>
-            <div class="user">
-
-            </div>
-        </div>
-
-        </div>
-        <div id="Q6" class="q">
-            <h1>Question 6: Renewable Energy</h1>
-            <div class="text">
-            <div class="def">
-                <ul>
-                    <li>Are you considering installing solar panels or any other renewable energy sources in the future?
-                    </li>
-                </ul>
-            </div>
-            <div class="user">
-
+            <div id="popup-container" class="popup">
+                <div class="popup-content">
+                    <h2>Tips</h2>
+                    <p>Here are some useful tips...</p>
+                    <button id="close-popup">Close</button>
+                </div>
             </div>
 
-        </div>
 
-        </div>
-        <div id="Q7" class="q">
-            <h1>Question 7: Local Climate</h1>
-            <div class="text">
-            <div class="def">
-                <ul>
-                    <li>What is the average temperature range in your area during the summer and winter months?</li>
-                </ul>
+            <div class="feedback-popup" id="form">
+            <div class="feedback-container relative" >
+                <!-- <button  class=" absolute bg-orange-600 rounded-full p-2  pl-4 pr-4  text-white"
+                    >X</button> -->
+                <h2 class="text-2xl font-bold flex justify-between" style="color: #ca5303;">Feedback Form  <span onclick="ban()" id="close" >X</span></h2>
+                <form class="feedback-form">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <div class="star-rating">
+                        <label for="rating">Rating:</label>
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label class="star" for="star5">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label class="star" for="star4">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label class="star" for="star3">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label class="star" for="star2">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label class="star" for="star1">&#9733;</label>
+                    </div>
+
+                    <label for="feedback">Your Feedback</label>
+                    <textarea id="feedback" name="feedback" required></textarea>
+
+                    <button onclick="submitfeedback()">Submit Feedback</button>
+                </form>
             </div>
-            <div class="user">
-
             </div>
-        </div>
 
 
         </div>
-        <div id="Q8" class="q">
-            <h1>Question 8: Windows and Doors</h1>
-            <div class="text">
-            <div class="def">
-                <ul>
-                    <li>
-                        How many windows and exterior doors does your home have?
-                    </li>
-                    <li>Are they single-pane or double-pane windows?</li>
-                </ul>
-            </div>
-            <div class="user">
 
-            </div>
-        </div>
-        </div>
-
-        <div id="Q9" class="q">
-            <h1>Question 9: Occupancy Patterns</h1>
-            <div class="text">
-            <div class="def">
-                <ul>
-                    <li>
-                        Do you have specific rooms or areas that are frequently occupied or unused during the day?
-                    </li>
-                    <li>Are there any specific times of day when certain areas of your home are used more frequently?
-                    </li>
-                </ul>
-            </div>
-            <div class="user">
-
-            </div>
-        </div>
-        </div>
 
     </div>
-    
+    </div>
 
     <script src="residential.js"></script>
 </body>
