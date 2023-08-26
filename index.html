@@ -51,15 +51,15 @@
         </nav>
 
         <div class="hero">
-            <div id="ihero" class=" mt-14 flex flex-col gap-12" >
+            <div id="ihero" class=" mt-14 flex flex-col gap-12">
                 <h1 class="text-6xl font-bold text-white ">Audit Energy <br><span style="color: #f16f04;">& Save
                         Energy</span></h1>
                 <p class="text-gray-400 ">ElectraOptima: Energizing efficiency. We specialize in precise energy audits,
                     uncovering tailored strategies for sustainable practices and cost savings. Partner with us to drive
                     a greener, more economical future.</p>
-                <div  onclick="getStart()"
-                    class=" but getStart border-2 w-7/12 text-center font-bold text-white p-4 rounded-xl text-2xl" >
-                   Get Start
+                <div onclick="getStart()"
+                    class=" but getStart border-2 w-7/12 text-center font-bold text-white p-4 rounded-xl text-2xl">
+                    Get Start
                 </div>
             </div>
 
@@ -69,99 +69,185 @@
         <div class="features flex flex-col justify-center gap-12 ">
             <h1 class="text-4xl text-center text-white  f">Electra Features</h1>
 
-        <div class="cards">
+            <div class="cards">
 
 
-            <!-- card 1 -->
-            <div class="card">
-                <div class="flex justify-center tem">
-                    <img width="60px" src="assets/calculator .png" alt="">
+                <!-- card 1 -->
+                <div class="card">
+                    <div class="flex justify-center tem">
+                        <img width="60px" src="assets/calculator .png" alt="">
+                    </div>
+                    <p class="text-center p-4 font-bold">Electra Calci</p>
+                    <ol>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Basic Arithmetic Oper.</li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Scientific Functions</li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Memory Functions</li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Percentage Calculator</li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Advanced Calculations</li>
+                    </ol>
+
+                    <div class=" but rounded bg-orange-400 text-white text-xl  text-center m-3 hover:bg-orange-600"
+                        onclick="calculator()">
+                        Get Start
+                    </div>
                 </div>
-                <p class="text-center p-4 font-bold">Electra Calci</p>
-                <ol>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Basic Arithmetic Oper.</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Scientific Functions</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Memory Functions</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Percentage Calculator</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Advanced Calculations</li>
-                </ol>
 
-                <div class=" but rounded bg-orange-400 text-white text-xl  text-center m-3 hover:bg-orange-600" onclick="calculator()">
-                    Get Start
+                <!-- card 2 -->
+
+                <div class="card">
+                    <div class="flex justify-center tem">
+                        <img width="60px" src="assets/icons8-auditor-64.png" alt="">
+                    </div>
+                    <p class="text-center p-4 font-bold">Energy Auditor</p>
+                    <ol>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Energy Consumption Anly.
+                        </li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Efficiency Suggestion</li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Real-time Monitoring</li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Cost Estimations</li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Reporting </li>
+
+                    </ol>
+
+                    <div onclick="Auditor()"
+                        class=" but rounded text-white bg-orange-400 text-xl  text-center m-3 hover:bg-orange-600">
+                        Get Start
+                    </div>
                 </div>
+
+
+                <!-- card 3 -->
+
+                <div class="card">
+                    <div class="flex justify-center tem">
+                        <img width="60px" class="rounded" src="assets/512x512bb-removebg-preview.jpg" alt="">
+                    </div>
+                    <p class="text-center p-4 font-bold">Units Convertor</p>
+                    <ol>
+                        <li><i class="fa-solid fa-check-to-slot " style="color: #fd7608;"></i>Unit Categories</li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Custom Units</li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Inverse Conversion</li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Real-Time Exchange Rates
+                        </li>
+                        <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Offline Mode</li>
+                    </ol>
+
+                    <div onclick="unitconvert()"
+                        class=" but rounded bg-orange-400 text-white text-xl  text-center m-3 hover:bg-orange-600">
+                        Get Start
+                    </div>
+                </div>
+
             </div>
-
-            <!-- card 2 -->
-
-            <div class="card">
-                <div class="flex justify-center tem">
-                    <img width="60px" src="assets/icons8-auditor-64.png" alt="">
-                </div>
-                <p class="text-center p-4 font-bold">Energy Auditor</p>
-                <ol>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Energy Consumption Anly.</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Efficiency Suggestion</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Real-time Monitoring</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Cost Estimations</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Reporting </li>
-                    
-                </ol>
- 
-                <div onclick="Auditor()" class=" but rounded text-white bg-orange-400 text-xl  text-center m-3 hover:bg-orange-600">
-                    Get Start
-                </div>
-            </div>
-
-
-            <!-- card 3 -->
-
-            <div class="card">
-                <div class="flex justify-center tem">
-                    <img width="60px" class="rounded" src="assets/512x512bb-removebg-preview.jpg" alt="">
-                </div>
-                <p class="text-center p-4 font-bold">Units Convertor</p>
-                <ol>
-                    <li><i class="fa-solid fa-check-to-slot " style="color: #fd7608;"></i>Unit Categories</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Custom Units</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Inverse Conversion</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Real-Time Exchange Rates</li>
-                    <li><i class="fa-solid fa-check-to-slot" style="color: #fd7608;"></i>Offline Mode</li>
-                </ol>
-
-                <div onclick="unitconvert()" class=" but rounded bg-orange-400 text-white text-xl  text-center m-3 hover:bg-orange-600">
-                    Get Start
-                </div>
-            </div>
-
-        </div>
 
         </div>
 
 
     </div>
 
-    
+    <!-- <p class="text-white text-6xl p-8">Ratings</p>
+    <div class="relative inbox  w-10/12 gap-10 ">
+       
+        <div class="left-right">
+            <div id="prevButton">
+
+                <i class="fa-regular fa-circle-left fa-2xl" style="color: #f26202;"></i>
+
+            </div>
+            <div id="nextButton">
+
+                <i class="fa-regular fa-circle-right fa-2xl" style="color: #f26202;"></i>
+
+            </div>
+        </div>
+        <div class="ratings absolute  z-10 "></div>
+       <div class="slide rate" id="r1">
+           
+           1
+            
+        </div>
+        <div class="slide rate "  id="r2">
+            2
+        </div> 
+        <div class="slide rate text-white"  id="r3">
+             
+                <div class="p-2 flex items-center ">
+                
+                  <img width="20%"   src="assets/user_1144709.png" alt="">
+                  <p class="w-10/12 font-bold  text-center">User Name</p>
+                  </div>
+                 <div class="p-4 ">
+                    <div class="p-2 text-2xl" style="color: #f16f04; ">
+                        &star;&star;&star;<span class="text-gray-300">&star;&star;</span> 
+                    </div>
+                    <p class="text-gray-400">Easy to use. and effective </p>
+                 </div>
+                
+        </div>
+         <div class="slide rate"  id="r4">
+            4
+        </div> 
+
+
+    </div>
+ -->
+
+
     <footer class="relative">
 
-        <img class="absolute " style="right: 0px; top: -80px;" width="300px" src="assets/animi-removebg-preview.png" alt="">
+        <img class="absolute " style="right: 0px; top: -80px;" width="300px" src="assets/animi-removebg-preview.png"
+            alt="">
 
         <div class=" flex mb-12 flex-col gap-4">
             <h1 class="text-6xl font-bold">Get In Touch</h1>
             <p class="text-xl">the quick fox jumps over the lazy dog</p>
             <div class="mt-12">
-                <a href="https://www.instagram.com/electraoptima/" target="_blank"> <i class="fa-brands fa-instagram fa-2xl" style="color: #ff932e;"></i></a>
-                <a href="https://www.instagram.com/electraoptima/" target="_blank"> <i class="fa-brands fa-facebook fa-2xl" style="color: #f59105;"></i></a>
-                <a href="mailto: hello.electaoptima@gmail.com" target="_blank"> <i class="fa-solid fa-envelope fa-2xl" style="color: #fd7608;"></i></a>
-               
-               
-               
+                <a href="https://www.instagram.com/electraoptima/" target="_blank"> <i
+                        class="fa-brands fa-instagram fa-2xl" style="color: #ff932e;"></i></a>
+                <a href="https://www.instagram.com/electraoptima/" target="_blank"> <i
+                        class="fa-brands fa-facebook fa-2xl" style="color: #f59105;"></i></a>
+                <a href="mailto: hello.electaoptima@gmail.com" target="_blank"> <i class="fa-solid fa-envelope fa-2xl"
+                        style="color: #fd7608;"></i></a>
+
+
+
 
             </div>
         </div>
 
-        <p class="flex  justify-between"><span >&copy; Copyright 2023 electraOptima, All right reserved,</span> <span class="flex gap-5"><span>Privacy Policy </span> <span>Terms & Conditions</span></span></p>
+        <p class="flex  justify-between"><span>&copy; Copyright 2023 electraOptima, All right reserved,</span> <span
+                class="flex gap-5"><span>Privacy Policy </span> <span>Terms & Conditions</span></span></p>
 
     </footer>
+    <!-- <script>
+        const prevButton = document.getElementById("prevButton");
+        const nextButton = document.getElementById("nextButton");
+        const slides = document.querySelectorAll(".slide");
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => {
+                slide.style.display = "none";
+            });
+            
+            
+            slides[index].style.display = "block";
+           
+        }
+
+        showSlide(currentIndex);
+
+        prevButton.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        nextButton.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        });
+
+    </script> -->
     <script src="unitConvertor.js"></script>
 
 </body>

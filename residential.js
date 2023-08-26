@@ -81,7 +81,7 @@ function q9() {
 
 function submit(){
     document.getElementById('upload').style.display ="flex";
-    setTimeout(sub,5000);
+    setTimeout(sub,2000);
 }
 function sub() {
     document.getElementById('cont').style.display = 'none';
@@ -122,3 +122,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function submitfeedback(){
     document.getElementById('form').style.display ='none';
 }
+
+function pdf(){
+    location.href = 'report.html';
+}
+
