@@ -127,3 +127,21 @@ function pdf(){
     location.href = 'report.html';
 }
 
+
+
+// auditing
+
+function calculateBulbStatistics(wattage, totalHours, numBulbs) {
+    
+    var totalEnergyConsumption = (wattage * totalHours * numBulbs) / 1000;
+  
+  
+    var averageOperatingTimePerBulb = totalHours / numBulbs;
+  
+    return {
+      totalEnergyConsumption: totalEnergyConsumption,
+      averageOperatingTimePerBulb: averageOperatingTimePerBulb
+    };
+}
+  
+  
