@@ -83,6 +83,10 @@
             padding: 40px;
             position: relative;
         }
+
+        #btn {
+            z-index: 100;
+        }
     </style>
     </style>
 </head>
@@ -100,7 +104,7 @@
 
     </div>
     <div id="invoice">
-        
+
         <div>
 
 
@@ -163,14 +167,14 @@
                 <li>Water heater temperature setting at [Temperature Setting]</li>
                 <li>Use of low-flow fixtures: [Yes/No]</li>
             </ul>
-            
+
             <h2>Insulation and Windows</h2>
             <p>Our evaluation of insulation and windows revealed:</p>
             <ul>
                 <li>Walls and attic insulation: [Yes/No]</li>
                 <li>Properly sealed windows: [Yes/No]</li>
             </ul>
-            
+
             <h2>Electric Heater</h2>
             <p>For your electric heater used for 4 hours, the wattage is [Wattage].</p>
 
@@ -232,43 +236,13 @@
 
 
     </div>
-</body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
     integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const date = new Date;
-
-        document.getElementById('date').innerText = ` ${date.getMonth() + 1} / ${date.getDate()}  /  ${date.getFullYear()}`;
-    }
-    );
-
-
-    function generatePdf() {
-
-        document.getElementById('invoice').style.width = '90%';
-        const ele = document.getElementById('invoice');
-
-        html2pdf().from(ele).save(`ElectraOptima_Residential_Report.pdf`);
-        setTimeout(() => {
-            document.getElementById('invoice').style.width = '80%';
-        }, 0);
-
-    }
-
-    jQuery(document).ready(function () {
-         
-        $('#btn-print').click(function () {
-            document.getElementById('btn').style.display ='none';
-            window.print();
-            document.getElementById('btn').style.display ='block';
-        })
-    })
-
-
-</script>
+<script src="report.js"></script>
+</body>
 
 </html>
