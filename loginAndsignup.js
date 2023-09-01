@@ -1,42 +1,51 @@
-
-
 function signup() {
+  try {
+    // const email = document.getElementById('email').value;
+    const name = document.getElementById('name').value;
+    const pass = document.getElementById('pass').value;
 
-  let email = document.getElementById('email').value;
-  let name = document.getElementById('name').value;
-  let pass = document.getElementById('pass').value;
-
-  localStorage.setItem(name, pass);
-  console.log("Sign up successful! You can now log in.");
-
-  location.href = 'login.html';
-
-}
-
-
-
-function login() {
-
-  let name = document.getElementById('name').value;
-  let pass = document.getElementById('pass').value;
-
-  if (localStorage.getItem(name) == pass) {
-
-    console.log("login successful! ");
-    location.href = 'unitConvertor.html';
+    localStorage.setItem(name, pass);
+    console.log("Sign up successful! You can now log in.");
+    location.href = 'login.html';
+  } catch (error) {
+    console.error("An error occurred during sign up:", error);
   }
 }
 
-let otpbox = document.getElementById('otp-box');
+function login() {
+  try {
+    const name = document.getElementById('name').value;
+    const pass = document.getElementById('pass').value;
+
+    if (localStorage.getItem(name) === pass) {
+      console.log("Login successful!");
+      location.href = 'unitConvertor.html';
+    } else {
+      console.log("Login failed. Check your credentials.");
+    }
+  } catch (error) {
+    console.error("An error occurred during login:", error);
+  }
+}
+
+const otpbox = document.getElementById('otp-box');
 
 function otp() {
   otpbox.style.display = 'flex';
 }
 
-function sendotp(){
-   document.body.style.display = 'none';
+function sendotp() {
+  try {
+    document.body.style.display = 'none';
+  } catch (error) {
+    console.error("An error occurred while sending OTP:", error);
+  }
 }
 
-document.getElementById('close').addEventListener('click',()=>{
-   otpbox.style.display = 'none';
-})
+document.getElementById('close').addEventListener('click', () => {
+  try {
+    otpbox.style.display = 'none';
+  } catch (error) {
+    console.error("An error occurred while closing the OTP box:", error);
+  }
+});
