@@ -14,10 +14,12 @@ function start(){
 }
 
 function comm(){
+    window.location ='error.html'
     alert("I regret to inform you that it's not presently accessible.");
 }
 
 function indu(){
+    window.location ='error.html'
     alert("I regret to inform you that it's not presently accessible.");
 }
 
