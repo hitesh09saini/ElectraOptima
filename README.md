@@ -49,8 +49,8 @@ To get started with ElectraOptima, you can clone this repository to your local m
 
 1. Navigate to the Repository: Change your current directory to the cloned repository using the cd (change directory) command. For example:
   
-  ```bash
-   cd ElectraOptima
+  
+   `cd ElectraOptima`
 
 
 2. Install Dependencies: If there are any specific dependencies or setup instructions for ElectraOptima, please provide them here. Users may need to install additional software or packages to run your application.
