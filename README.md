@@ -48,7 +48,8 @@ To get started with ElectraOptima, you can clone this repository to your local m
    git clone https://github.com/hitesh09saini/ElectraOptima.git
 
 1. Navigate to the Repository: Change your current directory to the cloned repository using the cd (change directory) command. For example:
-
+  
+  ```bash
    cd ElectraOptima
 
 
