@@ -125,27 +125,19 @@ li {
   margin: 10px;
 }
 
-input {
-  border-radius: 10px;
-  padding-left: 10px;
-  color: #0a0225;
-
-}
-
-
-
-
-
-
 
 .user {
   align-self: flex-end;
-  padding: 20px;
   background: linear-gradient(90deg, #7b17da65, #f55bfa65);
   box-shadow: inset 0px 0px 3px 0px #d3b5f049;
   border-radius: 15px;
   padding: 30px;
   margin: 20px;
+
+}
+
+.user>div {
+  margin: 10px;
 }
 
 .download {
@@ -287,22 +279,35 @@ input {
   border-top: 10px solid #ca5303;
   width: 120px;
   height: 120px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
   animation: spin 2s linear infinite;
 }
 
+
+
 /* Safari */
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.upload{
+.upload {
 
   display: none;
   position: fixed;
@@ -316,6 +321,7 @@ input {
   align-items: center;
 
 }
+
 .popup {
   display: none;
   position: fixed;
@@ -340,7 +346,7 @@ input {
   border: 4px solid #ca5303;
   text-shadow: 1px -2px 1px #8a8484;
   /* box-shadow: 1px 1px 10px 1px #ca5303, 1px 1px 15px 1px #cac703, 1px 1px 15px 1px #fae20db6, */
-    /* inset 1px 1px 15px 1px #e6e5eb65; */
+  /* inset 1px 1px 15px 1px #e6e5eb65; */
 }
 
 .popup-content {
@@ -353,6 +359,85 @@ input {
 
 #close-popup {
   margin-top: 10px;
+}
+
+input[type=number] {
+  color: #0a0225;
+  outline: none;
+  width:150px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #db5507;
+  border-radius: 3px;
+}
+
+table {
+  border: 1px solid #ccc;
+}
+
+#lightBulbsTable {
+  width: 100%;
+  margin: 0 auto;
+  /* background-color: #fff; */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f57003;
+  font-weight: bold;
+}
+
+
+
+select {
+  color: #0a0225;
+  outline: none;
+  padding: 5px;
+
+
+}
+
+.insulation {
+  background-color: #ca5303;
+  padding: 5px;
+}
+
+.insulation>div {
+  margin-top: 10px;
+}
+
+.active {
+  display: block;
+}
+
+#learnMore:hover {
+  background: #5e0a66;
+}
+
+.learn {
+  color: #0a0225;
+  /* display: none; */
+  background-color: #fff;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.learnpop {
+  display: none;
+  background: #080113a4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 @keyframes bounce {
@@ -379,13 +464,44 @@ input {
 
     font-size: 1.2rem;
   }
+
   .loader {
     width: 100px;
     height: 100px;
   }
 
+
 }
 
+@media screen and (max-width:950px) {
+
+
+  th,
+  td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  th {
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .lightBulbInput {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+
+}
 
 @media screen and (max-width:400px) {
   .container {
@@ -412,6 +528,12 @@ input {
     height: 80px;
   }
 
+  select {
+    font-size: 10px;
+  }
+
+
+
 }
 
 
@@ -421,6 +543,10 @@ input {
   .def {
     width: 90%;
     margin-left: 10px;
+  }
+
+  select {
+    font-size: 12px;
   }
 
   .container {
@@ -441,4 +567,5 @@ input {
     width: 60px;
     height: 60px;
   }
+
 }

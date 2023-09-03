@@ -5,10 +5,10 @@ let i = 0;
 function write(id, str) {
     if (i < str.length) {
         try {
-            document.getElementById(id).innerHTML += str.charAt(i); 
+            document.getElementById(id).innerHTML += str.charAt(i);
             i++;
             setTimeout(function () {
-                write(id, str); 
+                write(id, str);
             }, 100);
         } catch (error) {
             console.error("An error occurred in the 'write' function:", error);
@@ -18,7 +18,7 @@ function write(id, str) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     try {
         write('wel', 'Welcome to Residential Energy Auditor.');
     } catch (error) {

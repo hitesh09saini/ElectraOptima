@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐄𝐥𝐞𝐜𝐭𝐫𝐚𝐎𝐩𝐭𝐢𝐦𝐚 | learn About Homes</title>
+    <link rel="shortcut icon" href="assets/solar-energy.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #14021d;
+             display: flex;
+             justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin: 10px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+        
+        .learn {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .learn h2 {
+            font-size: 20px;
+        }
+        
+        .learn p {
+            margin-bottom: 10px;
+        }
+        
+        strong {
+            font-weight: bold;
+            color: #e07a05;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      
+        <h2 >Types of Homes</h2>
+        <div class="learn" id="learnMore" >
+           
+            <p><strong>Single-Family Home:</strong> A standalone dwelling designed for one family. It typically has a front and backyard, offering more privacy and space compared to multi-family homes.</p>
+            
+            <p><strong>Apartment:</strong> A unit within a multi-story building. It's often part of a larger complex with shared amenities. Apartments are ideal for individuals, couples, or small families.</p>
+            
+            <p><strong>Condominium (Condo):</strong> Similar to an apartment but owned rather than rented. Owners share common areas and pay fees for maintenance. Condos provide a balance of ownership and communal living.</p>
+            
+            <p><strong>Townhouse:</strong> Attached homes in a row, sharing walls with neighbors. Often multi-story with a small yard or patio. Combines aspects of single-family and condo living.</p>
+            
+            <p><strong>Duplex:</strong> A building divided into two separate units. Can be owner-occupied or used for rental income.</p>
+            
+            <p><strong>Mobile Home/Manufactured Home:</strong> A prefabricated home that can be transported to a specific location. Typically located in mobile home parks or on private land.</p>
+            
+            <p><strong>Cooperative (Co-op):</strong> Residents own shares in the cooperative corporation rather than owning individual units. Co-op boards often have a say in who can become a resident.</p>
+            
+            <p><strong>Bungalow:</strong> A single-story house with a sloping roof and front porch. Often chosen for its accessibility and cozy design.</p>
+            
+            <p><strong>Cottage:</strong> A small, cozy house, usually located in a rural or scenic location. Perfect for those seeking a retreat from city life.</p>
+            
+            <p><strong>Mansion:</strong> A large, luxurious home often associated with wealth. Features extensive amenities and space.</p>
+            
+            <p><strong>Ranch-style Home:</strong> A single-story home with a long, low-profile design. Typically features an open floor plan.</p>
+            
+            <p><strong>Colonial Home:</strong> A classic American home with symmetrical design. Often has two or more stories with a centered front door.</p>
+            
+            <p><strong>Victorian Home:</strong> Known for intricate, ornate designs and multiple stories. Often features decorative details and asymmetrical architecture.</p>
+            
+            <p><strong>Cabin:</strong> A small, rustic home, usually located in a natural setting.</p>
+            
+            <p><strong>Earthship:</strong> An eco-friendly, self-sustaining home built using natural and recycled materials. Designed to minimize environmental impact.</p>
+        </div>
+    </div>
+    
+    <script>
+        const homeTypes = document.getElementById('homeTypes');
+        const selectedType = document.getElementById('selectedType');
+        const learnMore = document.getElementById('learnMore');
+        
+        homeTypes.addEventListener('change', () => {
+            const selectedOption = homeTypes.options[homeTypes.selectedIndex];
+            selectedType.textContent = selectedOption.text;
+            
+            // Show/hide the "Learn More" section based on the selection
+            if (selectedOption.value === '') {
+                learnMore.style.display = 'none';
+            } else {
+                learnMore.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

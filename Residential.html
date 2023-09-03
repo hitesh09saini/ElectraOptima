@@ -28,39 +28,45 @@
     </nav>
 
 
+
     <div class="container relative" id="demo">
+
         <div id="cont">
             <p id="wel" class="text-xl ">
 
             </p>
 
             <button id="let" style="margin-bottom: 40px;" onclick="letStart()">Let's Start..</button>
-            <div id="Q1" class="q">
-                <h1>Question 1: Electricity Usage</h1>
+            <div id="Q1" class="q" >
+                <h1>Question 1: Electricity Bills Usage</h1>
                 <div class="text">
                     <div class="def">
                         <ul>
-                            <li>How many kilowatt-hours(kwh) of Electricity do you use on average per month? you can
+                            <li>How many kilowatt-hours(kwh) of Electricity do you use on average months (at least 12 )?
+                                you can
                                 find this information on your electricity bills</li>
                         </ul>
 
                     </div>
 
                     <div class="user">
-                        <p>Average Monthly Usage:</p>
-                        <input type="number" id="iq1" placeholder="Enter here..">
-                        <button onclick="showQuestion('Q2') ">Next</button>
+                        <p>Average Usage:</p>
+                        <div>
+                            <input type="number" id="a1" placeholder="KWH">
+                            <button onclick="showQuestion('Q2') ">Next</button>
+                        </div>
                     </div>
 
                 </div>
 
             </div>
             <div id="Q2" class="q">
-                <h1>Question 2: Heating and Cooling</h1>
+                <h1>Question 2: Home Structure</h1>
                 <div class="text">
                     <div class="def">
                         <ul>
-                            <li>How do you heat your home?(e.g., electric heaters, centeral heating)</li>
+                            <li>What type of home do you live in (e.g., single-family house, apartment, condo)?</li>
+                            <li>How many floors does your home have?</li>
                         </ul>
 
 
@@ -68,147 +74,963 @@
 
 
                     <div class="user">
-                        <p>Heating and Cooling:</p>
-                        <input type="number" id="iq1" placeholder="Enter here..">
-
-                        <button onclick="showQuestion('Q3') ">Next</button>
+                        <div>
+                            <label for="homeTypes">Choose a Type of Home:</label>
+                            <select id="homeTypes">
+                                <option value="">Select a type of home</option>
+                                <option value="singleFamily">Single-Family Home</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="condo">Condominium (Condo)</option>
+                                <option value="townhouse">Townhouse</option>
+                                <option value="duplex">Duplex</option>
+                                <option value="mobileHome">Mobile Home/Manufactured Home</option>
+                                <option value="cooperative">Cooperative (Co-op)</option>
+                                <option value="bungalow">Bungalow</option>
+                                <option value="cottage">Cottage</option>
+                                <option value="mansion">Mansion</option>
+                                <option value="ranch">Ranch-style Home</option>
+                                <option value="colonial">Colonial Home</option>
+                                <option value="victorian">Victorian Home</option>
+                                <option value="cabin">Cabin</option>
+                                <option value="earthship">Earthship</option>
+                            </select>
+                        </div>
+                        <p>If you're unsure about the types of homes, you can <a href="learn.html" target="_blank"
+                                style="color: #ca5303;  ">Learn More</a> about each type.</p>
+                        <div>
+                            <input type="number" id="a2" placeholder="Floors No.">
+                            <button onclick="showQuestion('Q3') ">Next</button>
+                        </div>
                     </div>
                 </div>
 
             </div>
             <div id="Q3" class="q">
-                <h1>Question 3: Appliances</h1>
+                <h1>Question 3: Heating and Cooling Systems</h1>
                 <div class="text">
                     <div class="def">
                         <ol>
 
-                            <li>How Often do you use your electrical Stove, and for how long each time?</li>
-
-                            <li>How old is your refrigerator?</li>
-                            <li>Do you have any other energy-intensive appliances (e.g., dishwasher, washing machine,
-                                dryer)? if
-                                yes, please provide usage details.</li>
-
+                            <li>What type of heating system do you have (e.g., furnace, heat pump, radiator)?</li>
+                            <li>What type of cooling system do you have (e.g., central air conditioner, window units)?
+                            </li>
+                            <li>How old are your heating and cooling systems?</li>
+                            <li>How often do you service or clean your heating and cooling systems?</li>
 
                         </ol>
 
                     </div>
                     <div class="user">
-                        <p></p>
-                        <input type="number" id="iq1" placeholder="Enter here..">
-                        <button onclick="showQuestion('Q4') ">Next</button>
+                        <div>
+                            <label for="heatingTypes">Choose a Heating System:</label>
+                            <select id="heatingTypes">
+                                <option value="">Select a heating system</option>
+                                <option value="furnace">Furnace</option>
+                                <option value="heatPump">Heat Pump</option>
+                                <option value="boiler">Boiler</option>
+                                <option value="radiantFloor">Radiant Floor Heating</option>
+                                <option value="electricSpaceHeater">Electric Space Heater</option>
+                                <option value="woodPelletStove">Wood or Pellet Stove</option>
+                                <option value="solarHeating">Solar Heating</option>
+                                <option value="electricResistanceHeater">Electric Resistance Heater</option>
+                                <option value="woodStove">Wood Stove</option>
+                                <option value="oilHeater">Oil Heater</option>
+                                <option value="propaneHeater">Propane Heater</option>
+                                <option value="electricBaseboardHeater">Electric Baseboard Heater</option>
+                                <option value="ceramicHeater">Ceramic Heater</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="coolingTypes">Choose a Cooling System:</label>
+                            <select id="coolingTypes">
+                                <option value="">Select a cooling system</option>
+                                <option value="centralAirConditioner">Central Air Conditioner</option>
+                                <option value="windowUnits">Window Units</option>
+                                <option value="splitSystem">Split System</option>
+                                <option value="evaporativeCooler">Evaporative Cooler</option>
+                                <option value="ductlessMiniSplit">Ductless Mini-Split</option>
+                                <option value="portableAirConditioner">Portable Air Conditioner</option>
+                                <option value="geothermalCooling">Geothermal Cooling</option>
+                                <option value="ceilingFans">Ceiling Fans</option>
+                                <option value="swampCooler">Swamp Cooler</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="heatingAge">Heating Age (in years):</label>
+                            <input type="number" id="heatingAge" placeholder="Heating system">
+                        </div>
+                        <div>
+                            <label for="coolingAge">Cooling Age (in years):</label>
+                            <input type="number" id="coolingAge" placeholder="Cooling system">
+
+                        </div>
+                        <div>
+
+                            <label for="heatingServiceFrequency">Heating Maintenance:</label>
+                            <select id="heatingServiceFrequency">
+                                <option value="">Select frequency</option>
+                                <option value="annually">Annually</option>
+                                <option value="biannually">Biannually</option>
+                                <option value="quarterly">Quarterly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="never">Never</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="heatingServiceFrequency">Cooling Maintenance:</label>
+                            <select id="coolingServiceFrequency">
+                                <option value="">Select frequency</option>
+                                <option value="annually">Annually</option>
+                                <option value="biannually">Biannually</option>
+                                <option value="quarterly">Quarterly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="never">Never</option>
+                            </select>
+
+                        </div>
+
+                        <div>
+
+                            <button onclick="showQuestion('Q4') ">Next</button>
+                        </div>
                     </div>
                 </div>
 
 
             </div>
             <div id="Q4" class="q">
-                <h1>Question 4: Lighting</h1>
+                <h1>Question 4: Hot Water System</h1>
                 <div class="text">
                     <div class="def">
                         <ul>
-                            <li>How many lamps,overhead lights, or other light sources do you have in house ?</li>
-                            <li>What is the the total wattage of all the light bulbs in these light sources combined?
-                            </li>
+                            <li>What type of water heater do you have (e.g., electric, gas, tankless)?</li>
+                            <li>How old is your water heater?</li>
+                            <li>Do you have a timer or any energy-saving features on your water heater?</li>
+                            <li>Check for any leaks in your hot water system, including pipes and connections.</li>
                         </ul>
                     </div>
                     <div class="user">
-                        <input type="number" id="iq1" placeholder="Enter here..">
-                        <button onclick="showQuestion('Q5') ">Next</button>
+                        <div>
+                            <label for="waterHeaterType">Choose a Water Heater Type:</label>
+                            <select id="waterHeaterType">
+                                <option value="">Select a water heater type</option>
+                                <option value="electric">Electric</option>
+                                <option value="gas">Gas</option>
+                                <option value="tankless">Tankless</option>
+                                <option value="solar">Solar</option>
+                                <option value="heatPump">Heat Pump</option>
+                                <option value="oil">Oil</option>
+                                <option value="propane">Propane</option>
+                                <option value="hybrid">Hybrid</option>
+                                <option value="geothermal">Geothermal</option>
+                                <option value="wood">Wood</option>
+                                <option value="pellet">Pellet</option>
+                                <option value="instantaneous">Instantaneous</option>
+                                <option value="storage">Storage</option>
+                                <option value="condensing">Condensing</option>
+                                <option value="pointOfUse">Point of Use</option>
+                                <option value="underSink">Under-Sink</option>
+                                <option value="directVent">Direct Vent</option>
+                                <option value="highEfficiency">High-Efficiency</option>
+                                <option value="onDemand">On-Demand</option>
+                                <option value="heatRecovery">Heat Recovery</option>
+                                <!-- Add more water heater types here -->
+                            </select>
+
+                        </div>
+                        <div>
+                            <label for="waterHeaterAge">Age (years):</label>
+                            <input type="number" id="waterHeaterAge" placeholder="Enter age">
+                        </div>
+                        <div>
+                            <label for="energySavingChoice">have a timer or any energy-saving features:</label>
+                            <select id="energySavingChoice">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+
+                        </div>
+
+                        <div>
+                            <label for="leakCheckChoice">Leaks in Hot Water System:</label>
+                            <select id="leakCheckChoice">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button onclick="showQuestion('Q5') ">Next</button>
+
+                        </div>
+
                     </div>
                 </div>
 
             </div>
             <div id="Q5" class="q">
-                <h1>Question 5: Insulation</h1>
+                <h1>Question 5: Lighting</h1>
                 <div class="text">
                     <div class="def">
                         <ul>
-                            <li>is your home adequately insulated? If yes, please provide details about the type and
-                                quality of
-                                insulation.</li>
+                            <li>What types of light bulbs are used throughout your home (e.g., incandescent, CFL, LED)?
+                            </li>
+                            <li>How many light fixtures are there in your home?</li>
+                            <li>Note the wattage of the bulbs in each fixture. This information is usually printed on
+                                the bulb itself.</li>
+                            <li>Can you estimate the average daily hours you have lights on in your home?</li>
+                            <li>Determine if you have dimmer switches installed for any of your light fixtures. Dimmers
+                                can reduce energy usage when lights are not at full brightness.</li>
+                            <li>Are there any timers or motion sensors installed that control lighting in specific areas
+                                of your home, such as outdoor lights or bathroom fans?</li>
+
                         </ul>
                     </div>
                     <div class="user">
-                        <input type="number" id="iq1" placeholder="Enter here..">
+                        <div>
+                            <table class="lightBulbsTable">
+                                <tr>
+                                    <th>Light Bulb Type</th>
+                                    <th>Wattage (W)</th>
+                                    <th>Quantity</th>
+                                </tr>
+                                <tr>
+                                    <td>Incandescent</td>
+                                    <td><input type="number" id="incandescentWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="incandescentQuantity" min="0" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>CFL (Compact Fluorescent Lamp)</td>
+                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="cflQuantity" min="0" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>LED (Light Emitting Diode)</td>
+                                    <td><input type="number" id="ledWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="ledQuantity" min="0" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>Halogen</td>
+                                    <td><input type="number" id="halogenWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="halogenQuantity" min="0" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>Fluorescent</td>
+                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="fluorescent" min="0" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>Smart Bulbs</td>
+                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="smart" min="0" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>Color Changing Bulbs</td>
+                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="colorChanging" min="0" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>Edison Bulbs</td>
+                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="edison" min="0" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>Spotlight Bulbs</td>
+                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="spotlight" min="0" value="0"></td>
+                                </tr>
+                                <tr>
+                                    <td>Floodlight Bulbs</td>
+                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="floodlight" min="0" value="0"></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div>
+                            <label>Estimated Average Daily Hours Lights Are On:</label>
+                            <input type="number" id="averageDailyHours" min="0" step="0.5" placeholder="Enter hours">
+                        </div>
+                        <div>
+                            <label for="dimmerSwitches">Dimmer switches installed:</label>
+                            <select id="dimmerSwitches">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="dimmerSwitches">Timers or Motion Sensors:</label>
+                            <select id="dimmerSwitches">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+
+                        </div>
+
                         <button onclick="showQuestion('Q6') ">Next</button>
                     </div>
                 </div>
 
             </div>
             <div id="Q6" class="q">
-                <h1>Question 6: Renewable Energy</h1>
+                <h1>Question 6: Appliances and Electronics</h1>
                 <div class="text">
                     <div class="def">
                         <ul>
-                            <li>Are you considering installing solar panels or any other renewable energy sources in the
-                                future?
-                            </li>
+                            <li>List the major appliances in your home (e.g., refrigerator, dishwasher, washing
+                                machine).</li>
+
                         </ul>
                     </div>
                     <div class="user">
-                        <input type="number" id="iq1" placeholder="Enter here..">
-                        <button onclick="showQuestion('Q7') ">Next</button>
+
+                        <h2>Select:</h2>
+                        <div>
+
+
+                            <label for="refrigerator">
+                                <input type="checkbox" id="refrigerator" name="appliance" value="Refrigerator">
+                                Refrigerator
+                            </label><br>
+                            <label for="freezer">
+                                <input type="checkbox" id="freezer" name="appliance" value="Freezer"> Freezer (if
+                                separate from the fridge)
+                            </label><br>
+                            <label for="dishwasher">
+                                <input type="checkbox" id="dishwasher" name="appliance" value="Dishwasher"> Dishwasher
+                            </label><br>
+                            <label for="washingMachine">
+                                <input type="checkbox" id="washingMachine" name="appliance" value="Washing Machine">
+                                Washing Machine
+                            </label><br>
+                            <label for="clothesDryer">
+                                <input type="checkbox" id="clothesDryer" name="appliance" value="Clothes Dryer"> Clothes
+                                Dryer
+                            </label><br>
+                            <label for="ovenRange">
+                                <input type="checkbox" id="ovenRange" name="appliance" value="Oven/Range"> Oven/Range
+                            </label><br>
+                            <label for="microwave">
+                                <input type="checkbox" id="microwave" name="appliance" value="Microwave"> Microwave
+                            </label><br>
+                            <label for="waterHeater">
+                                <input type="checkbox" id="waterHeater" name="appliance" value="Water Heater"> Water
+                                Heater
+                            </label><br>
+                            <label for="airConditioner">
+                                <input type="checkbox" id="airConditioner" name="appliance" value="Air Conditioner"> Air
+                                Conditioner (AC)
+                            </label><br>
+                            <label for="heatingSystem">
+                                <input type="checkbox" id="heatingSystem" name="appliance"
+                                    value="Furnace/Heating System"> Furnace/Heating System
+                            </label><br>
+                            <label for="heatPump">
+                                <input type="checkbox" id="heatPump" name="appliance" value="Heat Pump"> Heat Pump
+                            </label><br>
+                            <label for="ceilingFans">
+                                <input type="checkbox" id="ceilingFans" name="appliance" value="Ceiling Fans"> Ceiling
+                                Fans
+                            </label><br>
+                            <label for="exhaustFans">
+                                <input type="checkbox" id="exhaustFans" name="appliance" value="Exhaust Fans"> Exhaust
+                                Fans (bathroom, kitchen)
+                            </label><br>
+                            <label for="humidifier">
+                                <input type="checkbox" id="humidifier" name="appliance" value="Humidifier"> Humidifier
+                            </label><br>
+                            <label for="dehumidifier">
+                                <input type="checkbox" id="dehumidifier" name="appliance" value="Dehumidifier">
+                                Dehumidifier
+                            </label><br>
+                            <label for="electricKettle">
+                                <input type="checkbox" id="electricKettle" name="appliance" value="Electric Kettle">
+                                Electric Kettle
+                            </label><br>
+                            <label for="coffeeMaker">
+                                <input type="checkbox" id="coffeeMaker" name="appliance" value="Coffee Maker"> Coffee
+                                Maker
+                            </label><br>
+                            <label for="toaster">
+                                <input type="checkbox" id="toaster" name="appliance" value="Toaster"> Toaster
+                            </label><br>
+                            <label for="blender">
+                                <input type="checkbox" id="blender" name="appliance" value="Blender"> Blender
+                            </label><br>
+                            <label for="foodProcessor">
+                                <input type="checkbox" id="foodProcessor" name="appliance" value="Food Processor"> Food
+                                Processor
+                            </label><br>
+                            <label for="standMixer">
+                                <input type="checkbox" id="standMixer" name="appliance" value="Stand Mixer"> Stand Mixer
+                            </label><br>
+                            <label for="breadMaker">
+                                <input type="checkbox" id="breadMaker" name="appliance" value="Bread Maker"> Bread Maker
+                            </label><br>
+                            <label for="iron">
+                                <input type="checkbox" id="iron" name="appliance" value="Iron"> Iron
+                            </label><br>
+                            <label for="vacuumCleaner">
+                                <input type="checkbox" id="vacuumCleaner" name="appliance" value="Vacuum Cleaner">
+                                Vacuum Cleaner
+                            </label><br>
+                            <label for="hairDryer">
+                                <input type="checkbox" id="hairDryer" name="appliance" value="Hair Dryer"> Hair Dryer
+                            </label><br>
+                            <label for="curlingIronStraightener">
+                                <input type="checkbox" id="curlingIronStraightener" name="appliance"
+                                    value="Curling Iron/Straightener"> Curling Iron/Straightener
+                            </label><br>
+                            <label for="electricToothbrushCharger">
+                                <input type="checkbox" id="electricToothbrushCharger" name="appliance"
+                                    value="Electric Toothbrush Charger"> Electric Toothbrush Charger
+                            </label><br>
+                            <label for="waterPump">
+                                <input type="checkbox" id="waterPump" name="appliance" value="Water Pump"> Water Pump
+                                (Well Pump, if applicable)
+                            </label><br>
+                            <label for="sumpPump">
+                                <input type="checkbox" id="sumpPump" name="appliance" value="Sump Pump"> Sump Pump (if
+                                applicable)
+                            </label><br>
+                            <label for="garageDoorOpener">
+                                <input type="checkbox" id="garageDoorOpener" name="appliance"
+                                    value="Garage Door Opener"> Garage Door Opener
+                            </label><br>
+                            <label for="poolPumpHeater">
+                                <input type="checkbox" id="poolPumpHeater" name="appliance"
+                                    value="Swimming Pool Pump and Heater"> Swimming Pool Pump and Heater (if applicable)
+                            </label><br>
+                            <label for="lawnMower">
+                                <input type="checkbox" id="lawnMower" name="appliance" value="Lawn Mower"> Lawn Mower
+                            </label><br>
+                            <label for="snowBlower">
+                                <input type="checkbox" id="snowBlower" name="appliance" value="Snow Blower"> Snow Blower
+                                (if applicable)
+                            </label><br>
+                            <label for="airPurifier">
+                                <input type="checkbox" id="airPurifier" name="appliance" value="Air Purifier"> Air
+                                Purifier
+                            </label><br>
+                            <label for="spaceHeater">
+                                <input type="checkbox" id="spaceHeater" name="appliance" value="Space Heater"> Space
+                                Heater
+                            </label><br>
+                            <label for="electricBlanket">
+                                <input type="checkbox" id="electricBlanket" name="appliance" value="Electric Blanket">
+                                Electric Blanket
+                            </label><br>
+                            <label for="clothesSteamer">
+                                <input type="checkbox" id="clothesSteamer" name="appliance" value="Clothes Steamer">
+                                Clothes Steamer
+                            </label><br>
+                            <label for="electricFireplace">
+                                <input type="checkbox" id="electricFireplace" name="appliance"
+                                    value="Electric Fireplace"> Electric Fireplace
+                            </label><br>
+                            <label for="wineCooler">
+                                <input type="checkbox" id="wineCooler" name="appliance" value="Wine Cooler"> Wine Cooler
+                            </label><br>
+                            <label for="aquariumEquipment">
+                                <input type="checkbox" id="aquariumEquipment" name="appliance"
+                                    value="Aquarium Equipment"> Aquarium Equipment
+                            </label><br>
+                        </div>
+                        <div>
+                            <button onclick="showQuestion('Q62') ">Selected</button>
+                        </div>
                     </div>
+
+                    <div class="user" id="Q62" style="display: none;">
+                        <div>
+                            <table class="lightBulbsTable">
+                                <tr>
+                                    <th>Appliances</th>
+                                    <th>Age</th>
+                                    <th>Make and Model</th>
+                                    <th>Quantity</th>
+                                    <th>Wattage (W)</th>
+                                </tr>
+                                <tr>
+
+                                    <td></td>
+                                    <td><input type="number" id="incandescentage" min="0"></td>
+                                    <td><input type="number" id="incandescentmake" min="0"></td>
+                                    <td><input type="number" id="incandescentstar" min="0"></td>
+                                    <td><input type="number" id="incandescentQuantity" min="0"></td>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div>
+                            <button onclick="showQuestion('Q63'),showQuestion('Q64') ">Ahead</button>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="def q" id="Q63">
+                        <ul>
+
+                            <li>Estimate how often you use each appliance on a daily or weekly basis. For example,
+                                how
+                                many loads of laundry do you do per week, or how often do you run your dishwasher?
+                            </li>
+                            <li>Determine if you regularly clean or maintain your appliances. For example, clean
+                                lint
+                                filters in your dryer, replace air filters in your furnace, or flush your water
+                                heater
+                                as recommended by the manufacturer.</li>
+                            <li>Check if any of your appliances have energy-saving features, such as a delayed start or
+                                eco mode, and whether you use them.</li>
+                            <li>Are your appliances (e.g., refrigerator, stove) in good working condition, with no
+                                visible damage or leaks?</li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="user" id="Q64" style="display: none;">
+                        <style>
+                            td>input[type=checkbox] {
+                                width: 40px;
+                                height: 40px;
+                            }
+                        </style>
+                        <div>
+                            <table class="lightBulbsTable">
+                                <tr>
+                                    <th>Appliances</th>
+                                    <th>ENERGY STAR</th>
+                                    <th>Working Condition</th>
+                                    <th>Maintenance</th>
+
+                                </tr>
+                                <tr>
+
+                                    <td></td>
+                                    <td><input type="checkbox" name="refrigeratorEnergyStar"></td>
+                                    <td><input type="checkbox" name="refrigeratorCondition"></td>
+                                    <td><input type="checkbox" name="refrigeratorEnergyStar"></td>
+
+
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div>
+                            <table class="lightBulbsTable">
+                                <tr>
+                                    <th>Appliances</th>
+
+                                    <th>Energy-Saving Features</th>
+                                    <th>Good Working Condition</th>
+                                    <th>Average Use</th>
+                                </tr>
+                                <tr>
+
+                                    <td></td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+
+                                    <td><input type="number"></td>
+                                </tr>
+
+                            </table>
+                        </div>
+
+
+                        <div>
+                            <button onclick="showQuestion('Q7') ">Next</button>
+                        </div>
+                    </div>
+
+
 
                 </div>
 
             </div>
             <div id="Q7" class="q">
-                <h1>Question 7: Local Climate</h1>
+                <h1>Question 7: Thermostat and Temperature Settings</h1>
                 <div class="text">
                     <div class="def">
                         <ul>
-                            <li>What is the average temperature range in your area during the summer and winter months?
-                            </li>
+                            <li>What temperature do you typically set your thermostat to when you're at home?</li>
+                            <li>What temperature do you set it to when you're away?</li>
+                            <li>Do you have a programmable thermostat?</li>
                         </ul>
                     </div>
                     <div class="user">
-                        <input type="number" id="iq1" placeholder="Enter here..">
-                        <button onclick="showQuestion('Q8') ">Next</button>
+                        <div>
+
+                            <label for="homeTemp">Home Temperature:</label>
+                            <input type="number" name="homeTemp" min="0" placeholder="Enter temperature °C">
+                        </div>
+                        <div>
+                            <label for="awayTemp">Away Temperature:</label>
+                            <input type="number" name="awayTemp" min="0" placeholder="Enter temperature °C">
+                        </div>
+                        <div>
+                            <label for="progThermostat">Programmable Thermostat :</label>
+                            <select name="progThermostat">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button onclick="showQuestion('Q8') ">Next</button>
+                        </div>
+
                     </div>
                 </div>
 
 
             </div>
             <div id="Q8" class="q">
-                <h1>Question 8: Windows and Doors</h1>
+                <h1>Question 8: General Habits</h1>
                 <div class="text">
                     <div class="def">
                         <ul>
-                            <li>
-                                How many windows and exterior doors does your home have?
-                            </li>
-                            <li>Are they single-pane or double-pane windows?</li>
+                            <li> Do your daily routines have a positive impact on energy efficiency?</li>
                         </ul>
                     </div>
                     <div class="user">
-                        <input type="number" id="iq1" placeholder="Enter here..">
+                        <style>
+                            input {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        </style>
+
+                        <div>
+                            <input type="radio" name="dailyRoutines" id="dailyRoutinesYes" value="yes">
+                            <label for="dailyRoutinesYes">Yes</label>
+                            <input type="radio" name="dailyRoutines" id="dailyRoutinesNo" value="no">
+                            <label for="dailyRoutinesNo">No</label>
+                        </div>
                         <button onclick="showQuestion('Q9') ">Next</button>
                     </div>
                 </div>
             </div>
 
             <div id="Q9" class="q">
-                <h1>Question 9: Occupancy Patterns</h1>
+                <h1>Question 9: Air Leaks and Drafts</h1>
                 <div class="text">
                     <div class="def">
                         <ul>
                             <li>
-                                Do you have specific rooms or areas that are frequently occupied or unused during the
-                                day?
+                                Have you noticed any drafts or cold spots in your home?
                             </li>
-                            <li>Are there any specific times of day when certain areas of your home are used more
-                                frequently?
+                            <li>Are there any noticeable gaps or cracks around doors and windows?
                             </li>
                         </ul>
                     </div>
                     <div class="user">
-                        <input type="number" id="iq1" placeholder="Enter here..">
-                        <button onclick="submit()" id="submit">Submit</button>
+                        <p><label for="noticedDrafts">Notice Drafts or Cold Spots?</label></p>
+                        <div>
+                            <input type="radio" name="noticedDrafts" id="noticedDraftsYes" value="yes">
+                            <label for="noticedDraftsYes">Yes</label>
+                            <input type="radio" name="noticedDrafts" id="noticedDraftsNo" value="no">
+                            <label for="noticedDraftsNo">No</label>
+                        </div>
+                        <p> <label for="gapsAroundDoors">Gaps Around Doors/Windows?</label></p>
+                        <div>
+                            <input type="radio" name="gapsAroundDoors" id="gapsAroundDoorsYes" value="yes">
+                            <label for="gapsAroundDoorsYes">Yes</label>
+                            <input type="radio" name="gapsAroundDoors" id="gapsAroundDoorsNo" value="no">
+                            <label for="gapsAroundDoorsNo">No</label>
+
+                        </div>
+                        <button onclick="showQuestion('Q10') ">Next</button>
                     </div>
                 </div>
             </div>
+
+            <div id="Q10" class="q">
+                <h1>Question 10: Insulation</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>
+                                Do you have insulation in your walls? If so, what type and how thick is it?
+                            </li>
+                            <li>Is your attic insulated? If so, what type and how thick is the insulation?
+                            </li>
+                            <li>Is there insulation in your basement or crawl space?</li>
+                            <li>Are there any visible gaps or damage to the exterior walls of your home that might
+                                affect insulation?</li>
+                        </ul>
+                    </div>
+                    <div class="user">
+                        <div>
+                            <label for="wallInsulation">Wall Insulation?</label>
+                            <input type="radio" name="wallInsulation" id="wallInsulationYes" value="yes">
+                            <label for="wallInsulationYes">Yes</label>
+                            <input type="radio" name="wallInsulation" id="wallInsulationNo" value="no">
+                            <label for="wallInsulationNo">No</label>
+
+                        </div>
+                        <!-- walll -->
+
+                        <div class="insulation">
+                            <label for="wallInsulationType">Select Wall Insulation Type:</label>
+                            <div>
+                                <select id="wallInsulationType" name="wallInsulationType">
+                                    <option value="fiberglassBatt">Fiberglass Batt Insulation</option>
+                                    <option value="blownIn">Blown-In Insulation</option>
+                                    <option value="sprayFoam">Spray Foam Insulation</option>
+                                    <option value="rigidFoam">Rigid Foam Insulation</option>
+                                    <option value="mineralWool">Mineral Wool Insulation</option>
+                                    <option value="reflectiveInsulation">Reflective Insulation</option>
+                                    <option value="sips">SIPs (Structural Insulated Panels)</option>
+                                </select>
+
+                            </div>
+                            <div>
+                                <label for="insulationThickness">Insulation Thickness (in inches)</label>
+                                <select name="insulationThickness" id="insulationThickness">
+                                    <option value="less-than-2">Less than 2 inches</option>
+                                    <option value="2-to-4">2 to 4 inches</option>
+                                    <option value="4-to-6">4 to 6 inches</option>
+                                    <option value="more-than-6">More than 6 inches</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <label for="atticInsulation">3. Attic Insulation?</label>
+                            <input type="radio" name="atticInsulation" id="atticInsulationYes" value="yes">
+                            <label for="atticInsulationYes">Yes</label>
+                            <input type="radio" name="atticInsulation" id="atticInsulationNo" value="no">
+                            <label for="atticInsulationNo">No</label>
+
+                        </div>
+
+                        <!-- attic -->
+                        <div class="insulation">
+                            <label for="AtticInsulationType">Select Attic Insulation Type:</label>
+                            <div>
+                                <select id="AtticInsulationType" name="AtticInsulationType">
+                                    <option value="fiberglassBatt">Fiberglass Batt Insulation</option>
+                                    <option value="blownIn">Blown-In Insulation</option>
+                                    <option value="sprayFoam">Spray Foam Insulation</option>
+                                    <option value="rigidFoam">Rigid Foam Insulation</option>
+                                    <option value="mineralWool">Mineral Wool Insulation</option>
+                                    <option value="reflectiveInsulation">Reflective Insulation</option>
+                                    <option value="sips">SIPs (Structural Insulated Panels)</option>
+                                </select>
+
+                            </div>
+                            <div>
+                                <label for="insulationThickness">Insulation Thickness (in inches)</label>
+                                <select name="insulationThickness" id="insulationThickness">
+                                    <option value="less-than-2">Less than 2 inches</option>
+                                    <option value="2-to-4">2 to 4 inches</option>
+                                    <option value="4-to-6">4 to 6 inches</option>
+                                    <option value="more-than-6">More than 6 inches</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <label for="exteriorGaps">Exterior Gaps?</label>
+                            <input type="radio" name="exteriorGaps" id="exteriorGapsYes" value="yes">
+                            <label for="exteriorGapsYes">Yes</label>
+                            <input type="radio" name="exteriorGaps" id="exteriorGapsNo" value="no">
+                            <label for="exteriorGapsNo">No</label>
+                        </div>
+                        <button onclick="showQuestion('Q11') ">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Q11" class="q">
+                <h1>Question 11: Windows and Doors</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>
+                                Are your windows single-pane or double-pane?
+                            </li>
+                            <li>Do your windows have weatherstripping?
+                            </li>
+                            <li>Are your doors properly sealed, or do they have gaps at the bottom or sides?</li>
+                            <li>Are your windows and doors ENERGY STAR certified or energy-efficient models?</li>
+                        </ul>
+                    </div>
+                    <div class="user">
+                        <div>
+                            <label for="windowPane">Window Pane Type</label>
+                            <input type="radio" name="windowPane" id="singlePane" value="single">
+                            <label for="singlePane">Single-pane</label>
+                            <input type="radio" name="windowPane" id="doublePane" value="double">
+                            <label for="doublePane">Double-pane</label>
+                        </div>
+                        <div>
+                            <label for="windowWeatherstripping">Window Weatherstripping?</label>
+                            <input type="radio" name="windowWeatherstripping" id="windowWeatherstrippingYes"
+                                value="yes">
+                            <label for="windowWeatherstrippingYes">Yes</label>
+                            <input type="radio" name="windowWeatherstripping" id="windowWeatherstrippingNo" value="no">
+                            <label for="windowWeatherstrippingNo">No</label>
+                        </div>
+                        <div>
+                            <label for="doorSealing">Door Sealing?</label>
+                            <input type="radio" name="doorSealing" id="doorSealingProper" value="proper">
+                            <label for="doorSealingProper">Properly Sealed</label>
+                            <input type="radio" name="doorSealing" id="doorSealingGaps" value="gaps">
+                            <label for="doorSealingGaps">Gaps Present</label>
+                        </div>
+                        <div>
+                            <label for="energyEfficientWindowsDoors">ENERGY STAR or Energy-Efficient
+                                Windows/Doors?</label>
+                            <input type="radio" name="energyEfficientWindowsDoors" id="energyEfficientYes" value="yes">
+                            <label for="energyEfficientYes">Yes</label>
+                            <input type="radio" name="energyEfficientWindowsDoors" id="energyEfficientNo" value="no">
+                            <label for="energyEfficientNo">No</label>
+                        </div>
+                        <button onclick="showQuestion('Q12') ">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div id="Q12" class="q">
+                <h1>Question 12: Heating and Cooling System Assessment</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>
+                                Are there any unusual noises or odors coming from your heating and cooling systems?
+                            </li>
+                            <li>Do you feel warm or cool air escaping from ducts or vents?
+                            </li>
+                            <li>Are radiators or baseboard heaters functioning properly without leaks?</li>
+                        </ul>
+                    </div>
+                    <div class="user">
+                        <div>
+                            <label for="systemNoisesOdors">Noises or Odors?</label>
+                            <input type="radio" name="systemNoisesOdors" id="noisesOdorsYes" value="yes">
+                            <label for="noisesOdorsYes">Yes</label>
+                            <input type="radio" name="systemNoisesOdors" id="noisesOdorsNo" value="no">
+                            <label for="noisesOdorsNo">No</label>
+                        </div>
+                        <div>
+                            <label for="airEscapeDuctsVents">Air Escape from Ducts or Vents?</label>
+                            <input type="radio" name="airEscapeDuctsVents" id="airEscapeYes" value="yes">
+                            <label for="airEscapeYes">Yes</label>
+                            <input type="radio" name="airEscapeDuctsVents" id="airEscapeNo" value="no">
+                            <label for="airEscapeNo">No</label>
+                        </div>
+                        <div>
+                            <label for="radiatorsBaseboardHeaters">Radiator/Baseboard Heaters?</label>
+                            <input type="radio" name="radiatorsBaseboardHeaters" id="heatersFunctioning"
+                                value="functioning">
+                            <label for="heatersFunctioning">Functioning Properly</label>
+                            <input type="radio" name="radiatorsBaseboardHeaters" id="heatersLeaks" value="leaks">
+                            <label for="heatersLeaks">Leaks Present</label>
+                        </div>
+                        <button onclick="showQuestion('Q13') ">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div id="Q13" class="q">
+                <h1>Question 13: Ventilation</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>
+                                Is your home adequately ventilated, especially in kitchens and bathrooms?
+                            </li>
+                            <li>Do you have exhaust fans, and are they in good working condition?
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="user">
+                        <div>
+                            <label for="adequateVentilation">Adequate Ventilation?</label>
+                            <input type="radio" name="adequateVentilation" id="ventilationYes" value="yes">
+                            <label for="ventilationYes">Yes</label>
+                            <input type="radio" name="adequateVentilation" id="ventilationNo" value="no">
+                            <label for="ventilationNo">No</label>
+                        </div>
+                        <div>
+                            <label for="exhaustFansCondition">Exhaust Fans Condition?</label>
+                            <input type="radio" name="exhaustFansCondition" id="fansWorking" value="working">
+                            <label for="fansWorking">Working</label>
+                            <input type="radio" name="exhaustFansCondition" id="fansNotWorking" value="notWorking">
+                            <label for="fansNotWorking">Not Working</label>
+                        </div>
+                        <button onclick="showQuestion('Q14') ">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div id="Q14" class="q">
+                <h1>Question 14: Fireplace and Chimney</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>Do you use your fireplace? If so, is the damper tightly closed when not in use?</li>
+                            <li>Is your chimney properly sealed, and is the flue in good condition?</li>
+                        </ul>
+                    </div>
+                    <div class="user">
+                        <div>
+                            <label for="fireplaceUsage">Fireplace Usage?</label>
+                            <input type="radio" name="fireplaceUsage" id="fireplaceUsed" value="used">
+                            <label for="fireplaceUsed">Used</label>
+                            <input type="radio" name="fireplaceUsage" id="fireplaceNotUsed" value="notUsed">
+                            <label for="fireplaceNotUsed">Not Used</label>
+                        </div>
+                        <div>
+                            <label for="chimneySealedFlueCondition">Chimney Sealed and Flue Condition?</label>
+                            <input type="radio" name="chimneySealedFlueCondition" id="chimneySealedFlueGood"
+                                value="good">
+                            <label for="chimneySealedFlueGood">Good</label>
+                            <input type="radio" name="chimneySealedFlueCondition" id="chimneyNotSealedFlueCondition"
+                                value="notGood">
+                            <label for="chimneyNotSealedFlueCondition">Not Good</label>
+                        </div>
+                        <button onclick="showQuestion('Q15') ">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div id="Q15" class="q">
+                <h1>Question 15: Exterior</h1>
+                <div class="text">
+                    <div class="def">
+                        <ul>
+                            <li>Do you have shading from trees or other structures that affect the amount of sunlight
+                                entering your home?</li>
+                            <li>Is your roof in good condition with no leaks?</li>
+                        </ul>
+                    </div>
+                    <div class="user">
+                        <div>
+                            <label for="shadingEffect">Shading Effect?</label>
+                            <input type="radio" name="shadingEffect" id="shadingYes" value="yes">
+                            <label for="shadingYes">Yes</label>
+                            <input type="radio" name="shadingEffect" id="shadingNo" value="no">
+                            <label for="shadingNo">No</label>
+                        </div>
+                        <div>
+                            <label for="roofCondition">Roof Condition?</label>
+                            <input type="radio" name="roofCondition" id="roofGood" value="good">
+                            <label for="roofGood">Good</label>
+                            <input type="radio" name="roofCondition" id="roofNotGood" value="notGood">
+                            <label for="roofNotGood">Not Good</label>
+                        </div>
+                        <button onclick=" submit() ">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </div>
         <!-- upload -->
         <div class="upload" id="upload">
@@ -239,17 +1061,26 @@
                     <h2 style="color: rgb(255, 115, 0);">Tips</h2>
                     <p style="color: rgb(16, 3, 51);">Here are some useful tips...</p>
                     <ul>
-                        <li>🌟 Shine Bright with LED Lighting 🌟: Swap out old bulbs for energy-efficient LEDs! They use up to 80% less energy and last way longer, saving both electricity and money. 💡✨ </li>
-                        <li>🏠 Cozy Up Your Castle with Sealing and Insulation 🏠: Seal gaps around windows and doors to keep the comfy air in and the energy waste out! Proper insulation ensures your home stays cozy, all while reducing heating and cooling needs. 🚪❄️☀️</li>
-                        <li>🌡️ Get Smart with Thermostats 🌡️: Upgrade to a smart thermostat for temperature control wizardry! It learns your routine, adjusting for energy savings when you're out or asleep. Set comfort on autopilot while cutting down on energy use. 🤖🌬️🛏️</li>
+                        <li>🌟 Shine Bright with LED Lighting 🌟: Swap out old bulbs for energy-efficient LEDs! They use
+                            up to 80% less energy and last way longer, saving both electricity and money. 💡✨ </li>
+                        <li>🏠 Cozy Up Your Castle with Sealing and Insulation 🏠: Seal gaps around windows and doors to
+                            keep the comfy air in and the energy waste out! Proper insulation ensures your home stays
+                            cozy, all while reducing heating and cooling needs. 🚪❄️☀️</li>
+                        <li>🌡️ Get Smart with Thermostats 🌡️: Upgrade to a smart thermostat for temperature control
+                            wizardry! It learns your routine, adjusting for energy savings when you're out or asleep.
+                            Set comfort on autopilot while cutting down on energy use. 🤖🌬️🛏️</li>
                     </ul>
-                      
-                        
-                     <p style="color: red;">Note: these three awesome tricks, your energy-saving game will be strong and your home will become a hub of efficiency, comfort, and modern marvels! 🏡🌍💪</p>
-                    
+
+
+                    <p style="color: red;">Note: these three awesome tricks, your energy-saving game will be strong and
+                        your home will become a hub of efficiency, comfort, and modern marvels! 🏡🌍💪</p>
+
                     <button id="close-popup">Close</button>
                 </div>
             </div>
+
+
+
 
 
             <div class="feedback-popup" id="form">
@@ -289,11 +1120,13 @@
 
 
         </div>
-       
-    </div>
+
+
+
     </div>
 
-  
+
+
     <script src="residential.js"></script>
 </body>
 
