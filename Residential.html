@@ -37,7 +37,7 @@
             </p>
 
             <button id="let" style="margin-bottom: 40px;" onclick="letStart()">Let's Start..</button>
-            <div id="Q1" class="q" >
+            <div id="Q1" class="q">
                 <h1>Question 1: Electricity Bills Usage</h1>
                 <div class="text">
                     <div class="def">
@@ -52,7 +52,7 @@
                     <div class="user">
                         <p>Average Usage:</p>
                         <div>
-                            <input type="number" id="a1" placeholder="KWH">
+                            <input type="number" id="averageKwh" placeholder="KWH">
                             <button onclick="showQuestion('Q2') ">Next</button>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                         <p>If you're unsure about the types of homes, you can <a href="learn.html" target="_blank"
                                 style="color: #ca5303;  ">Learn More</a> about each type.</p>
                         <div>
-                            <input type="number" id="a2" placeholder="Floors No.">
+                            <input type="number" id="homeNuFloors" placeholder="Floors No.">
                             <button onclick="showQuestion('Q3') ">Next</button>
                         </div>
                     </div>
@@ -177,7 +177,7 @@
                             </select>
                         </div>
                         <div>
-                            <label for="heatingServiceFrequency">Cooling Maintenance:</label>
+                            <label for="coolingServiceFrequency">Cooling Maintenance:</label>
                             <select id="coolingServiceFrequency">
                                 <option value="">Select frequency</option>
                                 <option value="annually">Annually</option>
@@ -315,33 +315,33 @@
                                 </tr>
                                 <tr>
                                     <td>Fluorescent</td>
-                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="fluorescent" min="0" value="0"></td>
+                                    <td><input type="number" id="fluorescentWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="fluorescentQuantity" min="0" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>Smart Bulbs</td>
-                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="smart" min="0" value="0"></td>
+                                    <td><input type="number" id="smartWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="smartQuantity" min="0" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>Color Changing Bulbs</td>
-                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="colorChanging" min="0" value="0"></td>
+                                    <td><input type="number" id="colorChangingWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="colorChangingQuantity" min="0" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>Edison Bulbs</td>
-                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="edison" min="0" value="0"></td>
+                                    <td><input type="number" id="edisonWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="edisonQuantity" min="0" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>Spotlight Bulbs</td>
-                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="spotlight" min="0" value="0"></td>
+                                    <td><input type="number" id="spotlightWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="spotlightQuantity" min="0" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>Floodlight Bulbs</td>
-                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="floodlight" min="0" value="0"></td>
+                                    <td><input type="number" id="floodlightWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="floodlightQuantity" min="0" value="0"></td>
                                 </tr>
 
                             </table>
@@ -358,8 +358,8 @@
                             </select>
                         </div>
                         <div>
-                            <label for="dimmerSwitches">Timers or Motion Sensors:</label>
-                            <select id="dimmerSwitches">
+                            <label for="SensorsSwitches">Timers or Motion Sensors:</label>
+                            <select id="SensorsSwitches">
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
@@ -371,7 +371,7 @@
                 </div>
 
             </div>
-            <div id="Q6" class="q">
+            <div id="Q6" class="q" >
                 <h1>Question 6: Appliances and Electronics</h1>
                 <div class="text">
                     <div class="def">
@@ -396,18 +396,21 @@
                                 separate from the fridge)
                             </label><br>
                             <label for="dishwasher">
-                                <input type="checkbox" id="dishwasher" name="appliance" value="Dishwasher"> Dishwasher
+                                <input type="checkbox" id="dishwasher" name="appliance" value="Dishwasher">
+                                Dishwasher
                             </label><br>
                             <label for="washingMachine">
                                 <input type="checkbox" id="washingMachine" name="appliance" value="Washing Machine">
                                 Washing Machine
                             </label><br>
                             <label for="clothesDryer">
-                                <input type="checkbox" id="clothesDryer" name="appliance" value="Clothes Dryer"> Clothes
+                                <input type="checkbox" id="clothesDryer" name="appliance" value="Clothes Dryer">
+                                Clothes
                                 Dryer
                             </label><br>
                             <label for="ovenRange">
-                                <input type="checkbox" id="ovenRange" name="appliance" value="Oven/Range"> Oven/Range
+                                <input type="checkbox" id="ovenRange" name="appliance" value="Oven/Range">
+                                Oven/Range
                             </label><br>
                             <label for="microwave">
                                 <input type="checkbox" id="microwave" name="appliance" value="Microwave"> Microwave
@@ -417,7 +420,8 @@
                                 Heater
                             </label><br>
                             <label for="airConditioner">
-                                <input type="checkbox" id="airConditioner" name="appliance" value="Air Conditioner"> Air
+                                <input type="checkbox" id="airConditioner" name="appliance" value="Air Conditioner">
+                                Air
                                 Conditioner (AC)
                             </label><br>
                             <label for="heatingSystem">
@@ -428,15 +432,18 @@
                                 <input type="checkbox" id="heatPump" name="appliance" value="Heat Pump"> Heat Pump
                             </label><br>
                             <label for="ceilingFans">
-                                <input type="checkbox" id="ceilingFans" name="appliance" value="Ceiling Fans"> Ceiling
+                                <input type="checkbox" id="ceilingFans" name="appliance" value="Ceiling Fans">
+                                Ceiling
                                 Fans
                             </label><br>
                             <label for="exhaustFans">
-                                <input type="checkbox" id="exhaustFans" name="appliance" value="Exhaust Fans"> Exhaust
-                                Fans (bathroom, kitchen)
+                                <input type="checkbox" id="exhaustFans" name="appliance" value="Exhaust Fans">
+                                Exhaust
+                                Fans
                             </label><br>
                             <label for="humidifier">
-                                <input type="checkbox" id="humidifier" name="appliance" value="Humidifier"> Humidifier
+                                <input type="checkbox" id="humidifier" name="appliance" value="Humidifier">
+                                Humidifier
                             </label><br>
                             <label for="dehumidifier">
                                 <input type="checkbox" id="dehumidifier" name="appliance" value="Dehumidifier">
@@ -447,7 +454,8 @@
                                 Electric Kettle
                             </label><br>
                             <label for="coffeeMaker">
-                                <input type="checkbox" id="coffeeMaker" name="appliance" value="Coffee Maker"> Coffee
+                                <input type="checkbox" id="coffeeMaker" name="appliance" value="Coffee Maker">
+                                Coffee
                                 Maker
                             </label><br>
                             <label for="toaster">
@@ -457,14 +465,17 @@
                                 <input type="checkbox" id="blender" name="appliance" value="Blender"> Blender
                             </label><br>
                             <label for="foodProcessor">
-                                <input type="checkbox" id="foodProcessor" name="appliance" value="Food Processor"> Food
+                                <input type="checkbox" id="foodProcessor" name="appliance" value="Food Processor">
+                                Food
                                 Processor
                             </label><br>
                             <label for="standMixer">
-                                <input type="checkbox" id="standMixer" name="appliance" value="Stand Mixer"> Stand Mixer
+                                <input type="checkbox" id="standMixer" name="appliance" value="Stand Mixer"> Stand
+                                Mixer
                             </label><br>
                             <label for="breadMaker">
-                                <input type="checkbox" id="breadMaker" name="appliance" value="Bread Maker"> Bread Maker
+                                <input type="checkbox" id="breadMaker" name="appliance" value="Bread Maker"> Bread
+                                Maker
                             </label><br>
                             <label for="iron">
                                 <input type="checkbox" id="iron" name="appliance" value="Iron"> Iron
@@ -474,23 +485,25 @@
                                 Vacuum Cleaner
                             </label><br>
                             <label for="hairDryer">
-                                <input type="checkbox" id="hairDryer" name="appliance" value="Hair Dryer"> Hair Dryer
+                                <input type="checkbox" id="hairDryer" name="appliance" value="Hair Dryer"> Hair
+                                Dryer
                             </label><br>
                             <label for="curlingIronStraightener">
                                 <input type="checkbox" id="curlingIronStraightener" name="appliance"
-                                    value="Curling Iron/Straightener"> Curling Iron/Straightener
+                                    value="Curling Iron/Straightener"> Curling Iron
                             </label><br>
                             <label for="electricToothbrushCharger">
                                 <input type="checkbox" id="electricToothbrushCharger" name="appliance"
                                     value="Electric Toothbrush Charger"> Electric Toothbrush Charger
                             </label><br>
                             <label for="waterPump">
-                                <input type="checkbox" id="waterPump" name="appliance" value="Water Pump"> Water Pump
-                                (Well Pump, if applicable)
+                                <input type="checkbox" id="waterPump" name="appliance" value="Water Pump"> Water
+                                Pump
+
                             </label><br>
                             <label for="sumpPump">
-                                <input type="checkbox" id="sumpPump" name="appliance" value="Sump Pump"> Sump Pump (if
-                                applicable)
+                                <input type="checkbox" id="sumpPump" name="appliance" value="Sump Pump"> Sump Pump
+
                             </label><br>
                             <label for="garageDoorOpener">
                                 <input type="checkbox" id="garageDoorOpener" name="appliance"
@@ -498,14 +511,16 @@
                             </label><br>
                             <label for="poolPumpHeater">
                                 <input type="checkbox" id="poolPumpHeater" name="appliance"
-                                    value="Swimming Pool Pump and Heater"> Swimming Pool Pump and Heater (if applicable)
+                                    value="Swimming Pool Pump and Heater"> Swimming Pool Pump
                             </label><br>
                             <label for="lawnMower">
-                                <input type="checkbox" id="lawnMower" name="appliance" value="Lawn Mower"> Lawn Mower
+                                <input type="checkbox" id="lawnMower" name="appliance" value="Lawn Mower"> Lawn
+                                Mower
                             </label><br>
                             <label for="snowBlower">
-                                <input type="checkbox" id="snowBlower" name="appliance" value="Snow Blower"> Snow Blower
-                                (if applicable)
+                                <input type="checkbox" id="snowBlower" name="appliance" value="Snow Blower"> Snow
+                                Blower
+
                             </label><br>
                             <label for="airPurifier">
                                 <input type="checkbox" id="airPurifier" name="appliance" value="Air Purifier"> Air
@@ -528,42 +543,42 @@
                                     value="Electric Fireplace"> Electric Fireplace
                             </label><br>
                             <label for="wineCooler">
-                                <input type="checkbox" id="wineCooler" name="appliance" value="Wine Cooler"> Wine Cooler
+                                <input type="checkbox" id="wineCooler" name="appliance" value="Wine Cooler"> Wine
+                                Cooler
                             </label><br>
                             <label for="aquariumEquipment">
                                 <input type="checkbox" id="aquariumEquipment" name="appliance"
                                     value="Aquarium Equipment"> Aquarium Equipment
                             </label><br>
+
+
                         </div>
                         <div>
-                            <button onclick="showQuestion('Q62') ">Selected</button>
+                            <button onclick="showQuestion('Q62'),handleFormSubmit('applianceTable') ">Selected</button>
                         </div>
                     </div>
 
                     <div class="user" id="Q62" style="display: none;">
                         <div>
-                            <table class="lightBulbsTable">
-                                <tr>
-                                    <th>Appliances</th>
-                                    <th>Age</th>
-                                    <th>Make and Model</th>
-                                    <th>Quantity</th>
-                                    <th>Wattage (W)</th>
-                                </tr>
-                                <tr>
+                            <table id="applianceTable">
+                                <thead>
+                                    <tr>
+                                        <th>Appliances</th>
+                                        <th>Age</th>
+                                        <th>Make and Model</th>
+                                        <th>Quantity</th>
+                                        <th>Wattage (W)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                                    <td></td>
-                                    <td><input type="number" id="incandescentage" min="0"></td>
-                                    <td><input type="number" id="incandescentmake" min="0"></td>
-                                    <td><input type="number" id="incandescentstar" min="0"></td>
-                                    <td><input type="number" id="incandescentQuantity" min="0"></td>
-
-                                </tr>
+                                </tbody>
 
                             </table>
                         </div>
                         <div>
-                            <button onclick="showQuestion('Q63'),showQuestion('Q64') ">Ahead</button>
+                            <button
+                                onclick="showQuestion('Q63'),showQuestion('Q64'),handleFormSubmit('applianceTable1'),applianceCheckedTable()">Ahead</button>
                         </div>
 
                     </div>
@@ -597,45 +612,41 @@
                                 width: 40px;
                                 height: 40px;
                             }
+                            
                         </style>
                         <div>
-                            <table class="lightBulbsTable">
-                                <tr>
-                                    <th>Appliances</th>
-                                    <th>ENERGY STAR</th>
-                                    <th>Working Condition</th>
-                                    <th>Maintenance</th>
+                            <table id="applianceTable1">
+                                <thead>
+                                    <tr>
+                                        <th>Appliances</th>
+                                        <th>ENERGY STAR</th>
+                                        <th>Working Condition</th>
+                                        <th>Maintenance</th>
+    
+                                    </tr>
 
-                                </tr>
-                                <tr>
+                                </thead>
+                                <tbody>
 
-                                    <td></td>
-                                    <td><input type="checkbox" name="refrigeratorEnergyStar"></td>
-                                    <td><input type="checkbox" name="refrigeratorCondition"></td>
-                                    <td><input type="checkbox" name="refrigeratorEnergyStar"></td>
+                                </tbody>
+                                
 
-
-                                </tr>
 
                             </table>
                         </div>
                         <div>
-                            <table class="lightBulbsTable">
-                                <tr>
-                                    <th>Appliances</th>
-
-                                    <th>Energy-Saving Features</th>
-                                    <th>Good Working Condition</th>
-                                    <th>Average Use</th>
-                                </tr>
-                                <tr>
-
-                                    <td></td>
-                                    <td><input type="checkbox"></td>
-                                    <td><input type="checkbox"></td>
-
-                                    <td><input type="number"></td>
-                                </tr>
+                            <table id="applianceTable2">
+                                <thead>
+                                    <tr>
+                                        <th>Appliances</th>
+                                        <th>Energy-Saving Features</th>
+                                        <th>Good Working Condition</th>
+                                        <th>Average Use</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                </tbody>
 
                             </table>
                         </div>
@@ -651,7 +662,7 @@
                 </div>
 
             </div>
-            <div id="Q7" class="q">
+            <div id="Q7" class="q" >
                 <h1>Question 7: Thermostat and Temperature Settings</h1>
                 <div class="text">
                     <div class="def">
@@ -665,15 +676,15 @@
                         <div>
 
                             <label for="homeTemp">Home Temperature:</label>
-                            <input type="number" name="homeTemp" min="0" placeholder="Enter temperature °C">
+                            <input type="number" id="homeTemp" min="0" placeholder="Enter temperature °C">
                         </div>
                         <div>
                             <label for="awayTemp">Away Temperature:</label>
-                            <input type="number" name="awayTemp" min="0" placeholder="Enter temperature °C">
+                            <input type="number" id="awayTemp"  min="0" placeholder="Enter temperature °C">
                         </div>
                         <div>
                             <label for="progThermostat">Programmable Thermostat :</label>
-                            <select name="progThermostat">
+                            <select id="progThermostat">
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
@@ -687,7 +698,7 @@
 
 
             </div>
-            <div id="Q8" class="q">
+            <div id="Q8" class="q" >
                 <h1>Question 8: General Habits</h1>
                 <div class="text">
                     <div class="def">
@@ -714,7 +725,7 @@
                 </div>
             </div>
 
-            <div id="Q9" class="q">
+            <div id="Q9" class="q" >
                 <h1>Question 9: Air Leaks and Drafts</h1>
                 <div class="text">
                     <div class="def">
@@ -747,7 +758,7 @@
                 </div>
             </div>
 
-            <div id="Q10" class="q">
+            <div id="Q10" class="q" >
                 <h1>Question 10: Insulation</h1>
                 <div class="text">
                     <div class="def">
@@ -788,8 +799,8 @@
 
                             </div>
                             <div>
-                                <label for="insulationThickness">Insulation Thickness (in inches)</label>
-                                <select name="insulationThickness" id="insulationThickness">
+                                <label for="wallInsulationThickness">Insulation Thickness (in inches)</label>
+                                <select name="wallInsulationThickness" id="wallInsulationThickness">
                                     <option value="less-than-2">Less than 2 inches</option>
                                     <option value="2-to-4">2 to 4 inches</option>
                                     <option value="4-to-6">4 to 6 inches</option>
@@ -812,7 +823,7 @@
                         <div class="insulation">
                             <label for="AtticInsulationType">Select Attic Insulation Type:</label>
                             <div>
-                                <select id="AtticInsulationType" name="AtticInsulationType">
+                                <select id="atticInsulationType" name="AtticInsulationType">
                                     <option value="fiberglassBatt">Fiberglass Batt Insulation</option>
                                     <option value="blownIn">Blown-In Insulation</option>
                                     <option value="sprayFoam">Spray Foam Insulation</option>
@@ -824,8 +835,8 @@
 
                             </div>
                             <div>
-                                <label for="insulationThickness">Insulation Thickness (in inches)</label>
-                                <select name="insulationThickness" id="insulationThickness">
+                                <label for="AtticInsulationThickness">Insulation Thickness (in inches)</label>
+                                <select name="AtticInsulationThickness" id="atticInsulationThickness">
                                     <option value="less-than-2">Less than 2 inches</option>
                                     <option value="2-to-4">2 to 4 inches</option>
                                     <option value="4-to-6">4 to 6 inches</option>
@@ -847,7 +858,7 @@
                 </div>
             </div>
 
-            <div id="Q11" class="q">
+            <div id="Q11" class="q" >
                 <h1>Question 11: Windows and Doors</h1>
                 <div class="text">
                     <div class="def">
