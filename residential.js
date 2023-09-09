@@ -368,3 +368,8 @@ function reportGeneration(){
 
 
 }
+
+
+function show(){
+    document.getElementById('name').style.display = 'none';
+}

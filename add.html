@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐄𝐥𝐞𝐜𝐭𝐫𝐚𝐎𝐩𝐭𝐢𝐦𝐚 | Auditing Report</title>
+    <link rel="shortcut icon" href="assets/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'OpenSans-Semibold';
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background-color: #838181;
+            position: relative;
+            
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 20px;
+            color: #ccc;
+            background-color: #0d012e;
+            display: flex; justify-content: center; align-items: center; gap: 10px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+            background-repeat: no-repeat;
+            background-color: rgb(43, 43, 117);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #0E0237;
+        }
+
+        .finding {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .recommendation {
+            margin-top: 5px;
+            padding: 5px;
+            background-color: #f2dede;
+        }
+
+        .management-response {
+            margin-top: 5px;
+            padding: 5px;
+            background-color: #d9edf7;
+        }
+
+        #invoice {
+            width: 80%;
+            justify-content: center;
+            display: flex;
+            padding: 40px;
+            position: relative; 
+            background-color: #fff;
+        }
+
+
+        #btn {
+            z-index: 100;
+        }
+
+        #backImg{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          gap: 10%;
+          display: none;
+          justify-content: center;
+        }
+
+        #backImg>img{
+           opacity: 0.2;
+           width: 60%;
+           margin-top: 40%;
+        }
+
+       
+     
+    </style>
+    </style>
+</head>
+
+<body>
+    <!-- side buttons -->
+    <div id="btn"
+        style="position: fixed; top: 10px; padding: 20px; border-radius: 10px; background-color: #0d012e; left: 10px; ">
+        <div id="btn-down" onclick="generatePdf()" style="padding: 10px;">
+            <i class="fa-solid fa-download fa-2xl" style="color: #fa7b05;"></i>
+
+        </div>
+        <div id="btn-print" style="padding: 10px; margin-top: 60px; ">
+            <i class="fa-solid fa-print fa-2xl" style="color: #fa7b05;"></i>
+        </div>
+
+    </div>
+    <div id="invoice">
+        <!-- water maker -->
+        <div id="backImg">
+            <img    src="./assets/logo.png" alt="ElectraOptima">
+            <img   src="./assets/logo.png" alt="ElectraOptima">
+            <img  src="./assets/logo.png" alt="ElectraOptima">
+        </div>
+         <!-- report -->
+    
+        <div>
+
+           
+                <div>
+                    
+                    <h1 ><a href="index.html">
+                        <img width="60px" src="assets/logo.png" alt=""></a> 
+                        Energy Audit Report for Your Home</h1>
+                </div>
+                <div>
+                    <h2>Summary:</h2>
+                    <ul>
+                        <li id="date">Report Date: [Report Date]</li>
+                        <li>Auditor: ElectraOptima</li>
+                        <li>Client: [Your Name]</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Table of Contents</h2>
+                    <ol>
+                        <li><a href="#section1">Executive Summary</a></li>
+                        <li><a href="#section2">Introduction</a></li>
+                        <li><a href="#section3">Audit Scope and Methodology</a></li>
+                        <li><a href="#section4">Electricity Bills and Usage</a></li>
+                        <li><a href="#section5">Lighting</a></li>
+                        <li><a href="#section6">Appliance Usage</a></li>
+                        <li><a href="#section7">Water Heating</a></li>
+                        <li><a href="#section8">Home Temperature and Thermostat</a></li>
+                        <li><a href="#section9">Daily Routines</a></li>
+                        <li><a href="#section10">Drafts and Gaps</a></li>
+                        <li><a href="#section11">Insulation and Gaps</a></li>
+                        <li><a href="#section12">Windows and Doors</a></li>
+                        <li><a href="#section13">Energy Efficient Appliances</a></li>
+                        <li><a href="#section14">Noises, Air Escape, and Heaters</a></li>
+                        <li><a href="#section15">Ventilation and Fans</a></li>
+                        <li><a href="#section16">Fireplace and Chimney</a></li>
+                        <li><a href="#section17">Shading and Roof</a></li>
+                        <li><a href="#section18">Recommendations</a></li>
+                        <li><a href="#section19">Conclusion</a></li>
+                        <li><a href="#section20">Acknowledgments</a></li>
+                    </ol>
+                </div>
+                
+                <div id="section1">
+                    <h2>1. Executive Summary</h2>
+                    <p>We are pleased to present the findings of the energy audit conducted for your home. This audit aimed to assess your energy consumption patterns and provide recommendations for optimizing energy efficiency. Your commitment to sustainability is commendable, and we believe that implementing these recommendations will lead to significant energy savings and a reduced carbon footprint.</p>
+                    <h3>Key Findings:</h3>
+                    <p>[Insert a brief summary of the most important findings and potential savings.]</p>
+                </div>
+                
+                <div id="section2">
+                    <h2>2. Introduction</h2>
+                    <p>Your proactive approach to energy efficiency is commendable, and the recommendations provided in this report align with your commitment to sustainable living. Implementing these measures will not only lead to reduced energy expenses but will also contribute to environmental preservation. We encourage you to explore additional avenues for conservation and remain available for any inquiries you may have.</p>
+                </div>
+                
+                <div id="section3">
+                    <h2>3. Audit Scope and Methodology</h2>
+                    <p>In this section, outline the scope of the audit and the methodology used to conduct the assessment. Describe how data was collected, the duration of the audit, and any specific tools or equipment used.</p>
+                </div>
+                
+                <div id="section4">
+                    <h2>4. Electricity Bills and Usage</h2>
+                    <p>Provide details of the client's electricity consumption, including average monthly bills and total energy consumption. You can include a chart illustrating monthly usage patterns.</p>
+                </div>
+                
+                <div id="section5">
+                    <h2>5. Lighting</h2>
+                    <p>Detail the types of lighting in the home, including LED, fluorescent, and incandescent bulbs. Provide recommendations for upgrading to energy-efficient lighting.</p>
+                </div>
+                
+                <div id="section6">
+                    <h2>6. Appliance Usage</h2>
+                    <p>Summarize the client's appliance usage patterns and recommend energy-efficient appliances where applicable. Include calculations for potential energy savings.</p>
+                </div>
+                
+                <div id="section7">
+                    <h2>7. Water Heating</h2>
+                    <p>Discuss water heater settings, low-flow fixtures, and recommendations for improving water heating efficiency.</p>
+                </div>
+                
+                <div id="section8">
+                    <h2>8. Home Temperature and Thermostat</h2>
+                    <p>Describe the client's home temperature settings and the use of programmable thermostats. Recommend optimal temperature ranges for efficiency.</p>
+                </div>
+                
+                <div id="section9">
+                    <h2>9. Daily Routines</h2>
+                    <p>Highlight daily routines that impact energy consumption and provide suggestions for optimization.</p>
+                </div>
+                
+                <div id="section10">
+                    <h2>10. Drafts and Gaps</h2>
+                    <p>Detail any drafts or gaps noticed in the home and recommend sealing solutions.</p>
+                </div>
+                
+                <div id="section11">
+                    <h2>11. Insulation and Gaps</h2>
+                    <p>Provide information on the insulation in walls and the attic, recommend upgrades, and address any gaps in exterior walls.</p>
+                </div>
+                
+                <div id="section12">
+                    <h2>12. Windows and Doors</h2>
+                    <p>Discuss the condition of windows and doors, recommend weatherstripping and sealing solutions.</p>
+                </div>
+                
+                <div id="section13">
+                    <h2>13. Energy Efficient Appliances</h2>
+                    <p>List energy-efficient appliances that can be considered for replacement.</p>
+                </div>
+                
+                <div id="section14">
+                    <h2>14. Noises, Air Escape, and Heaters</h2>
+                    <p>Address any noise, air escape issues, and heater efficiency, recommending maintenance or upgrades.</p>
+                </div>
+                
+                <div id="section15">
+                    <h2>15. Ventilation and Fans</h2>
+                    <p>Discuss ventilation systems and the condition of fans, providing recommendations.</p>
+                </div>
+                
+                <div id="section16">
+                    <h2>16. Fireplace and Chimney</h2>
+                    <p>Evaluate fireplace usage and chimney condition, recommending sealing solutions.</p>
+                </div>
+                
+                <div id="section17">
+                    <h2>17. Shading and Roof</h2>
+                    <p>Examine shading options and roof condition, providing suggestions for improvement.</p>
+                </div>
+                
+                <div id="section18">
+                    <h2>18. Recommendations</h2>
+                    <ol>
+                        <li>
+                            <h3>Lighting Recommendations</h3>
+                            <ul>
+                                <li>Replace all incandescent bulbs with energy-efficient LED or CFL bulbs to reduce lighting energy consumption.</li>
+                                <li>Install motion sensors for outdoor lighting to ensure lights are only on when needed, reducing wasted energy.</li>
+                                <li>Consider installing dimmer switches for indoor lighting to have better control over light levels and energy usage.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Appliance Recommendations</h3>
+                            <ul>
+                                <li>Upgrade old, energy-hungry appliances such as refrigerators, washing machines, and dishwashers to ENERGY STAR-rated models, which are more energy-efficient.</li>
+                                <li>Unplug devices not in use or use smart power strips to prevent standby power consumption, which can account for a significant portion of electricity usage.</li>
+                                <li>Set appliances like refrigerators and freezers to optimal temperature settings recommended by the manufacturer to reduce energy waste.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Water Heating Recommendations</h3>
+                            <ul>
+                                <li>Insulate the water heater and hot water pipes to reduce heat loss, improving water heating efficiency.</li>
+                                <li>Lower the water heater's thermostat temperature if it's set too high, as this can lead to energy wastage.</li>
+                                <li>Consider replacing the current water heater with a tankless or on-demand water heater for improved energy efficiency and on-demand hot water supply.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Home Temperature and Thermostat Recommendations</h3>
+                            <ul>
+                                <li>Install a programmable thermostat to automatically adjust heating and cooling settings based on your daily schedule, optimizing energy usage.</li>
+                                <li>Seal gaps around doors and windows to prevent drafts and maintain indoor temperatures more effectively.</li>
+                                <li>Add insulation to the attic and walls to improve temperature regulation and reduce heating and cooling energy needs.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Daily Routines Recommendations</h3>
+                            <ul>
+                                <li>Encourage energy-efficient habits like turning off lights and appliances when not in use.</li>
+                                <li>Limit the use of space heaters and use them sparingly to avoid excessive energy consumption.</li>
+                                <li>Opt for natural daylighting when possible by opening curtains and blinds to reduce the need for artificial lighting during the day.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Drafts and Gaps Recommendations</h3>
+                            <ul>
+                                <li>Caulk and weatherstrip gaps around windows and doors to prevent cold air infiltration during winter and warm air infiltration during summer.</li>
+                                <li>Inspect and seal gaps in the attic, basement, and crawl spaces to eliminate drafts and reduce energy loss.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Insulation and Gaps Recommendations</h3>
+                            <ul>
+                                <li>Upgrade insulation in walls and the attic to improve thermal resistance and reduce heating and cooling energy requirements.</li>
+                                <li>Address any gaps or voids in exterior walls that may be contributing to energy loss.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Windows and Doors Recommendations</h3>
+                            <ul>
+                                <li>Consider upgrading to energy-efficient windows and doors with double or triple-pane glass and proper insulation to reduce heat transfer.</li>
+                                <li>Install weatherstripping and door sweeps to seal gaps around doors and windows, preventing drafts.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Energy Efficient Appliances Recommendations</h3>
+                            <ul>
+                                <li>Invest in energy-efficient HVAC systems for heating and cooling, ensuring they are appropriately sized for your home.</li>
+                                <li>Upgrade to high-efficiency air conditioning units and furnaces to reduce energy consumption during extreme temperatures.</li>
+                                <li>Consider installing ceiling fans and attic fans to improve ventilation and reduce the need for air conditioning during the summer.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Noises, Air Escape, and Heaters Recommendations</h3>
+                            <ul>
+                                <li>Schedule regular maintenance for heating and cooling systems to ensure they operate efficiently and quietly.</li>
+                                <li>Replace or repair noisy or inefficient HVAC components to reduce energy consumption and discomfort.</li>
+                                <li>Consider zoning your heating and cooling systems to only condition the areas of your home that are in use, saving energy in unoccupied spaces.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Ventilation and Fans Recommendations</h3>
+                            <ul>
+                                <li>Clean and maintain ventilation fans in bathrooms and kitchens to ensure they function properly and efficiently.</li>
+                                <li>Use ceiling fans to improve airflow and distribute conditioned air more evenly throughout your home, reducing the workload on your HVAC system.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Fireplace and Chimney Recommendations</h3>
+                            <ul>
+                                <li>Ensure the damper on your fireplace is closed when not in use to prevent heat loss and drafts.</li>
+                                <li>Install airtight fireplace doors to improve energy efficiency and prevent heat from escaping through the chimney.</li>
+                                <li>Regularly inspect and maintain the chimney to ensure it is free of obstructions and drafts.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Shading and Roof Recommendations</h3>
+                            <ul>
+                                <li>Install energy-efficient window treatments such as blinds or shades to block excessive sunlight and reduce cooling needs in the summer.</li>
+                                <li>Consider adding reflective roofing materials to reduce heat absorption and lower cooling demands.</li>
+                                <li>Plant shade trees or install awnings to block direct sunlight from entering your home, reducing cooling requirements.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Renewable Energy Options Recommendations</h3>
+                            <ul>
+                                <li>Evaluate the feasibility of installing solar panels on your roof to generate clean, renewable electricity and reduce your reliance on the grid.</li>
+                                <li>Explore the potential for wind turbines or small wind energy systems to generate electricity for your home if suitable in your location.</li>
+                                <li>Consider geothermal heating and cooling systems to harness the earth's energy for efficient temperature regulation.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <!-- Add more recommendations as needed -->
+                </div>
+                
+                <div id="section19">
+                    <h2>19. Conclusion</h2>
+                    <p>Your commitment to energy efficiency is commendable, and the recommendations provided in this report are tailored to your needs. By implementing these measures, you will not only reduce energy expenses but also contribute to environmental conservation.</p>
+                </div>
+                
+                <div id="section20">
+                    <h2>20. Acknowledgments</h2>
+                    <p>We extend our gratitude for your participation in this energy audit. If you require further assistance or wish to discuss these recommendations in more detail, please do not hesitate to contact us.</p>
+                    <p><strong>Sincerely,</strong><br> ElectraOptima<br><em>Energy Audit Specialist</em><br><strong>Email:</strong> <a href="mailto:hello.electraoptima@gmail.com">hello.electraoptima@gmail.com</a></p>
+                </div>
+           
+            
+
+
+        </div>
+
+
+    </div>
+    <!-- <script src="residential.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <!-- <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="report.js"></script> -->
+</body>
+
+</html>
