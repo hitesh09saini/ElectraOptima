@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Simulate an error by accessing a non-existent element
         const date = new Date();
         document.getElementById('date').innerText = `Report Date: ${date.getMonth() + 1} / ${date.getDate()}  /  ${date.getFullYear()}`;
+        
     } catch (error) {
 
         window.location.href = 'error.html';

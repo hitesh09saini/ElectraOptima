@@ -19,6 +19,7 @@
             padding: 30px;
             background-color: #838181;
             position: relative;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
         }
 
@@ -164,6 +165,11 @@
         #name-btn:hover{
             background-color:#fa9130;
         }
+        #input-group-p{
+            color: red;
+            font-size: 1rem;
+            display: none;
+        }
 
         @media screen and (max-width:520px) {
             .input-group {
@@ -181,9 +187,10 @@
 
 <body>
     <div class="name" id="name">
-        <div class="input-group">
+        <div class="input-group" id="input-group">
+            <p id="input-group-p"></p>
 
-            <input type="text" placeholder="Username" />
+            <input type="text" placeholder="Username" id="user-name" />
             <br>
             <div id="name-btn" onclick="show()">
              Submit
@@ -230,7 +237,7 @@
                 <ul>
                     <li id="date">Report Date: </li>
                     <li>Auditor: ElectraOptima</li>
-                    <li>Client: [Your Name]</li>
+                    <li id="Client-Name"></li>
                 </ul>
             </div>
             <div>

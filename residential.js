@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Function to submit and show progress
 function submit() {
 
-    try { 
+    try {
         reportGeneration();
         document.getElementById('upload').style.display = 'flex';
         setTimeout(sub, 3000);
@@ -363,13 +363,27 @@ let roofNotGood = document.getElementById('roofNotGood');
 
 // Report generation 
 
-function reportGeneration(){
+function reportGeneration() {
 
 
 
 }
 
 
-function show(){
-    document.getElementById('name').style.display = 'none';
+function show() {
+    let name = document.getElementById('user-name').value;
+    document.getElementById('Client-Name').innerText = `Client: ${name}`;
+    if (name.charAt(0) >= 'A' && name.charAt(0) <= 'Z') {
+        document.getElementById('name').style.display = 'none';
+    }else if(name==''){
+        document.getElementById('input-group-p').style.display = 'block';
+        document.getElementById('input-group-p').innerText = 'Enter Your Name';
+        document.getElementById('input-group').style.border = '2px solid red';
+     }else {
+        document.getElementById('input-group-p').style.display = 'block';
+        document.getElementById('input-group-p').innerText = ' Enter first letter capitale';
+        document.getElementById('input-group').style.border = '2px solid red';
+
+    }
+
 }
