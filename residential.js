@@ -128,20 +128,7 @@ function pdf() {
     }
 }
 
-// Function to calculate bulb statistics
-function calculateBulbStatistics(wattage, totalHours, numBulbs) {
-    try {
-        var totalEnergyConsumption = (wattage * totalHours * numBulbs) / 1000;
-        var averageOperatingTimePerBulb = totalHours / numBulbs;
-        return {
-            totalEnergyConsumption: totalEnergyConsumption,
-            averageOperatingTimePerBulb: averageOperatingTimePerBulb
-        };
-    } catch (error) {
-        console.error("An error occurred in the 'calculateBulbStatistics' function:", error);
-        return null; // or handle the error as needed
-    }
-}
+
 
 // Event listeners for opening and closing a popup
 document.addEventListener('DOMContentLoaded', function () {
@@ -181,60 +168,6 @@ function submit() {
 
 
 
-// q1
-let averageKwh = document.getElementById('averageKwh');
-
-// q2
-let homeTypes = document.getElementById('homeTypes');
-let homeNuFloors = document.getElementById('homeNuFloors');
-
-// q3
-let heatingTypes = document.getElementById('heatingTypes');
-let coolingTypes = document.getElementById('coolingTypes');
-let heatingAge = document.getElementById('heatingAge');
-let coolingAge = document.getElementById('coolingAge');
-let heatingServiceFrequency = document.getElementById('heatingServiceFrequency');
-let coolingServiceFrequency = document.getElementById('coolingServiceFrequency');
-
-// q4
-let waterHeaterType = document.getElementById('waterHeaterType');
-let waterHeaterAge = document.getElementById('waterHeaterAge');
-let energySavingChoice = document.getElementById('energySavingChoice');
-let leakCheckChoice = document.getElementById('leakCheckChoice');
-
-// q5
-let incandescentWattage = document.getElementById('incandescentWattage');
-let cflWattage = document.getElementById('cflWattage');
-let ledWattage = document.getElementById('ledWattage');
-let halogenWattage = document.getElementById('halogenWattage');
-let fluorescentWattage = document.getElementById('fluorescentWattage');
-let smartWattage = document.getElementById('smartWattage');
-let colorChangingWattage = document.getElementById('colorChangingWattage');
-let edisonWattage = document.getElementById('edisonWattage');
-let spotlightWattage = document.getElementById('spotlightWattage');
-let floodlightWattage = document.getElementById('floodlightWattage');
-
-let incandescentQuantity = document.getElementById('incandescentQuantity');
-let cflQuantity = document.getElementById('cflQuantity');
-let ledQuantity = document.getElementById('ledQuantity');
-let halogenQuantity = document.getElementById('halogenQuantity');
-let fluorescentQuantity = document.getElementById('fluorescentQuantity');
-let smartQuantity = document.getElementById('smartQuantity');
-let colorChangingQuantity = document.getElementById('colorChangingQuantity');
-let edisonQuantity = document.getElementById('edisonQuantity');
-let spotlightQuantity = document.getElementById('spotlightQuantity');
-let floodlightQuantity = document.getElementById('floodlightQuantity');
-
-let averageDailyHours = document.getElementById('averageDailyHours');
-let dimmerSwitches = document.getElementById('dimmerSwitches');
-let SensorsSwitches = document.getElementById('SensorsSwitches');
-
-// q6
-
-
-// Function to add an appliance to the table
-
-
 function handleFormSubmit(applianceTable) {
 
     console.log(applianceTable);
@@ -267,6 +200,7 @@ function handleFormSubmit(applianceTable) {
 }
 
 
+
 function applianceCheckedTable() {
     const tableBody = document.querySelector(`#applianceTable2 tbody`);
     const checkboxes = document.querySelectorAll('input[name="appliance"]');
@@ -285,10 +219,10 @@ function applianceCheckedTable() {
 
 
             newRow.innerHTML = ` <td>${applianceName}</td>
-                                 <td><input type="checkbox"></td>
-                                <td><input type="checkbox"></td>
-                                 <td><input type="number"></td>
-                                   `;
+                             <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
+                             <td><input type="number"></td>
+                               `;
         }
     });
 
@@ -296,77 +230,124 @@ function applianceCheckedTable() {
 
 
 
-// q7
-let homeTemp = document.getElementById('homeTemp');
-let awayTemp = document.getElementById('awayTemp');
-let progThermostat = document.getElementById('progThermostat');
-
-// q8
-let dailyRoutinesYes = document.getElementById('dailyRoutinesYes');
-let dailyRoutinesNo = document.getElementById('dailyRoutinesNo');
-
-// q9
-let noticedDraftsYes = document.getElementById('noticedDraftsYes');
-let noticedDraftsNo = document.getElementById('noticedDraftsNo');
-let gapsAroundDoorsYes = document.getElementById('gapsAroundDoorsYes');
-let gapsAroundDoorsNo = document.getElementById('gapsAroundDoorsNo');
-
-// q10
-let wallInsulationYes = document.getElementById('wallInsulationYes');
-let wallInsulationNo = document.getElementById('wallInsulationNo');
-let wallInsulationType = document.getElementById('wallInsulationType');
-let wallInsulationThickness = document.getElementById('wallInsulationThickness');
-let atticInsulationYes = document.getElementById('atticInsulationYes');
-let atticInsulationNo = document.getElementById('atticInsulationNo');
-let atticInsulationType = document.getElementById('atticInsulationType');
-let atticInsulationThickness = document.getElementById('atticInsulationThickness');
-let exteriorGapsYes = document.getElementById('exteriorGapsYes');
-let exteriorGapsNo = document.getElementById('exteriorGapsNo');
-
-// q11
-let singlePane = document.getElementById('singlePane');
-let doublePane = document.getElementById('doublePane');
-let windowWeatherstrippingYes = document.getElementById('windowWeatherstrippingYes');
-let windowWeatherstrippingNo = document.getElementById('windowWeatherstrippingNo');
-let doorSealingProper = document.getElementById('doorSealingProper');
-let doorSealingGaps = document.getElementById('doorSealingGaps');
-let energyEfficientYes = document.getElementById('energyEfficientYes');
-let energyEfficientNo = document.getElementById('energyEfficientNo');
-
-// q12
-let noisesOdorsYes = document.getElementById('noisesOdorsYes');
-let noisesOdorsNo = document.getElementById('noisesOdorsNo');
-let airEscapeYes = document.getElementById('airEscapeYes');
-let airEscapeNo = document.getElementById('airEscapeNo');
-let heatersFunctioning = document.getElementById('heatersFunctioning');
-let heatersLeaks = document.getElementById('heatersLeaks');
-
-// q13
-let ventilationYes = document.getElementById('ventilationYes');
-let ventilationNo = document.getElementById('ventilationNo');
-let fansWorking = document.getElementById('fansWorking');
-let fansNotWorking = document.getElementById('fansNotWorking');
-
-// q14
-let fireplaceUsed = document.getElementById('fireplaceUsed');
-let fireplaceNotUsed = document.getElementById('fireplaceNotUsed');
-let chimneySealedFlueGood = document.getElementById('chimneySealedFlueGood');
-let chimneyNotSealedFlueCondition = document.getElementById('chimneyNotSealedFlueCondition');
-
-// q15
-let shadingYes = document.getElementById('shadingYes');
-let shadingNo = document.getElementById('shadingNo');
-let roofGood = document.getElementById('roofGood');
-let roofNotGood = document.getElementById('roofNotGood');
-
-
-
-// Report generation 
 
 function reportGeneration() {
 
+    // q1
+    let averageKwh = document.getElementById('averageKwh');
+    // ans
+    // document.getElementById('reoprtBills').innerText = averageKwh.value;
+
+    // q2
+    let homeTypes = document.getElementById('homeTypes');
+    let homeNuFloors = document.getElementById('homeNuFloors');
+    // // ans
+    // document.getElementById('').innerText = homeTypes.value;
+    // document.getElementById('').innerText = homeNuFloors.value;
+
+    // q3
+    let heatingTypes = document.getElementById('heatingTypes');
+    let coolingTypes = document.getElementById('coolingTypes');
+    let heatingAge = document.getElementById('heatingAge');
+    let coolingAge = document.getElementById('coolingAge');
+    let heatingServiceFrequency = document.getElementById('heatingServiceFrequency');
+    let coolingServiceFrequency = document.getElementById('coolingServiceFrequency');
+
+    // q4
+    let waterHeaterType = document.getElementById('waterHeaterType');
+    let waterHeaterAge = document.getElementById('waterHeaterAge');
+    let energySavingChoice = document.getElementById('energySavingChoice');
+    let leakCheckChoice = document.getElementById('leakCheckChoice');
+
+    // q5
 
 
+    let averageDailyHours = document.getElementById('averageDailyHours');
+    let dimmerSwitches = document.getElementById('dimmerSwitches');
+    let SensorsSwitches = document.getElementById('SensorsSwitches');
+
+
+    // q6
+
+
+    // q7-
+    let homeTemp = document.getElementById('homeTemp');
+    let awayTemp = document.getElementById('awayTemp');
+    let progThermostat = document.getElementById('progThermostat');
+
+
+    // q8
+
+
+    let dailyRoutinesYes = document.getElementById('dailyRoutinesYes');
+    let dailyRoutinesNo = document.getElementById('dailyRoutinesNo');
+    let reportDailyRoutines = document.getElementById('reportDailyRoutines_sec8');
+
+    // q9
+    let noticedDraftsYes = document.getElementById('noticedDraftsYes');
+    let noticedDraftsNo = document.getElementById('noticedDraftsNo');
+    let gapsAroundDoorsYes = document.getElementById('gapsAroundDoorsYes');
+    let gapsAroundDoorsNo = document.getElementById('gapsAroundDoorsNo');
+
+ 
+
+    // q10
+    let wallInsulationYes = document.getElementById('wallInsulationYes');
+    let wallInsulationNo = document.getElementById('wallInsulationNo');
+    let wallInsulationType = document.getElementById('wallInsulationType');
+    let wallInsulationThickness = document.getElementById('wallInsulationThickness');
+    let atticInsulationYes = document.getElementById('atticInsulationYes');
+    let atticInsulationNo = document.getElementById('atticInsulationNo');
+    let atticInsulationType = document.getElementById('atticInsulationType');
+    let atticInsulationThickness = document.getElementById('atticInsulationThickness');
+    let exteriorGapsYes = document.getElementById('exteriorGapsYes');
+    let exteriorGapsNo = document.getElementById('exteriorGapsNo');
+
+    
+
+    // q11
+    let singlePane = document.getElementById('singlePane');
+    let doublePane = document.getElementById('doublePane');
+    let windowWeatherstrippingYes = document.getElementById('windowWeatherstrippingYes');
+    let windowWeatherstrippingNo = document.getElementById('windowWeatherstrippingNo');
+    let doorSealingProper = document.getElementById('doorSealingProper');
+    let doorSealingGaps = document.getElementById('doorSealingGaps');
+    let energyEfficientYes = document.getElementById('energyEfficientYes');
+    let energyEfficientNo = document.getElementById('energyEfficientNo');
+
+
+    // q12
+    let noisesOdorsYes = document.getElementById('noisesOdorsYes');
+    let noisesOdorsNo = document.getElementById('noisesOdorsNo');
+    let airEscapeYes = document.getElementById('airEscapeYes');
+    let airEscapeNo = document.getElementById('airEscapeNo');
+    let heatersFunctioning = document.getElementById('heatersFunctioning');
+    let heatersLeaks = document.getElementById('heatersLeaks');
+
+  
+
+    // q13
+    let ventilationYes = document.getElementById('ventilationYes');
+    let ventilationNo = document.getElementById('ventilationNo');
+    let fansWorking = document.getElementById('fansWorking');
+    let fansNotWorking = document.getElementById('fansNotWorking');
+
+  
+
+    // q14
+    let fireplaceUsed = document.getElementById('fireplaceUsed');
+    let fireplaceNotUsed = document.getElementById('fireplaceNotUsed');
+    let chimneySealedFlueGood = document.getElementById('chimneySealedFlueGood');
+    let chimneyNotSealedFlueCondition = document.getElementById('chimneyNotSealedFlueCondition');
+    // ans
+  
+
+    // q15
+    let shadingYes = document.getElementById('shadingYes');
+    let shadingNo = document.getElementById('shadingNo');
+    let roofGood = document.getElementById('roofGood');
+    let roofNotGood = document.getElementById('roofNotGood');
+  
 }
 
 
@@ -375,11 +356,11 @@ function show() {
     document.getElementById('Client-Name').innerText = `Client: ${name}`;
     if (name.charAt(0) >= 'A' && name.charAt(0) <= 'Z') {
         document.getElementById('name').style.display = 'none';
-    }else if(name==''){
+    } else if (name == '') {
         document.getElementById('input-group-p').style.display = 'block';
         document.getElementById('input-group-p').innerText = 'Enter Your Name';
         document.getElementById('input-group').style.border = '2px solid red';
-     }else {
+    } else {
         document.getElementById('input-group-p').style.display = 'block';
         document.getElementById('input-group-p').innerText = ' Enter first letter capitale';
         document.getElementById('input-group').style.border = '2px solid red';
@@ -387,3 +368,4 @@ function show() {
     }
 
 }
+

@@ -115,7 +115,7 @@
             /* margin-top: 30%; */
         }
 
-        @page{
+        @page {
             size: A4;
             margin: 10mm;
             bleed: 7pt;
@@ -160,19 +160,20 @@
             color: #fa7b05;
         }
 
-        #name-btn{
+        #name-btn {
             width: 90%;
             color: #fff;
             padding: 2px;
             border-radius: 10px;
             text-align: center;
-            background-color:#ff7b00;
+            background-color: #ff7b00;
         }
 
-        #name-btn:hover{
-            background-color:#fa9130;
+        #name-btn:hover {
+            background-color: #fa9130;
         }
-        #input-group-p{
+
+        #input-group-p {
             color: red;
             font-size: 1rem;
             display: none;
@@ -183,6 +184,7 @@
                 width: 70%;
                 font-size: 1rem;
             }
+
             .input-group>input {
                 font-size: 1rem;
             }
@@ -200,7 +202,7 @@
             <input type="text" placeholder="Username" id="user-name" />
             <br>
             <div id="name-btn" onclick="show()">
-             Submit
+                Submit
             </div>
         </div>
     </div>
@@ -252,24 +254,23 @@
                 <ol>
                     <li><a href="#section1">Executive Summary</a></li>
                     <li><a href="#section2">Introduction</a></li>
-                    <li><a href="#section3">Audit Scope and Methodology</a></li>
-                    <li><a href="#section4">Electricity Bills and Usage</a></li>
-                    <li><a href="#section5">Lighting</a></li>
-                    <li><a href="#section6">Appliance Usage</a></li>
-                    <li><a href="#section7">Water Heating</a></li>
-                    <li><a href="#section8">Home Temperature and Thermostat</a></li>
-                    <li><a href="#section9">Daily Routines</a></li>
-                    <li><a href="#section10">Drafts and Gaps</a></li>
-                    <li><a href="#section11">Insulation and Gaps</a></li>
-                    <li><a href="#section12">Windows and Doors</a></li>
-                    <li><a href="#section13">Energy Efficient Appliances</a></li>
-                    <li><a href="#section14">Noises, Air Escape, and Heaters</a></li>
-                    <li><a href="#section15">Ventilation and Fans</a></li>
-                    <li><a href="#section16">Fireplace and Chimney</a></li>
-                    <li><a href="#section17">Shading and Roof</a></li>
-                    <li><a href="#section18">Recommendations</a></li>
-                    <li><a href="#section19">Conclusion</a></li>
-                    <li><a href="#section20">Acknowledgments</a></li>
+                    <li><a href="#section3">Electricity Bills and Usage</a></li>
+                    <li><a href="#section4">Lighting</a></li>
+                    <li><a href="#section5">Appliance Usage</a></li>
+                    <li><a href="#section6">Water Heating</a></li>
+                    <li><a href="#section7">Home Temperature and Thermostat</a></li>
+                    <li><a href="#section8">Daily Routines</a></li>
+                    <li><a href="#section9">Drafts and Gaps</a></li>
+                    <li><a href="#section10">Insulation and Gaps</a></li>
+                    <li><a href="#section11">Windows and Doors</a></li>
+                    <li><a href="#section12">Energy Efficient Appliances</a></li>
+                    <li><a href="#section13">Noises, Air Escape, and Heaters</a></li>
+                    <li><a href="#section14">Ventilation and Fans</a></li>
+                    <li><a href="#section15">Fireplace and Chimney</a></li>
+                    <li><a href="#section16">Shading and Roof</a></li>
+                    <li><a href="#section17">Recommendations</a></li>
+                    <li><a href="#section18">Conclusion</a></li>
+                    <li><a href="#section19">Acknowledgments</a></li>
                 </ol>
             </div>
 
@@ -279,8 +280,7 @@
                     to assess your energy consumption patterns and provide recommendations for optimizing energy
                     efficiency. Your commitment to sustainability is commendable, and we believe that implementing these
                     recommendations will lead to significant energy savings and a reduced carbon footprint.</p>
-                <h3>Key Findings:</h3>
-                <p>[Insert a brief summary of the most important findings and potential savings.]</p>
+
             </div>
 
             <div id="section2">
@@ -292,92 +292,86 @@
                     have.</p>
             </div>
 
+
             <div id="section3">
-                <h2>3. Audit Scope and Methodology</h2>
-                <p>In this section, outline the scope of the audit and the methodology used to conduct the assessment.
-                    Describe how data was collected, the duration of the audit, and any specific tools or equipment
-                    used.</p>
+                <h2>3. Electricity Bills and Usage</h2>
+                <p>Average Monthly Usage : <span id="reoprtBills"></span></p>
             </div>
 
             <div id="section4">
-                <h2>4. Electricity Bills and Usage</h2>
-                <p>Provide details of the client's electricity consumption, including average monthly bills and total
-                    energy consumption. You can include a chart illustrating monthly usage patterns.</p>
+                <h2>4. Lighting</h2>
+               <p id="reportLight">
+
+               </p>
             </div>
 
             <div id="section5">
-                <h2>5. Lighting</h2>
-                <p>Detail the types of lighting in the home, including LED, fluorescent, and incandescent bulbs. Provide
-                    recommendations for upgrading to energy-efficient lighting.</p>
-            </div>
-
-            <div id="section6">
-                <h2>6. Appliance Usage</h2>
+                <h2>5. Appliance Usage</h2>
                 <p>Summarize the client's appliance usage patterns and recommend energy-efficient appliances where
                     applicable. Include calculations for potential energy savings.</p>
             </div>
 
-            <div id="section7">
-                <h2>7. Water Heating</h2>
+            <div id="section6">
+                <h2>6. Water Heating</h2>
                 <p>Discuss water heater settings, low-flow fixtures, and recommendations for improving water heating
                     efficiency.</p>
             </div>
 
-            <div id="section8">
-                <h2>8. Home Temperature and Thermostat</h2>
+            <div id="section7">
+                <h2>7. Home Temperature and Thermostat</h2>
                 <p>Describe the client's home temperature settings and the use of programmable thermostats. Recommend
                     optimal temperature ranges for efficiency.</p>
             </div>
 
+            <div id="section8">
+                <h2>8. Daily Routines</h2>
+                <p id="reportDailyRoutines_sec8">Highlight daily routines that impact energy consumption and provide suggestions for optimization.</p>
+            </div>
+
             <div id="section9">
-                <h2>9. Daily Routines</h2>
-                <p>Highlight daily routines that impact energy consumption and provide suggestions for optimization.</p>
+                <h2>9. Drafts and Gaps</h2>
+                <p id="">Detail any drafts or gaps noticed in the home and recommend sealing solutions.</p>
             </div>
 
             <div id="section10">
-                <h2>10. Drafts and Gaps</h2>
-                <p>Detail any drafts or gaps noticed in the home and recommend sealing solutions.</p>
-            </div>
-
-            <div id="section11">
-                <h2>11. Insulation and Gaps</h2>
+                <h2>10. Insulation and Gaps</h2>
                 <p>Provide information on the insulation in walls and the attic, recommend upgrades, and address any
                     gaps in exterior walls.</p>
             </div>
 
-            <div id="section12">
-                <h2>12. Windows and Doors</h2>
+            <div id="section11">
+                <h2>11. Windows and Doors</h2>
                 <p>Discuss the condition of windows and doors, recommend weatherstripping and sealing solutions.</p>
             </div>
 
-            <div id="section13">
-                <h2>13. Energy Efficient Appliances</h2>
+            <div id="section12">
+                <h2>12. Energy Efficient Appliances</h2>
                 <p>List energy-efficient appliances that can be considered for replacement.</p>
             </div>
 
-            <div id="section14">
-                <h2>14. Noises, Air Escape, and Heaters</h2>
+            <div id="section13">
+                <h2>13. Noises, Air Escape, and Heaters</h2>
                 <p>Address any noise, air escape issues, and heater efficiency, recommending maintenance or upgrades.
                 </p>
             </div>
 
-            <div id="section15">
-                <h2>15. Ventilation and Fans</h2>
+            <div id="section14">
+                <h2>14. Ventilation and Fans</h2>
                 <p>Discuss ventilation systems and the condition of fans, providing recommendations.</p>
             </div>
 
-            <div id="section16">
-                <h2>16. Fireplace and Chimney</h2>
+            <div id="section15">
+                <h2>15. Fireplace and Chimney</h2>
                 <p>Evaluate fireplace usage and chimney condition, recommending sealing solutions.</p>
             </div>
 
-            <div id="section17">
-                <h2>17. Shading and Roof</h2>
+            <div id="section16">
+                <h2>16. Shading and Roof</h2>
                 <p>Examine shading options and roof condition, providing suggestions for improvement.</p>
             </div>
 
-            <div id="section18">
-                <h2>18. Recommendations</h2>
+            <div id="section17">
+                <h2>17. Recommendations</h2>
                 <ol>
                     <li>
                         <h3>Lighting Recommendations</h3>
@@ -529,15 +523,15 @@
                 <!-- Add more recommendations as needed -->
             </div>
 
-            <div id="section19">
-                <h2>19. Conclusion</h2>
+            <div id="section18">
+                <h2>18. Conclusion</h2>
                 <p>Your commitment to energy efficiency is commendable, and the recommendations provided in this report
                     are tailored to your needs. By implementing these measures, you will not only reduce energy expenses
                     but also contribute to environmental conservation.</p>
             </div>
 
-            <div id="section20">
-                <h2>20. Acknowledgments</h2>
+            <div id="section19">
+                <h2>19. Acknowledgments</h2>
                 <p>We extend our gratitude for your participation in this energy audit. If you require further
                     assistance or wish to discuss these recommendations in more detail, please do not hesitate to
                     contact us.</p>
