@@ -36,7 +36,7 @@
 
             </p>
 
-            <button id="let" style="margin-bottom: 40px;" onclick="letStart()">Let's Start..</button>
+            <button id="let" style="margin-bottom: 40px;" onclick="letStart(),submit()">Let's Start..</button>
             <div id="Q1" class="q">
                 <h1>Question 1: Electricity Bills Usage</h1>
                 <div class="text">
@@ -267,7 +267,7 @@
                 </div>
 
             </div>
-            <div id="Q5" class="q" >
+            <div id="Q5" class="q">
                 <h1>Question 5: Lighting</h1>
                 <div class="text">
                     <div class="def">
@@ -295,53 +295,61 @@
                                 </tr>
                                 <tr>
                                     <td>Incandescent</td>
-                                    <td><input type="number" id="incandescentWattage"  min="0" value="0"></td>
-                                    <td><input type="number" id="incandescentQuantity" title="Incandescent" min="0" value="0"></td>
+                                    <td><input type="number" id="incandescentWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="incandescentQuantity" title="Incandescent" min="0"
+                                            value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>CFL (Compact Fluorescent Lamp)</td>
-                                    <td><input type="number" id="cflWattage"  min="0" value="0"></td>
+                                    <td><input type="number" id="cflWattage" min="0" value="0"></td>
                                     <td><input type="number" id="cflQuantity" title="CFL" min="0" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>LED (Light Emitting Diode)</td>
-                                    <td><input type="number" id="ledWattage"  min="0" value="0"></td>
+                                    <td><input type="number" id="ledWattage" min="0" value="0"></td>
                                     <td><input type="number" id="ledQuantity" title="LED" min="0" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>Halogen</td>
-                                    <td><input type="number" id="halogenWattage"  min="0" value="0"></td>
-                                    <td><input type="number" id="halogenQuantity" title="Halogen" min="0" value="0"></td>
+                                    <td><input type="number" id="halogenWattage" min="0" value="0"></td>
+                                    <td><input type="number" id="halogenQuantity" title="Halogen" min="0" value="0">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Fluorescent</td>
                                     <td><input type="number" id="fluorescentWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="fluorescentQuantity" title="Fluorescent" min="0" value="0"></td>
+                                    <td><input type="number" id="fluorescentQuantity" title="Fluorescent" min="0"
+                                            value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>Smart Bulbs</td>
                                     <td><input type="number" id="smartWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="smartQuantity" title="Smart Bulb" min="0" value="0"></td>
+                                    <td><input type="number" id="smartQuantity" title="Smart Bulb" min="0" value="0">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Color Changing Bulbs</td>
                                     <td><input type="number" id="colorChangingWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="colorChangingQuantity" title="Color Changing Bulb" min="0" value="0"></td>
+                                    <td><input type="number" id="colorChangingQuantity" title="Color Changing Bulb"
+                                            min="0" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>Edison Bulbs</td>
                                     <td><input type="number" id="edisonWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="edisonQuantity" title="Edison Bulb" min="0" value="0"></td>
+                                    <td><input type="number" id="edisonQuantity" title="Edison Bulb" min="0" value="0">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Spotlight Bulbs</td>
                                     <td><input type="number" id="spotlightWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="spotlightQuantity" title="Spotlight Bulb" min="0" value="0"></td>
+                                    <td><input type="number" id="spotlightQuantity" title="Spotlight Bulb" min="0"
+                                            value="0"></td>
                                 </tr>
                                 <tr>
                                     <td>Floodlight Bulbs</td>
                                     <td><input type="number" id="floodlightWattage" min="0" value="0"></td>
-                                    <td><input type="number" id="floodlightQuantity" title="Floodlight" min="0" value="0"></td>
+                                    <td><input type="number" id="floodlightQuantity" title="Floodlight" min="0"
+                                            value="0"></td>
                                 </tr>
 
                             </table>
@@ -371,7 +379,7 @@
                 </div>
 
             </div>
-            <div id="Q6" class="q" >
+            <div id="Q6" class="q">
                 <h1>Question 6: Appliances and Electronics</h1>
                 <div class="text">
                     <div class="def">
@@ -612,7 +620,6 @@
                                 width: 40px;
                                 height: 40px;
                             }
-                            
                         </style>
                         <div>
                             <table id="applianceTable1">
@@ -622,14 +629,14 @@
                                         <th>ENERGY STAR</th>
                                         <th>Working Condition</th>
                                         <th>Maintenance</th>
-    
+
                                     </tr>
 
                                 </thead>
                                 <tbody>
 
                                 </tbody>
-                                
+
 
 
                             </table>
@@ -645,7 +652,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                   
+
                                 </tbody>
 
                             </table>
@@ -662,7 +669,7 @@
                 </div>
 
             </div>
-            <div id="Q7" class="q" >
+            <div id="Q7" class="q">
                 <h1>Question 7: Thermostat and Temperature Settings</h1>
                 <div class="text">
                     <div class="def">
@@ -680,7 +687,7 @@
                         </div>
                         <div>
                             <label for="awayTemp">Away Temperature:</label>
-                            <input type="number" id="awayTemp"  min="0" placeholder="Enter temperature °C">
+                            <input type="number" id="awayTemp" min="0" placeholder="Enter temperature °C">
                         </div>
                         <div>
                             <label for="progThermostat">Programmable Thermostat :</label>
@@ -698,7 +705,7 @@
 
 
             </div>
-            <div id="Q8" class="q"  >
+            <div id="Q8" class="q">
                 <h1>Question 8: General Habits</h1>
                 <div class="text">
                     <div class="def">
@@ -725,7 +732,7 @@
                 </div>
             </div>
 
-            <div id="Q9" class="q" >
+            <div id="Q9" class="q">
                 <h1>Question 9: Air Leaks and Drafts</h1>
                 <div class="text">
                     <div class="def">
@@ -758,7 +765,7 @@
                 </div>
             </div>
 
-            <div id="Q10" class="q" >
+            <div id="Q10" class="q">
                 <h1>Question 10: Insulation</h1>
                 <div class="text">
                     <div class="def">
@@ -858,7 +865,7 @@
                 </div>
             </div>
 
-            <div id="Q11" class="q" >
+            <div id="Q11" class="q">
                 <h1>Question 11: Windows and Doors</h1>
                 <div class="text">
                     <div class="def">
@@ -1052,12 +1059,67 @@
 
         <div class="flex-col flex " id="gen">
             <p id="report" class="pb-8 text-4xl font-bold text-center">
-
             </p>
-            <div class="download" onclick="pdf()">
-                <i class="fa-solid fa-file-arrow-down fa-2xl" style="color: #000529;"></i> Download your report
+            <!-- download -->
+            <div class="flex justify-center" >
+
+                <div class="demo" >
+                    <div class="demo__drone-cont demo__drone-cont--takeoff">
+                        <div class="demo__drone-cont demo__drone-cont--shift-x">
+                            <div class="demo__drone-cont demo__drone-cont--landing">
+                                <svg viewBox="0 0 136 112" class="demo__drone">
+                                    <g class="demo__drone-leaving">
+                                        <path class="demo__drone-arm" d="M52,46 c0,0 -15,5 -15,20 l15,10" />
+                                        <path class="demo__drone-arm demo__drone-arm--2"
+                                            d="M52,46 c0,0 -15,5 -15,20 l15,10" />
+                                        <path class="demo__drone-yellow"
+                                            d="M28,36 l20,0 a20,9 0,0,1 40,0 l20,0 l0,8 l-10,0 c-10,0 -15,0 -23,10 l-14,0 c-10,-10 -15,-10 -23,-10 l-10,0z" />
+                                        <path class="demo__drone-green" d="M16,12 a10,10 0,0,1 20,0 l-10,50z" />
+                                        <path class="demo__drone-green" d="M100,12 a10,10 0,0,1 20,0 l-10,50z" />
+                                        <path class="demo__drone-yellow"
+                                            d="M9,8 l34,0 a8,8 0,0,1 0,16 l-34,0 a8,8 0,0,1 0,-16z" />
+                                        <path class="demo__drone-yellow"
+                                            d="M93,8 l34,0 a8,8 0,0,1 0,16 l-34,0 a8,8 0,0,1 0,-16z" />
+                                    </g>
+                                    <path class="demo__drone-package demo__drone-green"
+                                        d="M50,70 l36,0 l-4,45 l-28,0z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo__circle">
+                        <div class="demo__circle-inner">
+                            <svg viewBox="0 0 16 20" class="demo__circle-package">
+                                <path d="M0,0 16,0 13,20 3,20z" />
+                            </svg>
+                            <div class="demo__circle-grabbers"></div>
+                        </div>
+                        <svg viewBox="0 0 40 40" class="demo__circle-progress">
+                            <path class="demo__circle-progress-line" d="M20,0 a20,20 0 0,1 0,40 a20,20 0 0,1 0,-40" />
+                            <path class="demo__circle-progress-checkmark" d="M14,19 19,24 29,14" />
+                        </svg>
+                    </div>
+                    <div class="demo__text-fields">
+                        <div class="demo__text demo__text--step-0" style="color: black;">Generate Report</div>
+                        <div class="demo__text demo__text--step-1">
+                            Processing
+                            <span class="demo__text-dots"><span>.</span></span>
+                        </div>
+                        <div class="demo__text demo__text--step-2">
+                            Delivering
+                            <span class="demo__text-dots"><span>.</span></span>
+                        </div>
+                        <div class="demo__text demo__text--step-3">It's on the way</div>
+                        <div class="demo__text demo__text--step-4" onclick="pdf()">Get Report</div>
+                    </div>
+                    <div class="demo__revert-line"></div>
+                </div>
+
+
             </div>
 
+
+            <!-- email -->
             <div class=" md:flex justify-between  items-center">
                 <div id="open-popup" class="m-5"><i class="fa-solid fa-lightbulb fa-beat fa-xl"
                         style="color: #ff7e05;"></i><br> Show <br> Tips</div>
@@ -1067,6 +1129,7 @@
 
             </div>
 
+            <!-- tips -->
             <div id="popup-container" class="popup">
                 <div class="popup-content m-4">
                     <h2 style="color: rgb(255, 115, 0);">Tips</h2>
@@ -1092,10 +1155,16 @@
 
 
 
-
+            <!-- feedback -->
 
             <div class="feedback-popup" id="form">
                 <div class="feedback-container relative">
+                    <style>
+                        input{
+                            width: 80%;
+                            height: 40px;
+                        }
+                    </style>
                     <!-- <button  class=" absolute bg-orange-600 rounded-full p-2  pl-4 pr-4  text-white"
                     >X</button> -->
                     <h2 class="text-2xl font-bold flex justify-between" style="color: #ca5303;">Feedback Form <span
@@ -1138,6 +1207,8 @@
 
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="residential.js"></script>
 </body>
 

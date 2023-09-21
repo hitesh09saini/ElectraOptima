@@ -84,7 +84,7 @@ function sub() {
         document.getElementById('upload').style.display = 'none';
         document.getElementById('gen').style.display = 'flex';
         write('report', 'The Auditing process is completed.');
-        setTimeout(openFeedback, 5000);
+        setTimeout(openFeedback, Math.floor(Math.random() * 9001) + 1000);
     } catch (error) {
         console.error("An error occurred in the 'sub' function:", error);
     }
@@ -228,6 +228,39 @@ function applianceCheckedTable() {
 
 }
 
+// download button
+
+
+
+const $demo = document.querySelector('.demo');
+let processing = false;
+
+$demo.addEventListener('click', () => {
+    if (processing) return;
+    let reverting = false;
+    processing = true;
+    const $endListener = document.createElement('div');
+    $endListener.classList.add('demo-transitionend-listener');
+    $demo.appendChild($endListener);
+    const layoutTrigger = $demo.offsetTop;
+    $demo.classList.add('s--processing');
+    
+    $demo.onclick = pdf;
+    
+    // $endListener.addEventListener('transitionend', () => {
+    //     if (reverting) return;
+    //     reverting = true;
+    //     $demo.classList.add('s--reverting');
+    // });
+    // pdf();
+    // setTimeout(() => {
+    //     // pdf();
+    //     $demo.removeChild($endListener);
+    //     $demo.classList.remove('s--processing', 's--reverting');
+    //     processing = false;
+
+    // }, 10000);
+});
 
 
 
@@ -289,7 +322,7 @@ function reportGeneration() {
     let gapsAroundDoorsYes = document.getElementById('gapsAroundDoorsYes');
     let gapsAroundDoorsNo = document.getElementById('gapsAroundDoorsNo');
 
- 
+
 
     // q10
     let wallInsulationYes = document.getElementById('wallInsulationYes');
@@ -303,7 +336,7 @@ function reportGeneration() {
     let exteriorGapsYes = document.getElementById('exteriorGapsYes');
     let exteriorGapsNo = document.getElementById('exteriorGapsNo');
 
-    
+
 
     // q11
     let singlePane = document.getElementById('singlePane');
@@ -324,7 +357,7 @@ function reportGeneration() {
     let heatersFunctioning = document.getElementById('heatersFunctioning');
     let heatersLeaks = document.getElementById('heatersLeaks');
 
-  
+
 
     // q13
     let ventilationYes = document.getElementById('ventilationYes');
@@ -332,7 +365,7 @@ function reportGeneration() {
     let fansWorking = document.getElementById('fansWorking');
     let fansNotWorking = document.getElementById('fansNotWorking');
 
-  
+
 
     // q14
     let fireplaceUsed = document.getElementById('fireplaceUsed');
@@ -340,14 +373,14 @@ function reportGeneration() {
     let chimneySealedFlueGood = document.getElementById('chimneySealedFlueGood');
     let chimneyNotSealedFlueCondition = document.getElementById('chimneyNotSealedFlueCondition');
     // ans
-  
+
 
     // q15
     let shadingYes = document.getElementById('shadingYes');
     let shadingNo = document.getElementById('shadingNo');
     let roofGood = document.getElementById('roofGood');
     let roofNotGood = document.getElementById('roofNotGood');
-  
+
 }
 
 
