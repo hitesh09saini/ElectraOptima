@@ -7,10 +7,21 @@
     <title>𝐄𝐥𝐞𝐜𝐭𝐫𝐚𝐎𝐩𝐭𝐢𝐦𝐚 | Residential Energy Auditor</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="Residential.css">
+
     <link rel="shortcut icon" href="assets/solar-energy.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        input[type="checkbox"] {
+            width: 20px;
+        }
+
+        input[type="radio"] {
+            width: 20px;
+            color: green;
+        }
+    </style>
 </head>
 
 <body>
@@ -393,173 +404,128 @@
 
                         <h2>Select:</h2>
                         <div>
+                            <input type="checkbox" id="refrigerator" name="appliance" value="Refrigerator">
+                            <label for="refrigerator">Refrigerator</label><br>
 
+                            <input type="checkbox" id="freezer" name="appliance" value="Freezer">
+                            <label for="freezer">Freezer (if separate from the fridge)</label><br>
 
-                            <label for="refrigerator">
-                                <input type="checkbox" id="refrigerator" name="appliance" value="Refrigerator">
-                                Refrigerator
-                            </label><br>
-                            <label for="freezer">
-                                <input type="checkbox" id="freezer" name="appliance" value="Freezer"> Freezer (if
-                                separate from the fridge)
-                            </label><br>
-                            <label for="dishwasher">
-                                <input type="checkbox" id="dishwasher" name="appliance" value="Dishwasher">
-                                Dishwasher
-                            </label><br>
-                            <label for="washingMachine">
-                                <input type="checkbox" id="washingMachine" name="appliance" value="Washing Machine">
-                                Washing Machine
-                            </label><br>
-                            <label for="clothesDryer">
-                                <input type="checkbox" id="clothesDryer" name="appliance" value="Clothes Dryer">
-                                Clothes
-                                Dryer
-                            </label><br>
-                            <label for="ovenRange">
-                                <input type="checkbox" id="ovenRange" name="appliance" value="Oven/Range">
-                                Oven/Range
-                            </label><br>
-                            <label for="microwave">
-                                <input type="checkbox" id="microwave" name="appliance" value="Microwave"> Microwave
-                            </label><br>
-                            <label for="waterHeater">
-                                <input type="checkbox" id="waterHeater" name="appliance" value="Water Heater"> Water
-                                Heater
-                            </label><br>
-                            <label for="airConditioner">
-                                <input type="checkbox" id="airConditioner" name="appliance" value="Air Conditioner">
-                                Air
-                                Conditioner (AC)
-                            </label><br>
-                            <label for="heatingSystem">
-                                <input type="checkbox" id="heatingSystem" name="appliance"
-                                    value="Furnace/Heating System"> Furnace/Heating System
-                            </label><br>
-                            <label for="heatPump">
-                                <input type="checkbox" id="heatPump" name="appliance" value="Heat Pump"> Heat Pump
-                            </label><br>
-                            <label for="ceilingFans">
-                                <input type="checkbox" id="ceilingFans" name="appliance" value="Ceiling Fans">
-                                Ceiling
-                                Fans
-                            </label><br>
-                            <label for="exhaustFans">
-                                <input type="checkbox" id="exhaustFans" name="appliance" value="Exhaust Fans">
-                                Exhaust
-                                Fans
-                            </label><br>
-                            <label for="humidifier">
-                                <input type="checkbox" id="humidifier" name="appliance" value="Humidifier">
-                                Humidifier
-                            </label><br>
-                            <label for="dehumidifier">
-                                <input type="checkbox" id="dehumidifier" name="appliance" value="Dehumidifier">
-                                Dehumidifier
-                            </label><br>
-                            <label for="electricKettle">
-                                <input type="checkbox" id="electricKettle" name="appliance" value="Electric Kettle">
-                                Electric Kettle
-                            </label><br>
-                            <label for="coffeeMaker">
-                                <input type="checkbox" id="coffeeMaker" name="appliance" value="Coffee Maker">
-                                Coffee
-                                Maker
-                            </label><br>
-                            <label for="toaster">
-                                <input type="checkbox" id="toaster" name="appliance" value="Toaster"> Toaster
-                            </label><br>
-                            <label for="blender">
-                                <input type="checkbox" id="blender" name="appliance" value="Blender"> Blender
-                            </label><br>
-                            <label for="foodProcessor">
-                                <input type="checkbox" id="foodProcessor" name="appliance" value="Food Processor">
-                                Food
-                                Processor
-                            </label><br>
-                            <label for="standMixer">
-                                <input type="checkbox" id="standMixer" name="appliance" value="Stand Mixer"> Stand
-                                Mixer
-                            </label><br>
-                            <label for="breadMaker">
-                                <input type="checkbox" id="breadMaker" name="appliance" value="Bread Maker"> Bread
-                                Maker
-                            </label><br>
-                            <label for="iron">
-                                <input type="checkbox" id="iron" name="appliance" value="Iron"> Iron
-                            </label><br>
-                            <label for="vacuumCleaner">
-                                <input type="checkbox" id="vacuumCleaner" name="appliance" value="Vacuum Cleaner">
-                                Vacuum Cleaner
-                            </label><br>
-                            <label for="hairDryer">
-                                <input type="checkbox" id="hairDryer" name="appliance" value="Hair Dryer"> Hair
-                                Dryer
-                            </label><br>
-                            <label for="curlingIronStraightener">
-                                <input type="checkbox" id="curlingIronStraightener" name="appliance"
-                                    value="Curling Iron/Straightener"> Curling Iron
-                            </label><br>
-                            <label for="electricToothbrushCharger">
-                                <input type="checkbox" id="electricToothbrushCharger" name="appliance"
-                                    value="Electric Toothbrush Charger"> Electric Toothbrush Charger
-                            </label><br>
-                            <label for="waterPump">
-                                <input type="checkbox" id="waterPump" name="appliance" value="Water Pump"> Water
-                                Pump
+                            <input type="checkbox" id="dishwasher" name="appliance" value="Dishwasher">
+                            <label for="dishwasher">Dishwasher</label><br>
 
-                            </label><br>
-                            <label for="sumpPump">
-                                <input type="checkbox" id="sumpPump" name="appliance" value="Sump Pump"> Sump Pump
+                            <input type="checkbox" id="washingMachine" name="appliance" value="Washing Machine">
+                            <label for="washingMachine">Washing Machine</label><br>
 
-                            </label><br>
-                            <label for="garageDoorOpener">
-                                <input type="checkbox" id="garageDoorOpener" name="appliance"
-                                    value="Garage Door Opener"> Garage Door Opener
-                            </label><br>
-                            <label for="poolPumpHeater">
-                                <input type="checkbox" id="poolPumpHeater" name="appliance"
-                                    value="Swimming Pool Pump and Heater"> Swimming Pool Pump
-                            </label><br>
-                            <label for="lawnMower">
-                                <input type="checkbox" id="lawnMower" name="appliance" value="Lawn Mower"> Lawn
-                                Mower
-                            </label><br>
-                            <label for="snowBlower">
-                                <input type="checkbox" id="snowBlower" name="appliance" value="Snow Blower"> Snow
-                                Blower
+                            <input type="checkbox" id="clothesDryer" name="appliance" value="Clothes Dryer">
+                            <label for="clothesDryer">Clothes Dryer</label><br>
 
-                            </label><br>
-                            <label for="airPurifier">
-                                <input type="checkbox" id="airPurifier" name="appliance" value="Air Purifier"> Air
-                                Purifier
-                            </label><br>
-                            <label for="spaceHeater">
-                                <input type="checkbox" id="spaceHeater" name="appliance" value="Space Heater"> Space
-                                Heater
-                            </label><br>
-                            <label for="electricBlanket">
-                                <input type="checkbox" id="electricBlanket" name="appliance" value="Electric Blanket">
-                                Electric Blanket
-                            </label><br>
-                            <label for="clothesSteamer">
-                                <input type="checkbox" id="clothesSteamer" name="appliance" value="Clothes Steamer">
-                                Clothes Steamer
-                            </label><br>
-                            <label for="electricFireplace">
-                                <input type="checkbox" id="electricFireplace" name="appliance"
-                                    value="Electric Fireplace"> Electric Fireplace
-                            </label><br>
-                            <label for="wineCooler">
-                                <input type="checkbox" id="wineCooler" name="appliance" value="Wine Cooler"> Wine
-                                Cooler
-                            </label><br>
-                            <label for="aquariumEquipment">
-                                <input type="checkbox" id="aquariumEquipment" name="appliance"
-                                    value="Aquarium Equipment"> Aquarium Equipment
-                            </label><br>
+                            <input type="checkbox" id="ovenRange" name="appliance" value="Oven/Range">
+                            <label for="ovenRange">Oven/Range</label><br>
 
+                            <input type="checkbox" id="microwave" name="appliance" value="Microwave">
+                            <label for="microwave">Microwave</label><br>
 
+                            <input type="checkbox" id="waterHeater" name="appliance" value="Water Heater">
+                            <label for="waterHeater">Water Heater</label><br>
+
+                            <input type="checkbox" id="airConditioner" name="appliance" value="Air Conditioner">
+                            <label for="airConditioner">Air Conditioner (AC)</label><br>
+
+                            <input type="checkbox" id="heatingSystem" name="appliance" value="Furnace/Heating System">
+                            <label for="heatingSystem">Furnace/Heating System</label><br>
+
+                            <input type="checkbox" id="heatPump" name="appliance" value="Heat Pump">
+                            <label for="heatPump">Heat Pump</label><br>
+
+                            <input type="checkbox" id="ceilingFans" name="appliance" value="Ceiling Fans">
+                            <label for="ceilingFans">Ceiling Fans</label><br>
+
+                            <input type="checkbox" id="exhaustFans" name="appliance" value="Exhaust Fans">
+                            <label for="exhaustFans">Exhaust Fans</label><br>
+
+                            <input type="checkbox" id="humidifier" name="appliance" value="Humidifier">
+                            <label for="humidifier">Humidifier</label><br>
+
+                            <input type="checkbox" id="dehumidifier" name="appliance" value="Dehumidifier">
+                            <label for="dehumidifier">Dehumidifier</label><br>
+
+                            <input type="checkbox" id="electricKettle" name="appliance" value="Electric Kettle">
+                            <label for="electricKettle">Electric Kettle</label><br>
+
+                            <input type="checkbox" id="coffeeMaker" name="appliance" value="Coffee Maker">
+                            <label for="coffeeMaker">Coffee Maker</label><br>
+
+                            <input type="checkbox" id="toaster" name="appliance" value="Toaster">
+                            <label for="toaster">Toaster</label><br>
+
+                            <input type="checkbox" id="blender" name="appliance" value="Blender">
+                            <label for="blender">Blender</label><br>
+
+                            <input type="checkbox" id="foodProcessor" name="appliance" value="Food Processor">
+                            <label for="foodProcessor">Food Processor</label><br>
+
+                            <input type="checkbox" id="standMixer" name="appliance" value="Stand Mixer">
+                            <label for="standMixer">Stand Mixer</label><br>
+
+                            <input type="checkbox" id="breadMaker" name="appliance" value="Bread Maker">
+                            <label for="breadMaker">Bread Maker</label><br>
+
+                            <input type="checkbox" id="iron" name="appliance" value="Iron">
+                            <label for="iron">Iron</label><br>
+
+                            <input type="checkbox" id="vacuumCleaner" name="appliance" value="Vacuum Cleaner">
+                            <label for="vacuumCleaner">Vacuum Cleaner</label><br>
+
+                            <input type="checkbox" id="hairDryer" name="appliance" value="Hair Dryer">
+                            <label for="hairDryer">Hair Dryer</label><br>
+
+                            <input type="checkbox" id="curlingIronStraightener" name="appliance"
+                                value="Curling Iron/Straightener">
+                            <label for="curlingIronStraightener">Curling Iron/Straightener</label><br>
+
+                            <input type="checkbox" id="electricToothbrushCharger" name="appliance"
+                                value="Electric Toothbrush Charger">
+                            <label for="electricToothbrushCharger">Electric Toothbrush Charger</label><br>
+
+                            <input type="checkbox" id="waterPump" name="appliance" value="Water Pump">
+                            <label for="waterPump">Water Pump</label><br>
+
+                            <input type="checkbox" id="sumpPump" name="appliance" value="Sump Pump">
+                            <label for="sumpPump">Sump Pump</label><br>
+
+                            <input type="checkbox" id="garageDoorOpener" name="appliance" value="Garage Door Opener">
+                            <label for="garageDoorOpener">Garage Door Opener</label><br>
+
+                            <input type="checkbox" id="poolPumpHeater" name="appliance"
+                                value="Swimming Pool Pump and Heater">
+                            <label for="poolPumpHeater">Swimming Pool Pump and Heater</label><br>
+
+                            <input type="checkbox" id="lawnMower" name="appliance" value="Lawn Mower">
+                            <label for="lawnMower">Lawn Mower</label><br>
+
+                            <input type="checkbox" id="snowBlower" name="appliance" value="Snow Blower">
+                            <label for="snowBlower">Snow Blower</label><br>
+
+                            <input type="checkbox" id="airPurifier" name="appliance" value="Air Purifier">
+                            <label for="airPurifier">Air Purifier</label><br>
+
+                            <input type="checkbox" id="spaceHeater" name="appliance" value="Space Heater">
+                            <label for="spaceHeater">Space Heater</label><br>
+
+                            <input type="checkbox" id="electricBlanket" name="appliance" value="Electric Blanket">
+                            <label for="electricBlanket">Electric Blanket</label><br>
+
+                            <input type="checkbox" id="clothesSteamer" name="appliance" value="Clothes Steamer">
+                            <label for="clothesSteamer">Clothes Steamer</label><br>
+
+                            <input type="checkbox" id="electricFireplace" name="appliance" value="Electric Fireplace">
+                            <label for="electricFireplace">Electric Fireplace</label><br>
+
+                            <input type="checkbox" id="wineCooler" name="appliance" value="Wine Cooler">
+                            <label for="wineCooler">Wine Cooler</label> <br>
+
+                            <input type="checkbox" id="aquariumEquipment" name="appliance" value="Aquarium Equipment">
+                            <label for="aquariumEquipment">Aquarium Equipment</label><br>
                         </div>
                         <div>
                             <button onclick="showQuestion('Q62'),handleFormSubmit('applianceTable') ">Selected</button>
@@ -765,7 +731,7 @@
                 </div>
             </div>
 
-            <div id="Q10" class="q">
+            <div id="Q10" class="q" >
                 <h1>Question 10: Insulation</h1>
                 <div class="text">
                     <div class="def">
@@ -783,15 +749,24 @@
                     <div class="user">
                         <div>
                             <label for="wallInsulation">Wall Insulation?</label>
-                            <input type="radio" name="wallInsulation" id="wallInsulationYes" value="yes">
-                            <label for="wallInsulationYes">Yes</label>
-                            <input type="radio" name="wallInsulation" id="wallInsulationNo" value="no">
-                            <label for="wallInsulationNo">No</label>
+
+                            <div>
+                                <input type="radio" name="wallInsulation" id="wallInsulationYes"
+                                    onclick="handleInsulationYes('wallInsulation')" value="yes">
+                                <label for="wallInsulationYes">Yes</label>
+                                <input type="radio" name="wallInsulation" id="wallInsulationNo"
+                                    onclick="handleInsulationNo('wallInsulation')" value="no">
+                                <label for="wallInsulationNo">No</label>
+
+
+                            </div>
 
                         </div>
+
                         <!-- walll -->
 
-                        <div class="insulation">
+
+                        <div class="insulation" id='wallInsulation'>
                             <label for="wallInsulationType">Select Wall Insulation Type:</label>
                             <div>
                                 <select id="wallInsulationType" name="wallInsulationType">
@@ -818,16 +793,22 @@
 
 
                         <div>
-                            <label for="atticInsulation">3. Attic Insulation?</label>
-                            <input type="radio" name="atticInsulation" id="atticInsulationYes" value="yes">
-                            <label for="atticInsulationYes">Yes</label>
-                            <input type="radio" name="atticInsulation" id="atticInsulationNo" value="no">
-                            <label for="atticInsulationNo">No</label>
+                            <label for="atticInsulation">Attic Insulation?</label>
+                            <div>
+                                <input type="radio" name="atticInsulation"
+                                    onclick="handleInsulationYes('atticInsulation')" id="atticInsulationYes"
+                                    value="yes">
+                                <label for="atticInsulationYes">Yes</label>
+                                <input type="radio" name="atticInsulation"
+                                    onclick="handleInsulationNo('atticInsulation')" id="atticInsulationNo" value="no">
+                                <label for="atticInsulationNo">No</label>
+                            </div>
+
 
                         </div>
 
                         <!-- attic -->
-                        <div class="insulation">
+                        <div class="insulation" id="atticInsulation">
                             <label for="AtticInsulationType">Select Attic Insulation Type:</label>
                             <div>
                                 <select id="atticInsulationType" name="AtticInsulationType">
@@ -855,10 +836,15 @@
 
                         <div>
                             <label for="exteriorGaps">Exterior Gaps?</label>
-                            <input type="radio" name="exteriorGaps" id="exteriorGapsYes" value="yes">
-                            <label for="exteriorGapsYes">Yes</label>
-                            <input type="radio" name="exteriorGaps" id="exteriorGapsNo" value="no">
-                            <label for="exteriorGapsNo">No</label>
+                            <div>
+                                <input type="radio" name="exteriorGaps" id="exteriorGapsYes" value="yes">
+                                <label for="exteriorGapsYes">Yes</label>
+                                <input type="radio" name="exteriorGaps" id="exteriorGapsNo" value="no">
+                                <label for="exteriorGapsNo">No</label>
+
+
+                            </div>
+
                         </div>
                         <button onclick="showQuestion('Q11') ">Next</button>
                     </div>
@@ -882,33 +868,48 @@
                     <div class="user">
                         <div>
                             <label for="windowPane">Window Pane Type</label>
-                            <input type="radio" name="windowPane" id="singlePane" value="single">
-                            <label for="singlePane">Single-pane</label>
-                            <input type="radio" name="windowPane" id="doublePane" value="double">
-                            <label for="doublePane">Double-pane</label>
+                            <div>
+                                <input type="radio" name="windowPane" id="singlePane" value="single">
+                                <label for="singlePane">Single-pane</label>
+                                <input type="radio" name="windowPane" id="doublePane" value="double">
+                                <label for="doublePane">Double-pane</label>
+                                <input type="radio" name="windowPane" id="bothPane" value="both">
+                                <label for="bothPane">Both-pane</label>
+                            </div>
                         </div>
                         <div>
                             <label for="windowWeatherstripping">Window Weatherstripping?</label>
-                            <input type="radio" name="windowWeatherstripping" id="windowWeatherstrippingYes"
-                                value="yes">
-                            <label for="windowWeatherstrippingYes">Yes</label>
-                            <input type="radio" name="windowWeatherstripping" id="windowWeatherstrippingNo" value="no">
-                            <label for="windowWeatherstrippingNo">No</label>
+                            <div>
+                                <input type="radio" name="windowWeatherstripping" id="windowWeatherstrippingYes"
+                                    value="yes">
+                                <label for="windowWeatherstrippingYes">Yes</label>
+                                <input type="radio" name="windowWeatherstripping" id="windowWeatherstrippingNo"
+                                    value="no">
+                                <label for="windowWeatherstrippingNo">No</label>
+                            </div>
                         </div>
                         <div>
                             <label for="doorSealing">Door Sealing?</label>
-                            <input type="radio" name="doorSealing" id="doorSealingProper" value="proper">
-                            <label for="doorSealingProper">Properly Sealed</label>
-                            <input type="radio" name="doorSealing" id="doorSealingGaps" value="gaps">
-                            <label for="doorSealingGaps">Gaps Present</label>
+                            <div>
+                                <input type="radio" name="doorSealing" id="doorSealingProper" value="proper">
+                                <label for="doorSealingProper">Properly Sealed</label>
+                                <input type="radio" name="doorSealing" id="doorSealingGaps" value="gaps">
+                                <label for="doorSealingGaps">Gaps Present</label>
+                            </div>
                         </div>
                         <div>
                             <label for="energyEfficientWindowsDoors">ENERGY STAR or Energy-Efficient
                                 Windows/Doors?</label>
-                            <input type="radio" name="energyEfficientWindowsDoors" id="energyEfficientYes" value="yes">
-                            <label for="energyEfficientYes">Yes</label>
-                            <input type="radio" name="energyEfficientWindowsDoors" id="energyEfficientNo" value="no">
-                            <label for="energyEfficientNo">No</label>
+                            <div>
+                                <input type="radio" name="energyEfficientWindowsDoors" id="energyEfficientYes"
+                                    value="yes">
+                                <label for="energyEfficientYes">Yes</label>
+                                <input type="radio" name="energyEfficientWindowsDoors" id="energyEfficientNo"
+                                    value="no">
+                                <label for="energyEfficientNo">No</label>
+
+                            </div>
+
                         </div>
                         <button onclick="showQuestion('Q12') ">Next</button>
                     </div>
@@ -930,31 +931,37 @@
                     <div class="user">
                         <div>
                             <label for="systemNoisesOdors">Noises or Odors?</label>
-                            <input type="radio" name="systemNoisesOdors" id="noisesOdorsYes" value="yes">
-                            <label for="noisesOdorsYes">Yes</label>
-                            <input type="radio" name="systemNoisesOdors" id="noisesOdorsNo" value="no">
-                            <label for="noisesOdorsNo">No</label>
+                            <div>
+                                <input type="radio" name="systemNoisesOdors" id="noisesOdorsYes" value="yes">
+                                <label for="noisesOdorsYes">Yes</label>
+                                <input type="radio" name="systemNoisesOdors" id="noisesOdorsNo" value="no">
+                                <label for="noisesOdorsNo">No</label>
+                            </div>
                         </div>
                         <div>
                             <label for="airEscapeDuctsVents">Air Escape from Ducts or Vents?</label>
-                            <input type="radio" name="airEscapeDuctsVents" id="airEscapeYes" value="yes">
-                            <label for="airEscapeYes">Yes</label>
-                            <input type="radio" name="airEscapeDuctsVents" id="airEscapeNo" value="no">
-                            <label for="airEscapeNo">No</label>
+                            <div>
+                                <input type="radio" name="airEscapeDuctsVents" id="airEscapeYes" value="yes">
+                                <label for="airEscapeYes">Yes</label>
+                                <input type="radio" name="airEscapeDuctsVents" id="airEscapeNo" value="no">
+                                <label for="airEscapeNo">No</label>
+                            </div>
                         </div>
                         <div>
                             <label for="radiatorsBaseboardHeaters">Radiator/Baseboard Heaters?</label>
-                            <input type="radio" name="radiatorsBaseboardHeaters" id="heatersFunctioning"
-                                value="functioning">
-                            <label for="heatersFunctioning">Functioning Properly</label>
-                            <input type="radio" name="radiatorsBaseboardHeaters" id="heatersLeaks" value="leaks">
-                            <label for="heatersLeaks">Leaks Present</label>
+                            <div>
+                                <input type="radio" name="radiatorsBaseboardHeaters" id="heatersFunctioning"
+                                    value="functioning">
+                                <label for="heatersFunctioning">Functioning Properly</label>
+                                <input type="radio" name="radiatorsBaseboardHeaters" id="heatersLeaks" value="leaks">
+                                <label for="heatersLeaks">Leaks Present</label>
+                            </div>
                         </div>
                         <button onclick="showQuestion('Q13') ">Next</button>
                     </div>
                 </div>
             </div>
-            <div id="Q13" class="q">
+            <div id="Q13" class="q" >
                 <h1>Question 13: Ventilation</h1>
                 <div class="text">
                     <div class="def">
@@ -970,17 +977,21 @@
                     <div class="user">
                         <div>
                             <label for="adequateVentilation">Adequate Ventilation?</label>
-                            <input type="radio" name="adequateVentilation" id="ventilationYes" value="yes">
-                            <label for="ventilationYes">Yes</label>
-                            <input type="radio" name="adequateVentilation" id="ventilationNo" value="no">
-                            <label for="ventilationNo">No</label>
+                            <div>
+                                <input type="radio" name="adequateVentilation" id="ventilationYes" value="yes">
+                                <label for="ventilationYes">Yes</label>
+                                <input type="radio" name="adequateVentilation" id="ventilationNo" value="no">
+                                <label for="ventilationNo">No</label>
+                            </div>
                         </div>
                         <div>
                             <label for="exhaustFansCondition">Exhaust Fans Condition?</label>
-                            <input type="radio" name="exhaustFansCondition" id="fansWorking" value="working">
-                            <label for="fansWorking">Working</label>
-                            <input type="radio" name="exhaustFansCondition" id="fansNotWorking" value="notWorking">
-                            <label for="fansNotWorking">Not Working</label>
+                            <div>
+                                <input type="radio" name="exhaustFansCondition" id="fansWorking" value="working">
+                                <label for="fansWorking">Working</label>
+                                <input type="radio" name="exhaustFansCondition" id="fansNotWorking" value="notWorking">
+                                <label for="fansNotWorking">Not Working</label>
+                            </div>
                         </div>
                         <button onclick="showQuestion('Q14') ">Next</button>
                     </div>
@@ -998,19 +1009,23 @@
                     <div class="user">
                         <div>
                             <label for="fireplaceUsage">Fireplace Usage?</label>
-                            <input type="radio" name="fireplaceUsage" id="fireplaceUsed" value="used">
-                            <label for="fireplaceUsed">Used</label>
-                            <input type="radio" name="fireplaceUsage" id="fireplaceNotUsed" value="notUsed">
-                            <label for="fireplaceNotUsed">Not Used</label>
+                            <div>
+                                <input type="radio" name="fireplaceUsage" id="fireplaceUsed" value="used">
+                                <label for="fireplaceUsed">Used</label>
+                                <input type="radio" name="fireplaceUsage" id="fireplaceNotUsed" value="notUsed">
+                                <label for="fireplaceNotUsed">Not Used</label>
+                            </div>
                         </div>
                         <div>
                             <label for="chimneySealedFlueCondition">Chimney Sealed and Flue Condition?</label>
-                            <input type="radio" name="chimneySealedFlueCondition" id="chimneySealedFlueGood"
-                                value="good">
-                            <label for="chimneySealedFlueGood">Good</label>
-                            <input type="radio" name="chimneySealedFlueCondition" id="chimneyNotSealedFlueCondition"
-                                value="notGood">
-                            <label for="chimneyNotSealedFlueCondition">Not Good</label>
+                            <div>
+                                <input type="radio" name="chimneySealedFlueCondition" id="chimneySealedFlueGood"
+                                    value="good">
+                                <label for="chimneySealedFlueGood">Good</label>
+                                <input type="radio" name="chimneySealedFlueCondition" id="chimneyNotSealedFlueCondition"
+                                    value="notGood">
+                                <label for="chimneyNotSealedFlueCondition">Not Good</label>
+                            </div>
                         </div>
                         <button onclick="showQuestion('Q15') ">Next</button>
                     </div>
@@ -1029,17 +1044,21 @@
                     <div class="user">
                         <div>
                             <label for="shadingEffect">Shading Effect?</label>
-                            <input type="radio" name="shadingEffect" id="shadingYes" value="yes">
-                            <label for="shadingYes">Yes</label>
-                            <input type="radio" name="shadingEffect" id="shadingNo" value="no">
-                            <label for="shadingNo">No</label>
+                            <div>
+                                <input type="radio" name="shadingEffect" id="shadingYes" value="yes">
+                                <label for="shadingYes">Yes</label>
+                                <input type="radio" name="shadingEffect" id="shadingNo" value="no">
+                                <label for="shadingNo">No</label>
+                            </div>
                         </div>
                         <div>
                             <label for="roofCondition">Roof Condition?</label>
-                            <input type="radio" name="roofCondition" id="roofGood" value="good">
-                            <label for="roofGood">Good</label>
-                            <input type="radio" name="roofCondition" id="roofNotGood" value="notGood">
-                            <label for="roofNotGood">Not Good</label>
+                            <div>
+                                <input type="radio" name="roofCondition" id="roofGood" value="good">
+                                <label for="roofGood">Good</label>
+                                <input type="radio" name="roofCondition" id="roofNotGood" value="notGood">
+                                <label for="roofNotGood">Not Good</label>
+                            </div>
                         </div>
                         <button onclick=" submit() ">Submit</button>
                     </div>
@@ -1061,9 +1080,9 @@
             <p id="report" class="pb-8 text-4xl font-bold text-center">
             </p>
             <!-- download -->
-            <div class="flex justify-center" >
+            <div class="flex justify-center">
 
-                <div class="demo" >
+                <div class="demo">
                     <div class="demo__drone-cont demo__drone-cont--takeoff">
                         <div class="demo__drone-cont demo__drone-cont--shift-x">
                             <div class="demo__drone-cont demo__drone-cont--landing">
@@ -1160,7 +1179,7 @@
             <div class="feedback-popup" id="form">
                 <div class="feedback-container relative">
                     <style>
-                        input{
+                        input {
                             width: 80%;
                             height: 40px;
                         }

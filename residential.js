@@ -244,9 +244,9 @@ $demo.addEventListener('click', () => {
     $demo.appendChild($endListener);
     const layoutTrigger = $demo.offsetTop;
     $demo.classList.add('s--processing');
-    
+
     $demo.onclick = pdf;
-    
+
     // $endListener.addEventListener('transitionend', () => {
     //     if (reverting) return;
     //     reverting = true;
@@ -261,6 +261,7 @@ $demo.addEventListener('click', () => {
 
     // }, 10000);
 });
+
 
 
 
@@ -402,3 +403,16 @@ function show() {
 
 }
 
+function handleInsulationYes(id) {
+    let d = document.getElementById(id);
+   
+        d.style.display= "block";
+    
+}
+
+function handleInsulationNo(id) {
+    let d = document.getElementById(id);
+   
+        d.style.display= "none";
+    
+}
